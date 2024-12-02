@@ -1,0 +1,14 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Success Solutions HR Consulting | Expatriate Hiring'
+theme = 'HR-website'
+[params]
+favicon = '/logo/favicon.ico'
+description = 'Success Solutions specializes in expatriate hiring and global executive search, helping businesses build exceptional teams. With ethical hiring practices, confidentiality assurance, and a focus on quality, we provide innovative and tailored solutions to drive organizational success and growth.'
+keywords = 'expatriate hiring, global executive search, leadership hiring, business consulting, recruitment solutions, talent acquisition, organizational growth, ethical hiring practices, Success Solutions, hiring methodology, corporate hiring, human resource management, executive search services'
+author = 'Balachandiran - TenSketch'
+logo = '/images/logo/Success-Solutions-logo-2.jpeg'
+og_image = '/logo/ogimage.jpg'
+[asset]
+  # Enable Hugo pipes for SCSS
+  enable = true

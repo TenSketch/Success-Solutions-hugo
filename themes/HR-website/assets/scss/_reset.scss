@@ -1,0 +1,11 @@
+html{
+
+    scroll-behavior: smooth;
+
+    @media(max-width:425px){
+        font-size: 14px;
+    }
+}
+body{
+    overflow-x: hidden;
+}

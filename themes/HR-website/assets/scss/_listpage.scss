@@ -1,0 +1,10 @@
+@import 'variables';
+@import 'utilities';
+
+
+.page-title{
+    background: hsla(216, 57%, 17%, 90%) url(/images/expatriates.webp) no-repeat fixed center center / cover;
+    background-blend-mode: overlay;
+    color: $white;
+    min-height: 50vh;
+}

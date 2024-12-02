@@ -1,0 +1,209 @@
+{{ define "main" }}
+<header class="hero-section d-flex align-items-center justify-content-center text-center min-vh-100 py-5 px-custom">
+  <div class="hero-content">
+    <h1 class="company-name">Welcome to <span class="">Success Solutions</span></h1>
+    <h2 class="tagline mt-md-5 mt-4">"A Company is as great as the people who work for it"</h2>
+    <h3 class="subtext">Your people are your <span class="highlight">SUCCESS</span></h3>
+    <p class="main-text my-3">We craft innovative solutions for your people's success.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn btn-primary ">Explore Our Services</a>
+      <!-- <a href="#contact" class="btn btn-secondary btn--large">Contact Us</a> -->
+    </div>
+  </div>
+</header>
+<!-- challenges section -->
+<section class="animated-section d-flex align-items-center justify-content-center position-relative py-5">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="/videos/technology-changes.mp4" type="video/mp4">
+    <a class="attribution"
+      href="https://www.freepik.com/free-video/network-connections-data-processing_1896959#fromView=search&page=1&position=23&uuid=6bd54f59-928d-41b4-a93b-8dcf4e0b4233">Video
+      by VectorFusionArt</a>
+    Your browser does not support the video tag.
+  </video>
+  <!-- Overlay -->
+  <div class="overlay"></div>
+  <!-- Content Wrapper -->
+  <div class="content-wrapper text-center px-custom position-relative">
+    <!-- Typing text -->
+    <div id="typing-text" class="typing-text mb-4"></div>
+    <!-- Sliding items -->
+    <div id="sliding-items" class="sliding-items"></div>
+    <!-- Final paragraph -->
+    <p id="final-paragraph" class="final-paragraph d-none text-center">
+      resolving problems + being creative + thinking out of box + foresee current + future challenges + seeing the broad
+      spectrum of possibilities
+      <br>
+      also.....<br><br>
+      <span class="text-gold">learning how life changes + market shifts + politics + science/high-tech + new resources,
+        economics + social needs....and so forth....to serve your company/organization</span>
+    </p>
+  </div>
+</section>
+<!-- about us -->
+<section class="about pe-md-0">
+  <div class="content px-custom py-custom bg-light">
+    <img src="/images/expatriate-hiring-1.jpeg" alt="expatriate hiring" class="img-fluid d-md-none mb-3 ">
+    <h1 class="text-primary font-weight-bold mt-4 mt-md-0">About us</h1>
+    <h2 class="font-weight-bold">Success Solutions is a synonymous name to expatriate hiring for its global clients</h2>
+    <!-- <p class="subtitle"> We are well known for expatriate hiring among global clients.</p> -->
+    <p class="mt-4"><em class="text-primary font-weight-bold h5">Welcome to one stop expatriate hiring consulting
+        solution provider.</em> <br><br>
+      Our global executive search solutions bring in such great people to drive your organization success from dream to
+      delivery and in the process retain satisfied clients & customers
+    </p>
+    <!-- <h2 class="main-text"><span class="highlight">TALENT?</span> MEET OPPORTUNITY.</h2> -->
+    <button href="#" class="btn btn-gold mt-4">Explore Job Openings</button>
+  </div>
+</section>
+<!-- services -->
+<section class="services-section text-center py-5">
+  <div class="container">
+    <h1 class=" font-weight-bold">Our HR Solutions</h1>
+    <h2 class="section-title mt-2 mb-5">Assist You to Find the Right Talent</h2>
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="icon mb-3">
+            <i class="fas fa-user-tie"></i> <!-- Font Awesome Icon for Expatriate Hiring -->
+          </div>
+          <h5 class="service-title">Expatriate Hiring</h5>
+          <p class="service-description">We assist in hiring top expatriate talent to meet your organizational goals
+            globally.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mt-4 mt-md-0">
+        <div class="service-box">
+          <div class="icon mb-3">
+            <i class="fas fa-globe"></i> <!-- Font Awesome Icon for Global Executive Search -->
+          </div>
+          <h5 class="service-title">Global Executive Search</h5>
+          <p class="service-description">Specialized services to help you find top-level executives across the globe.
+          </p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn btn-gold btn--icon mt-4">
+      Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>
+<!-- quotes -->
+<section class="quotes-section py-custom px-custom" id="quotes">
+  <h1 class="text-primary font-weight-bold text-center mb-4">What Great Minds Say</h1>
+  <div class="row g-4">
+    <!-- Quote 1 -->
+    <div class="col-md-4">
+      <div class="quote-card">
+        <div class="quote-card-inner">
+          <div class="quote-card-front">
+            <p class="quote-text">
+              "It doesn't make sense to hire smart people and tell them what to do; we hire smart people so they can
+              tell us what to do."
+            </p>
+          </div>
+          <div class="quote-card-back">
+            <img src="/images/Steve_Jobs.webp" alt="Steve Jobs" class="author-photo">
+            <div class="author-details mt-2">
+              <h5 class="author-name">Steve Jobs</h5>
+              <p class="author-info">1955 - 2011</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat for other quotes -->
+    <div class="col-md-4">
+      <div class="quote-card">
+        <div class="quote-card-inner">
+          <div class="quote-card-front">
+            <p class="quote-text">
+              "Great companies make meaning. A company has a name, but its people give it meaning."
+            </p>
+          </div>
+          <div class="quote-card-back">
+            <img src="/images/richard-pascale-toolshero.jpg" alt="Richard Pascale" class="author-photo">
+            <div class="author-details mt-2">
+              <h5 class="author-name">Richard Pascale</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Quote 3 -->
+    <div class="col-md-4">
+      <div class="quote-card">
+        <div class="quote-card-inner">
+          <div class="quote-card-front">
+            <p class="quote-text">
+              "You don't build the business. You build people. Then people build your business."
+            </p>
+          </div>
+          <div class="quote-card-back">
+            <img src="/images/zig-ziglar.webp" alt="Zig Ziglar" class="author-photo">
+            <div class="author-details mt-2">
+              <h5 class="author-name">Zig Ziglar</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="trapezoid-section ">
+  <div class="">
+    <div class="row">
+      <div class="col-md-6 py-custom px-custom ">
+        <h2 class="section-title">Expatriate Hiring Methodologies</h2>
+        <p class="section-description mt-3">
+          Our comprehensive hiring methodologies ensure that you get the best global talent for your organization's
+          success.
+        </p>
+        <div class="methodologies-list mt-4">
+          <ul>
+            <li>Turnkey Hiring</li>
+            <li>Succession Hiring</li>
+            <li>Contingent Hiring</li>
+            <li>Leadership Hiring</li>
+            <li>Discrete & Confidential Hiring</li>
+            <li>Hostility Hiring</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 img-bg">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- why choose us -->
+<section class="why-choose-us py-custom px-custom">
+  <h1 class="text-center text-gold ">What makes our services unique..</h1>
+  <div class="card-container mt-5 pt-5">
+    <div class="card">
+      <i class="fa fa-handshake"></i>
+      <h3>Ethical Practices</h3>
+      <p>We follow strict ethical hiring practices to ensure fairness and integrity.</p>
+    </div>
+    <div class="card">
+      <i class="fa fa-user-secret"></i>
+      <h3>Confidentiality</h3>
+      <p>Protecting clients' business confidentiality is our utmost priority.</p>
+    </div>
+    <div class="card">
+      <i class="fa fa-balance-scale"></i>
+      <h3>Equal Opportunity</h3>
+      <p>We promote equal opportunity employment practices in all our hiring solutions.</p>
+    </div>
+    <div class="card">
+      <i class="fa fa-map-marked-alt"></i>
+      <h3>Legal Compliance</h3>
+      <p>We ensure geography-specific hiring legal compliance for smooth operations.</p>
+    </div>
+    <div class="card">
+      <i class="fa fa-check"></i>
+      <h3>Quality Assurance</h3>
+      <p>Adhering to and assuring the highest quality in our hiring processes.</p>
+    </div>
+  </div>
+</section>
+{{ end }}
