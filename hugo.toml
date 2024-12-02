@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://success-solutions.netlify.app/'
 languageCode = 'en-us'
 title = 'Success Solutions HR Consulting | Expatriate Hiring'
 theme = 'HR-website'
