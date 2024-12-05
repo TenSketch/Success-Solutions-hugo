@@ -381,6 +381,9 @@ body {
       font-weight: 600;
       text-transform: uppercase;
       color: #ffd700; }
+  .executive-search-section img {
+    height: 450px;
+    object-fit: cover; }
 
 .animated-section {
   min-height: 100vh;

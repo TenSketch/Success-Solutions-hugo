@@ -211,6 +211,10 @@
       color: $accent-color;
     }
   }
+  img{
+    height: 450px;
+    object-fit: cover;
+  }
 }
 
 // challenges animations section
