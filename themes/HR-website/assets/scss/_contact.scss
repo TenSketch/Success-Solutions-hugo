@@ -1,0 +1,216 @@
+.contact-page {
+  font-family: 'Arial', sans-serif;
+  // color: #1a1a1a;
+  background: hsla(216, 57%, 17%, 90%) url(/images/hero.jpg) no-repeat fixed center center / cover;
+  background-blend-mode: overlay;
+
+  .certificate-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d7f77a; // Certificate background
+    //   padding: 20px;
+
+    .certificate {
+      max-width: 500px;
+      text-align: center;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .buyer {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .details {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+
+      .issued-by {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          text-align: left;
+
+          p {
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+
+          span {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .certificate-image {
+      max-width: 300px;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .contact-section {
+    //   padding: 20px;
+    text-align: center;
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-options {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+
+      div {
+        p {
+          font-size: 1rem;
+          margin-bottom: 5px;
+        }
+
+        a {
+          color: #6bcc52;
+          font-weight: bold;
+          text-decoration: none;
+        }
+
+        button {
+          padding: 10px 20px;
+          background-color: #6bcc52;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #57a944;
+          }
+
+          .contact-form {
+            .form-floating {
+              position: relative;
+
+              .form-control {
+                border: none;
+                border-bottom: 2px solid #ccc;
+                border-radius: 0;
+                padding-left: 0;
+                box-shadow: none;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+
+                &:focus {
+                  outline: none;
+                  border-bottom-color: #6bcc52;
+                }
+              }
+
+              label {
+                color: #888;
+                font-size: 0.9rem;
+                padding-left: 0;
+              }
+            }
+
+            .btn {
+              background-color: #6bcc52;
+              border: none;
+
+              &:hover {
+                background-color: #57a944;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+    .contact-form {
+      .form-floating {
+        position: relative;
+    
+        .form-control {
+          border: none;
+          border-bottom: 2px solid #ccc;
+          border-radius: 0;
+          background: transparent;
+          box-shadow: none;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+          caret-color: #6bcc52; // Change the cursor color here
+    
+          &:focus {
+            outline: none;
+            border-bottom-color: #6bcc52;
+          }
+        }
+    
+        label {
+          color: $white;
+          font-size: 0.9rem;
+          padding-left: 0;
+        }
+      }
+    
+      .btn {
+        border: none;
+    
+        &:hover {
+          // background-color: #57a944;
+        }
+      }
+    }
+
+    .form-floating>.form-control-plaintext~label::after,
+    .form-floating>.form-control:focus~label::after,
+    .form-floating>.form-control:not(:placeholder-shown)~label::after,
+    .form-floating>.form-select~label::after {
+      background-color: transparent;
+    }
+
+    .map-image {
+      margin-top: 30px;
+
+      img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .certificate-section {
+      flex-direction: row;
+      justify-content: space-between;
+
+      .certificate {
+        text-align: left;
+      }
+    }
+
+    .contact-section {
+      .contact-options {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+  }
+}

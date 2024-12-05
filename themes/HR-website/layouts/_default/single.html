@@ -6,8 +6,14 @@
     </div>
   </section>
   <section class="py-5 container">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <!-- <h1>{{ .Title }}</h1> -->
+    <div class="row justify-content-around align-items-center">
+      <div class="col-md-3 order-md-2">
+        <img src="{{ .Params.Image }}" alt="{{ .Name }}
+        " class="img-fluid">
+      </div>
+      <div class="col-md-6 mt-4 mt-md-0">{{ .Content }}</div>
+    </div>
   </section>
 </main>
 {{ end }}

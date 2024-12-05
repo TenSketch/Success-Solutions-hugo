@@ -55,7 +55,7 @@
     // padding-block: 0;
     // position: relative;
     transition: color 500ms ease, transform 0.3s ease;
-
+    position: relative;
     &:hover {
       color: $primary-color--light; // Optional, for text color change
     }
@@ -158,9 +158,9 @@
         color: $primary-color;
       }
 
-      &:hover {
-        // color: $secondary-color; // Optional, for text color change
-      }
+      // &:hover {
+      //   // color: $secondary-color; // Optional, for text color change
+      // }
 
       &::after {
         background-color: $secondary-color;

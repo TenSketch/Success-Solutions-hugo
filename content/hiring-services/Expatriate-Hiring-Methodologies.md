@@ -13,7 +13,7 @@ draft: false
 - ‌Discrete & Confidential Hiring
 - ‌Hostility Hiring
 
-### Strategic Expatriate Hiring Solutions details:
+### Strategic Expatriate Hiring Solutions details
 
 #### 1. Turnkey Hiring
 
@@ -43,4 +43,3 @@ Improves the quality of hiring by identifying the best talent.
 Aggressive Joining Timelines: With our proactive support, you can set ambitious joining dates, even though senior-level candidates may typically require extended notice periods.
 Confidential Pre-Joining Induction: We partner with you to lead a high-level confidential induction process, ensuring the new leader integrates smoothly into your organizational dynamics.
 Crisis-Free Leadership Hiring: By engaging our Succession Hiring solution, your organization builds a long-term strategy to address leadership hiring challenges, preventing key position vacancies from becoming crises.
-

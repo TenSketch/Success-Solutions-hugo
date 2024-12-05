@@ -1,19 +1,14 @@
----
-title: 'Hiring SBU verticals (Hiring Solutions)'
-date: 2024-12-02T17:30:50+05:30
-draft: false
----
 
 <!-- 1. End-to-end Expatriate Hiring Solutions (EHS)
 2. Resume Referral Service (RRS)
 3. Dedicated Resources Management Service (RMS)
 4. Hiring Associated Allied Services (AAS) -->
 
-## 1. End-to-end Expatriate Hiring Solutions (EHS)
+# 1. End-to-end Expatriate Hiring Solutions (EHS)
 
-### **Terms of Service for Expatriate Hiring**
+## **Terms of Service for Expatriate Hiring**
 
-#### **Basic Search**
+### **Basic Search**
 
 **Candidate Referral (1 Month Net Savings Offered):**  
 
@@ -22,7 +17,7 @@ draft: false
 - The client is responsible for all interview and selection coordination directly with the candidates.  
 - Free replacement is offered for candidates who leave your organization within the first 30 days of joining.  
 
-#### **End-to-End Search**
+### **End-to-End Search**
 
 **Comprehensive Expatriate Placement Services (1.5 Months Net Savings Offered):**  
 

@@ -13,9 +13,15 @@
   }
 }
 .text-primary {
-  color: $primary-color--dark!important;
+  color: $primary-color !important;
   
 }
+
+.text-primary--dark {
+  color: $primary-color--dark !important;
+  
+}
+
 .font-weight-bold{
   font-weight: bold;
 }
@@ -63,6 +69,7 @@
     color: $neutral-dark;
     &:hover{
       background-color: lighten($accent-color, 10%);
+      color: $neutral-dark;
     }
   }
 

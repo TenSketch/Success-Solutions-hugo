@@ -69,6 +69,150 @@
   }
 }
 
+.quotes-section {
+  // h1{
+  //   color: $primary-color--dark;
+  // }
+  .quote-card {
+    perspective: 1000px; // Enables 3D effect
+    cursor: pointer;
+    box-shadow: -25px 0px 23px -20px rgba(0,0,0,0.45);
+    position: relative;
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    /* Apply animation */
+    &::after {
+      content: "Hover or touch to reveal";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: $primary-color--dark;
+      animation: fadeInOut 2.5s ease-in-out infinite;
+    }
+    
+
+    .quote-card-inner {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease;
+
+      &:hover {
+        transform: rotateY(180deg); // Flips the card
+      }
+
+      .quote-card-front,
+      .quote-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; // Hides the back face
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .quote-card-front {
+        background-color: $background-light;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-style: italic;
+        color: $neutral-dark;
+      }
+
+      .quote-card-back {
+        background-color: $primary-color;
+        color: $secondary-color;
+        transform: rotateY(180deg); // Starts flipped
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .author-photo {
+          width:  130px;
+          height: 130px;
+          border-radius: 50%;
+          // border: 2px solid $white;
+          object-fit: cover;
+          margin: 0 auto;
+        }
+
+        .author-details {
+          text-align: center;
+
+          .author-name {
+            font-size: 1.1rem;
+            font-weight: bold;
+          }
+
+          .author-info {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.executive-search-section {
+  background: linear-gradient(135deg, rgba(28, 42, 72, 0.8), rgba(0, 255, 198, 0.8));
+  color: $white;
+
+  .section-title {
+    // font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .section-subtext {
+    // font-size: 1.2rem;
+    // font-weight: 400;
+    // line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  h5{
+    line-height: 1.5;
+  }
+  .highlight-box {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border-radius: 15px;
+    padding: 20px;
+    // max-width: 600px;
+    // margin: 0 auto;
+
+    .highlight-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $accent-color;
+    }
+  }
+}
+
 // challenges animations section
 .animated-section {
   min-height: 100vh;
@@ -186,37 +330,15 @@
   }
 }
 
-.about {
-
-  // height: 80vh;
-  @media(min-width:768px) {
-    background: url(/images/expatriate-hiring.jpeg) no-repeat fixed center right / cover;
-  }
-
-  .content {
-    img {
-      border-radius: 10px;
-    }
-
-    &.py-custom {
-      @media(max-width:768px) {
-        padding-block: 3rem;
-      }
-    }
-
-    @media(min-width:768px) {
-      width: 40%;
-    }
-  }
-}
-
 // Styles for Services Section
 .services-section {
   background-color: $secondary-color;
   // background: rgb(28,42,72);
   // background: linear-gradient(90deg, rgba(28,42,72,1) 50%, rgba(0,255,198,1) 100%);
   color: $neutral-light;
-
+  &.trapezoid-section{
+    background: $secondary-color;
+  }
   h1 {
     color: $primary-color;
     // font-weight: bold;
@@ -255,83 +377,33 @@
   }
 }
 
-.quotes-section {
-  // h1{
-  //   color: $primary-color--dark;
-  // }
-  .quote-card {
-    perspective: 1000px; // Enables 3D effect
-    cursor: pointer;
-    box-shadow: -25px 0px 23px -20px rgba(0,0,0,0.45);
-    .quote-card-inner {
-      position: relative;
-      width: 100%;
-      height: 300px;
-      transform-style: preserve-3d;
-      transition: transform 0.6s ease;
+.about {
 
-      &:hover {
-        transform: rotateY(180deg); // Flips the card
+  // height: 80vh;
+  @media(min-width:768px) {
+    background: url(/images/expatriate-hiring.jpeg) no-repeat fixed center right / cover;
+  }
+
+  .content {
+    img {
+      border-radius: 10px;
+    }
+
+    &.py-custom {
+      @media(max-width:768px) {
+        padding-block: 3rem;
       }
+    }
 
-      .quote-card-front,
-      .quote-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden; // Hides the back face
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-
-      .quote-card-front {
-        background-color: $background-light;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-style: italic;
-        color: $neutral-dark;
-      }
-
-      .quote-card-back {
-        background-color: $primary-color;
-        color: $secondary-color;
-        transform: rotateY(180deg); // Starts flipped
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .author-photo {
-          width:  130px;
-          height: 130px;
-          border-radius: 50%;
-          // border: 2px solid $white;
-          object-fit: cover;
-          margin: 0 auto;
-        }
-
-        .author-details {
-          text-align: center;
-
-          .author-name {
-            font-size: 1.1rem;
-            font-weight: bold;
-          }
-
-          .author-info {
-            font-size: 0.9rem;
-          }
-        }
-      }
+    @media(min-width:768px) {
+      width: 40%;
     }
   }
 }
+
+
+
+
 
 .trapezoid-section {
   background: rgb(28, 42, 72);
@@ -377,6 +449,20 @@
   min-height: 100vh;
   background: url(/images/3D-bg.jpg) no-repeat fixed center center/cover;
   clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+  &.py-custom{
+    @media(max-width:768px){
+      padding-top: 15rem!important;
+    }
+  }
+  .title-div{
+    @media(min-width:768px){
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      transform: translateX(-50%);
+    padding-block: 5rem;
+    }
+  }
   h1{
     // padding-bottom: 10rem;
     background: rgba(28, 42, 72, 0.6);
@@ -392,6 +478,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    @media(min-width:768px){
+   
+      position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    }
 
     .card {
       background: rgba(28, 42, 72, 0.6);
@@ -428,7 +522,7 @@
         position: absolute;
 
         &:nth-child(1) {
-          top: 17%;
+          top: -450%;
           left: 2%;
         }
 
@@ -443,8 +537,8 @@
         }
 
         &:nth-child(4) {
-          bottom: 10%;
-          right: 20%;
+          bottom: 130%;
+          right: 10%;
         }
 
         &:nth-child(5) {

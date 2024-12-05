@@ -13,7 +13,7 @@ draft: false
 7. Hiring audits & reporting
 8. Hiring benchmarking
 9. Competency assessment center
-10. Candidate credentials verification & validation 
+10. Candidate credentials verification & validation
 11. Capability enhancement training to your hiring managers
 12. Outplacement services
 13. Designing, developing total enduring hiring architecture to your company

@@ -1,27 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Success Solutions HR Consulting | Expatriate Hiring</title>
-    <link>https://success-solutions.netlify.app/</link>
-    <description>Recent content on Success Solutions HR Consulting | Expatriate Hiring</description>
+    <title>Success Solutions Hiring Services on Success Solutions HR Consulting | Expatriate Hiring</title>
+    <link>https://success-solutions.netlify.app/hiring-services/</link>
+    <description>Recent content in Success Solutions Hiring Services on Success Solutions HR Consulting | Expatriate Hiring</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Dec 2024 16:01:41 +0530</lastBuildDate>
-    <atom:link href="https://success-solutions.netlify.app/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Contact Us</title>
-      <link>https://success-solutions.netlify.app/contact-us/</link>
-      <pubDate>Tue, 03 Dec 2024 16:01:41 +0530</pubDate>
-      <guid>https://success-solutions.netlify.app/contact-us/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>About Us</title>
-      <link>https://success-solutions.netlify.app/about-us/</link>
-      <pubDate>Tue, 03 Dec 2024 16:01:28 +0530</pubDate>
-      <guid>https://success-solutions.netlify.app/about-us/</guid>
-      <description>&lt;p&gt;We are an incorporated company in India providing HR services to global clients.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Led by our CEO and Consulting Mentor, &lt;strong&gt;Mr. R. Muralidharan&lt;/strong&gt;, who brings over 33 years of rich global HR corporate and consulting experience.&lt;/li&gt;&#xA;&lt;li&gt;Supported by a dedicated &lt;strong&gt;RPO team&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Equipped with advanced &lt;strong&gt;competency assessment capabilities&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Partnered with a network of consulting professionals across India.&lt;/li&gt;&#xA;&lt;li&gt;Skilled in sourcing candidates globally in addition to PAN-India coverage.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
+    <lastBuildDate>Mon, 02 Dec 2024 17:50:43 +0530</lastBuildDate>
+    <atom:link href="https://success-solutions.netlify.app/hiring-services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>End-to-end Expatriate Hiring Solutions (EHS)</title>
       <link>https://success-solutions.netlify.app/hiring-services/expatriate-hiring-methodologies/</link>
