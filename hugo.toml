@@ -12,3 +12,70 @@ og_image = '/ogimage.jpg'
 [asset]
   # Enable Hugo pipes for SCSS
   enable = true
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About Us"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Our Approach"
+    url = "/our-approach/"
+    weight = 3
+
+    [[menu.main]]
+      name = "Belief"
+      parent = "Our Approach"
+      url = "/our-approach/belief/"
+      weight = 1
+
+    [[menu.main]]
+      name = "Consulting Practice"
+      parent = "Our Approach"
+      url = "/our-approach/consulting-practice/"
+      weight = 2
+
+    [[menu.main]]
+      name = "Consistent Expertise"
+      parent = "Our Approach"
+      url = "/our-approach/consistent-expertise/"
+      weight = 3
+
+  [[menu.main]]
+    name = "Our Core Services"
+    url = "/core-services/"
+    weight = 4
+
+    [[menu.main]]
+      name = "Expat Hiring Methodologies"
+      parent = "Our Core Services"
+      url = "/core-services/expat-hiring-methodologies/"
+      weight = 1
+
+    [[menu.main]]
+      name = "Hiring SBU's Vertical"
+      parent = "Our Core Services"
+      url = "/core-services/hiring-sbus-vertical/"
+      weight = 2
+
+    [[menu.main]]
+      name = "Allied Services"
+      parent = "Our Core Services"
+      url = "/core-services/allied-services/"
+      weight = 3
+
+  [[menu.main]]
+    name = "Downloads"
+    url = "/downloads/"
+    weight = 5
+
+  [[menu.main]]
+    name = "Contact Us"
+    url = "/contact/"
+    weight = 6

@@ -1,31 +1,35 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top px-custom">
-    <a class="navbar-brand" href="/">Success Solutions</a>
-    <button
-      class="navbar-toggler border-0 position-relative"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
-      <div class="hamburger-icon"></div>
-      <div class="hamburger-icon"></div>
-    </button>
-    <div class="collapse navbar-collapse pe-5 pe-md-0 text-end" id="navbarNav">
-      <ul class="navbar-nav ms-auto h-100 gap-3">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+  <a class="navbar-brand" href="/">Success Solutions</a>
+  <button
+    class="navbar-toggler border-0 position-relative"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+    <div class="hamburger-icon"></div>
+    <div class="hamburger-icon"></div>
+  </button>
+  <div class="collapse navbar-collapse pe-5 pe-md-0 text-end" id="navbarNav">
+    <ul class="navbar-nav ms-auto h-100 gap-3">
+      {{ range .Site.Menus.main }}
+        <li class="nav-item {{ if .HasChildren }}dropdown{{ end }}">
+          <a 
+            class="nav-link {{ if .HasChildren }}dropdown-toggle{{ end }}" 
+            href="{{ .URL }}" 
+            {{ if .HasChildren }}id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"{{ end }}>
+            {{ .Name }}
+          </a>
+          {{ if .HasChildren }}
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {{ range .Children }}
+                <li><a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+          {{ end }}
         </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/about-us">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/hiring-services">Hiring Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact-us">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

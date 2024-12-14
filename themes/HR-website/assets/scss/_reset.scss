@@ -1,11 +1,32 @@
+@import './typography';
+@import 'variables';
+@import 'utilities';
+
 html{
 
     scroll-behavior: smooth;
 
     @media(max-width:425px){
-        font-size: 14px;
+        font-size: 17px;
     }
 }
 body{
+    background-color: $background-color;
+  color: $text-color;
     overflow-x: hidden;
+    font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+a {
+    color: $primary-color;
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  

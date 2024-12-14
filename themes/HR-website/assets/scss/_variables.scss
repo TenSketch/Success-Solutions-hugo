@@ -1,16 +1,15 @@
-// $primary-color: #007bff; // Blue
-$primary-color:hsl(167, 100%, 50%); //#00ffc6
-$primary-color--light:hsl(167, 100%, 80%); //
-$primary-color--dark: hsl(167, 100%, 30%); //#009978
-
-$secondary-color: hsl(221, 44%, 20%); //#1c2a48
-$secondary-color--light: hsl(221, 44%, 90%); //
-
-$accent-color: #ffd700; // Gold
-$accent-color--light: hsl(51, 100%, 90%); 
-
-
-$neutral-dark: #333333; // Dark Grey
-$neutral-light: #f8f9fa; // Light Grey
+$primary-color: #00897B;  // Primary - Teal
+$secondary-color: hsl(200, 18%, 26%);  //#37474f Secondary - Blue Gray
+$accent-color: #FFD54F;  // Accent - Amber
+$text-color: #212121;  // Dark text
+$background-color: #FAFAFA;  // Light background
 $white: #fff; // White
-$background-light: #f9f9f9;
+$text-muted: #757575;
+
+// Example Usage
+
+
+header, footer {
+  background-color: $secondary-color;
+  color: $background-color;
+}
