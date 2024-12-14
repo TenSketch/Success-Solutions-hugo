@@ -334,6 +334,120 @@
   }
 }
 
+.challenges-section {
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background: rgb(28, 42, 72);
+    background: linear-gradient(90deg, rgba(28, 42, 72, 0.5) 70%, rgba(0, 255, 198, 0.3) 100%);
+    z-index: 2;
+    /* Ensure overlay is above the video */
+  }
+
+  .content-wrapper {
+    max-width: 800px;
+    width: 80%;
+    z-index: 3;
+
+    .typing-text {
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: bold;
+      color: $background-color;
+      z-index: 3;
+
+      @media(min-width:768px) {
+        font-size: 2.3rem;
+      }
+    }
+
+    .sliding-items {
+      font-size: 1.1rem;
+      color: $accent-color;
+      // font-weight: 500;
+      display: inline-block;
+      // white-space: nowrap;
+      /* Prevent line wrapping */
+      overflow: hidden;
+      z-index: 3;
+
+      @media(min-width:768px) {
+        font-size: 2rem;
+      }
+
+      span {
+        display: inline-block;
+        opacity: 0;
+        animation: slide-in-out 3s ease-in-out forwards;
+      }
+    }
+
+    @keyframes slide-in-out {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+
+      10% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      80% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+    }
+
+    .final-paragraph {
+      font-size: 1.1rem;
+      // font-weight: bold;
+      text-align: left;
+      animation: slide-in-final 1s forwards ease-in-out;
+      color: $background-color;
+      z-index: 3;
+      @media(min-width:768px){
+        font-size: 1.5rem;
+      }
+    }
+  }
+  /* Final slide-in animation */
+  @keyframes slide-in-final {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+
 // Styles for Services Section
 .services-section {
   background-color: $secondary-color;

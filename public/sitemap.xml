@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://success-solutions.netlify.app/contact-us/</loc>
+    <loc>http://localhost:1313/contact-us/</loc>
     <lastmod>2024-12-03T16:01:41+05:30</lastmod>
   </url><url>
-    <loc>https://success-solutions.netlify.app/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-03T16:01:41+05:30</lastmod>
   </url><url>
-    <loc>https://success-solutions.netlify.app/about-us/</loc>
+    <loc>http://localhost:1313/about-us/</loc>
     <lastmod>2024-12-03T16:01:28+05:30</lastmod>
   </url><url>
-    <loc>https://success-solutions.netlify.app/hiring-services/expatriate-hiring-methodologies/</loc>
+    <loc>http://localhost:1313/hiring-services/expatriate-hiring-methodologies/</loc>
     <lastmod>2024-12-02T17:50:43+05:30</lastmod>
   </url><url>
-    <loc>https://success-solutions.netlify.app/hiring-services/hiring-sbu-verticals/</loc>
+    <loc>http://localhost:1313/hiring-services/hiring-sbu-verticals/</loc>
     <lastmod>2024-12-02T17:40:51+05:30</lastmod>
   </url><url>
-    <loc>https://success-solutions.netlify.app/hiring-services/</loc>
+    <loc>http://localhost:1313/hiring-services/</loc>
     <lastmod>2024-12-02T17:30:50+05:30</lastmod>
   </url><url>
-    <loc>https://success-solutions.netlify.app/hiring-services/hiring-associated-allied-services/</loc>
+    <loc>http://localhost:1313/hiring-services/hiring-associated-allied-services/</loc>
     <lastmod>2024-12-02T17:28:04+05:30</lastmod>
   </url><url>
-    <loc>https://success-solutions.netlify.app/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://success-solutions.netlify.app/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

@@ -1,5 +1,6 @@
 {{ define "main" }}
-<section class="hero min-vh-100 py-5 px-custom d-flex align-items-center">
+<!-- 1st sec hero -->
+<section class="hero min-vh-100 py-custom px-custom d-flex align-items-center">
   <div class="row align-items-center justify-content-between h-100">
     <div class="col-md-7 content px-custom">
       <h1 class="title display-3 fw-bold mb-0">"A Company is As Great As The People Who Work For it"</h1>
@@ -13,11 +14,11 @@
     </div>
   </div>
 </section>
-<!-- 2nd sec -intro -->
-<section class="intro py-5 px-custom d-flex align-items-center">
+<!-- 2nd sec comapny intro -->
+<section class="intro py-custom px-custom d-flex align-items-center">
     <div class="row">
-      <div class="col-md-8 mx-auto">
-        <h1 class="text-primary main-heading mb-3">
+      <div class="col-md-10 mx-auto">
+        <h1 class="display-5 text-primary main-heading mb-5">
           Success Solutions is a synonymous name to expatriate hiring for its global clients
         </h1>
         <h2 class="text-accent sub-heading fst-italic">
@@ -26,47 +27,80 @@
       </div>
     </div>
 </section>
-<!-- quotes sec -->
-<section class="people-foremost py-5 px-3">
-  <div class="container">
-    <div class="intro-text mb-4">
-      <h2 class="heading fst-italic">Why People Are Foremost?</h2>
-    </div>
+<!-- 3rd sec quotes -->
+<section class="quotes py-custom px-custom">
+      <h1 class="heading fst-italic  mb-5 display-5">Why People Are Foremost?</h1>
     <div class="quotes-grid">
       <!-- Quote 1 -->
       <div class="quote-item">
         <img src="/images/steve-jobs.png" alt="Steve Jobs" class="person-img" />
         <blockquote>
-          <p>
             "It doesn't make sense to hire smart people and tell them what to do; 
             we hire smart people so they can tell us what to do."
-          </p>
+          </blockquote>
           <cite>Steve Jobs <span class="year">1955 - 2011</span></cite>
-        </blockquote>
       </div>
       <!-- Quote 2 -->
       <div class="quote-item">
         <img src="/images/richard-pascale.png" alt="Richard Pascale" class="person-img" />
         <blockquote>
-          <p>
             "Great companies make meaning. A company has a name, but its people give it meaning."
-          </p>
+          </blockquote>
           <cite>Richard Pascale <span class="year">1938 - 2024</span></cite>
-        </blockquote>
       </div>
       <!-- Quote 3 -->
       <div class="quote-item">
         <img src="/images/zig-ziglar.png" alt="Zig Ziglar" class="person-img" />
         <blockquote>
-          <p>
             "You don't build the business. You build people. Then people build your business."
-          </p>
+          </blockquote>
           <cite>Zig Ziglar <span class="year">1926 - 2012</span></cite>
-        </blockquote>
       </div>
+    </div>
+</section>
+
+<!-- 4th sec what we do -->
+<section class="py-custom px-custom people-success">
+  <h1 class="title display-5">People are the<br />integral part of your<br />business success....</h1>
+  <div class="image-wrapper">
+    <img src="/images/people.jpg" alt="People Success" class="responsive-img" />
+    <a href="https://www.freepik.com/free-photo/team-discussing-ideas-tablet-pc_993613.htm#fromView=search&page=1&position=12&uuid=26862da7-963c-42aa-a5af-870766b7e7df">Image by katemangostar on Freepik</a>
+  </div>
+  <p class="description">
+    Our global executive search solutions bring in such great people to drive your 
+    organization’s success from dream to delivery and, in the process, retain satisfied 
+    clients & customers.
+  </p>
+</section>
+
+<!-- challenges section -->
+<section class="challenges-section  position-relative py-5 px-custom">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="/videos/technology-changes.mp4" type="video/mp4">
+    <a class="attribution"
+      href="https://www.freepik.com/free-video/network-connections-data-processing_1896959#fromView=search&page=1&position=23&uuid=6bd54f59-928d-41b4-a93b-8dcf4e0b4233">Video
+      by VectorFusionArt</a>
+    Your browser does not support the video tag.
+  </video>
+  <!-- Overlay -->
+  <div class="overlay"></div>
+  <!-- Content Wrapper -->
+  <div class="content-wrapper position-relative">
+    <!-- Typing text -->
+    <div id="typing-text" class="typing-text mb-4"></div>
+    <!-- Sliding items -->
+    <div id="sliding-items" class="sliding-items"></div>
+    <!-- Final paragraph -->
+    <div id="final-paragraph" class="final-paragraph d-none">
+      <ul class="text-gold">
+        <li>Direct business-related bottlenecks</li>
+        <li>New Products and competition related challenges</li>
+        <li>Exploring company expansion plans</li>
+        <li>Share Market positioning intiatives etc</li>
+      </ul>
+      <span class="">We would love to support you with your ‘People hiring’ and let you spend your quality time for the above business criticalities.</span>
     </div>
   </div>
 </section>
-
-
 {{ end }}

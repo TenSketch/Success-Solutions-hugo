@@ -86,3 +86,8 @@
     font-size: 0.875em; // Slightly smaller icon size relative to text
   }
 }
+
+
+@mixin border-radius($radius: 10px) {
+  border-radius: $radius;
+}

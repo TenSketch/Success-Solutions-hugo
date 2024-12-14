@@ -81,9 +81,9 @@ img {
   height: auto; }
 
 a {
-  color: #00897B; }
+  color: #FFD54F; }
   a:hover {
-    color: #FFD54F; }
+    opacity: 0.8; }
 
 header, footer {
   background-color: #36464e;
@@ -320,55 +320,184 @@ header, footer {
   min-height: 50vh; }
   .intro .main-heading {
     color: #00897B;
-    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.4; }
   .intro .sub-heading {
     color: #36464e;
-    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.6;
     margin-top: 1rem; }
 
-.people-foremost {
+.quotes {
   background-color: #00897B;
   text-align: center; }
-  .people-foremost .heading {
+  .quotes .heading {
     color: #FAFAFA;
-    font-size: 2rem;
-    font-weight: bold; }
-  .people-foremost .quotes-grid {
+    font-weight: 600; }
+  .quotes .quotes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     align-items: center; }
-    .people-foremost .quotes-grid .quote-item {
+    .quotes .quotes-grid .quote-item {
       background: white;
+      border-radius: 10px;
       border: 1px solid #FAFAFA;
-      border-radius: 8px;
       padding: 1.5rem;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease; }
-      .people-foremost .quotes-grid .quote-item:hover {
+      transition: box-shadow 0.3s ease;
+      min-height: 45vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      @media (min-width: 768px) {
+        .quotes .quotes-grid .quote-item {
+          min-height: 65vh; } }
+      .quotes .quotes-grid .quote-item:hover {
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); }
-      .people-foremost .quotes-grid .quote-item .person-img {
+      .quotes .quotes-grid .quote-item .person-img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         margin-bottom: 1rem;
         object-fit: contain; }
-      .people-foremost .quotes-grid .quote-item blockquote {
-        font-size: 1.1rem;
+      .quotes .quotes-grid .quote-item blockquote {
+        font-size: 1.2rem;
+        font-style: italic;
         color: #36464e;
         line-height: 1.6; }
-        .people-foremost .quotes-grid .quote-item blockquote cite {
-          display: block;
-          margin-top: 1rem;
-          font-size: 0.9rem;
-          color: #757575; }
-          .people-foremost .quotes-grid .quote-item blockquote cite .year {
-            font-weight: 600;
-            color: #FFD54F; }
+      .quotes .quotes-grid .quote-item cite {
+        display: block;
+        font-size: 0/9rem;
+        color: #757575; }
+        .quotes .quotes-grid .quote-item cite .year {
+          color: #00897B; }
+
+.people-success {
+  background-color: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; }
+  .people-success .title {
+    color: #00897B;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: left; }
+  .people-success .image-wrapper .responsive-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px; }
+  .people-success .image-wrapper a {
+    color: #00897B; }
+  .people-success .description {
+    color: #757575;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    text-align: left; }
+  @media (min-width: 768px) {
+    .people-success {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas: "title image ." ". image desc";
+      align-items: center;
+      gap: 2rem; }
+      .people-success .title {
+        grid-area: title;
+        font-size: 2.5rem; }
+      .people-success .image-wrapper {
+        grid-area: image; }
+        .people-success .image-wrapper .responsive-img {
+          max-width: 400px; }
+      .people-success .description {
+        grid-area: desc;
+        font-size: 1.5rem; } }
+.challenges-section {
+  min-height: 100vh;
+  overflow-x: hidden; }
+  .challenges-section .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; }
+  .challenges-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(28, 42, 72, 0.8) 70%, rgba(0, 255, 198, 0.8) 100%);
+    z-index: 2; }
+  .challenges-section .content-wrapper {
+    max-width: 800px;
+    width: 80%;
+    z-index: 3; }
+    .challenges-section .content-wrapper .typing-text {
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: bold;
+      color: white;
+      z-index: 3; }
+      @media (min-width: 768px) {
+        .challenges-section .content-wrapper .typing-text {
+          font-size: 2.3rem; } }
+    .challenges-section .content-wrapper .sliding-items {
+      font-size: 1.1rem;
+      color: #f0c75e;
+      overflow: hidden;
+      z-index: 3; }
+      @media (min-width: 768px) {
+        .challenges-section .content-wrapper .sliding-items {
+          font-size: 2rem; } }
+      .challenges-section .content-wrapper .sliding-items span {
+        display: inline-block;
+        opacity: 0;
+        animation: slide-in-out 3s ease-in-out forwards; }
+
+@keyframes slide-in-out {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; }
+  10%, 80% {
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0; } }
+    .challenges-section .content-wrapper .final-paragraph {
+      font-size: 1.1rem;
+      text-align: left;
+      animation: slide-in-final 1s forwards ease-in-out;
+      color: white;
+      z-index: 3; }
+      .challenges-section .content-wrapper .final-paragraph ul {
+        list-style: none;
+        padding-left: 0; }
+        .challenges-section .content-wrapper .final-paragraph ul li {
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 10px; }
+          .challenges-section .content-wrapper .final-paragraph ul li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #f0c75e; }
+
+@keyframes slide-in-final {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
 
 header, footer {
   background-color: #36464e;
