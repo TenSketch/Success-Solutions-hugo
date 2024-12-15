@@ -1,5 +1,6 @@
 <footer id="contact" class="site-footer px-custom">
-    <div class="footer-top row ">
+    <div class="footer-top row">
+        <!-- About Us Section -->
         <div class="footer-column col-md-3">
             <h4>About Us</h4>
             <p>
@@ -7,28 +8,38 @@
                 your success by building great teams.
             </p>
         </div>
+
+        <!-- Quick Links Section -->
         <div class="footer-column col-md-3">
             <h4>Quick Links</h4>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/hiring-services">Hiring Services</a></li>
-                <li><a href="/about-us">About Us</a></li>
-                <li><a href="/contact-us">Contact</a></li>
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
             </ul>
         </div>
+
+        <!-- Contact Us Section -->
         <div class="footer-column col-md-3">
             <h4>Contact Us</h4>
             <ul class="contact-info">
-                <li><i class="fa me-2 fa-phone"></i>
+                <li>
+                    <i class="fa me-2 fa-phone"></i>
                     <a href="tel:+919962006364">+91 9962006364</a>
                 </li>
-                <li><i class="fa me-2 fa-envelope"></i>
+                <li>
+                    <i class="fa me-2 fa-envelope"></i>
                     <a href="mailto:link2rmd@gmail.com">link2rmd@gmail.com</a>
                 </li>
-                <li><i class="fa me-2 fa-map-marker-alt"></i><strong>Registered Office</strong><br>Visa Manor 281 KH
-                    Road,<br>Ayanavaram, Chennai 600023</li>
+                <li>
+                    <i class="fa me-2 fa-map-marker-alt"></i>
+                    <strong>Registered Office</strong><br>
+                    Visa Manor 281 KH Road,<br>Ayanavaram, Chennai 600023
+                </li>
             </ul>
         </div>
+
+        <!-- Follow Us Section -->
         <div class="footer-column col-md-3">
             <h4>Follow Us</h4>
             <ul class="social-links d-flex gap-3">
@@ -39,9 +50,13 @@
             </ul>
         </div>
     </div>
+
+    <!-- Footer Bottom -->
     <div class="footer-bottom">
-        <p>&copy; 2024 Success Solutions. All rights reserved. Sketched with <i class="fa fa-heart"
-                aria-hidden="true"></i> by <a href="https://www.tensketch.com/" title="TenSketch website">TenSketch</a>
+        <p>
+            &copy; {{ now.Format "2006" }} Success Solutions. All rights reserved. Sketched with 
+            <i class="fa fa-heart" aria-hidden="true"></i> by 
+            <a href="https://www.tensketch.com/" title="TenSketch website">TenSketch</a>
         </p>
     </div>
 </footer>

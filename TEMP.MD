@@ -52,3 +52,8 @@ Our core services
 Expatriate Hiring Methodologies
 Our Hiring SBU verticals
 Hiring associated allied services
+
+Our approach
+Our Core Belief
+Our Consulting Practice
+Our consistent Expertise
