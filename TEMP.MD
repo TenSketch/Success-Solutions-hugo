@@ -38,3 +38,17 @@ From receiving your specifications to the candidate's joining at an overseas loc
 - We work closely with your designated hiring managers, adhering to your company's hiring standards.  
 - We aim to build a long-term partnership as your dedicated recruiting partner in India.  
 - **No candidate fees:** All service charges are borne by the client.  
+
+
+
+Our Global Executive Search Solutions & Services
+
+End to End Expat placements
+Off shore Global resource management (RMS)
+Recruitment Process Outsourcing (RPO)
+Establish, audit and enhance successful hiring standards
+
+Our core services
+Expatriate Hiring Methodologies
+Our Hiring SBU verticals
+Hiring associated allied services
