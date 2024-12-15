@@ -9,14 +9,43 @@
 
 // 2nd section company intro
 .intro {
+  // background: rgba(163, 163, 163, 0.1) url(/images/one-stop-xpat-hiring.jpeg) no-repeat fixed center center/cover;
+  // background-blend-mode: color-dodge;
+  min-height: 100vh;
+  position: relative;
+  .rotating-blob{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+      .rotate {
+        width :100px;
+        height:100px;
+        animation-name: ani-rotate;
+        animation-duration: 30s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        // @media(min-width:768px){
+        //   width: 150px;
+        //   height:150px;
+        // }
+      }
+    
+      @keyframes ani-rotate {
+        0%{ transform: rotate(0); }
+        100%{ transform: rotate(360deg); }  
+      }
+}
   background-color: $background-color;
-  text-align: center;
+  // text-align: center;
   min-height: 50vh;
 
   .main-heading {
     color: $primary-color;
     // font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4;
   }
 
@@ -27,6 +56,36 @@
     line-height: 1.6;
     margin-top: 1rem;
   }
+  // .blob-bg{
+  //   background: url(/images/blob.svg) no-repeat center center/cover;
+  //   position: relative;
+  //   img{
+  //     position: absolute;
+  //     inset: 0;
+  //     object-fit: contain;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
+  .blob-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* Match image width */
+    max-height: 600px; /* Match image height */
+    // background-color: #f0f4f8; /* Desired background color */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  .blob-svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
 }
 
 // 3rd section quotes
@@ -37,7 +96,7 @@
   .heading {
     color: $background-color;
     // font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4;
   }
 
@@ -108,7 +167,7 @@
   .title {
     color: $primary-color;
     // font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: 600;
     // font-weight: 600;
     line-height: 1.4;
     text-align: left;
@@ -430,7 +489,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 
       .title {
         // font-size: 2.5rem;
-        font-weight: 700;
+        font-weight: 600;
         // margin-bottom: 1rem;
       }
 
@@ -488,7 +547,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 
   .title {
     // font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4;
     position: relative;
     z-index: 2;
@@ -537,8 +596,8 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
     }
 
     .service-title {
-      // font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1.2rem;
+      // font-weight: bold;
       color: $secondary-color;
       margin-bottom: 0.5rem;
     }
@@ -566,7 +625,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 
   .title {
     // font-size: 2.2rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.4;
     color: $background-color;
     // text-align: center;
@@ -614,7 +673,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
       }
 
       .service-title {
-        // font-size: 1.3rem;
+        font-size: 1.2rem;
         // font-weight: bold;
         // margin-top: 1rem;
         margin-block: 2rem;
@@ -645,7 +704,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
   color: white;
   .title{
     line-height: 1.4;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .card-container {
@@ -700,77 +759,37 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 }
 // sec 11 - usp
 .usp {  
-  background-color: $background-color;  
+  // background-color: $background-color;  
+  background: $background-color url(/images/vertical-wave-bg.png)no-repeat fixed center center/cover;
   color: $primary-color;  
-  padding: 4rem 2rem;  
-  position: relative;
   .title {  
-    font-weight: 700;  
+    font-weight: 600;  
     line-height: 1.4;  
     margin-bottom: 2rem;
-    // z-index: 1000;
-    // left: 50%;
-    // top: 20%;
-    // transform: translateX(-50%);
-    // background-color: #006359;
   }  
 
-  .card-image-container {  
-    position: relative; // For wave positioning  
-
-    .card-container {  
+  .card-container {  
+    .card {  
+      background: transparent;
+      border: none;
+      padding: 1rem 1.5rem;  
+      // text-align: center;  
+      transition: transform 0.3s, box-shadow 0.3s;  
       display: flex;  
-      align-items: center;  
-      margin-bottom: 3rem; // Space between sections  
-      // position: relative;  
-      gap: 2rem;
-      border-bottom: 2px solid $primary-color;
-      padding-bottom: 2rem;
-      @media(max-width:768px) {
-      flex-wrap: wrap;
-}
-      .card {  
-        background: rgba(255, 255, 255, 0.9);  
-        border-radius: 8px;  
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);  
-        padding: 2rem;  
-        text-align: center;  
-        transition: transform 0.3s, box-shadow 0.3s;  
+      // align-items: center; // Centering icon and text  
+      // margin-right: 2rem; // Gap between card and image  
+
+      .icon-title {  
         display: flex;  
-        align-items: center; // Centering icon and text  
-        // margin-right: 2rem; // Gap between card and image  
-
-        .icon-title {  
-          display: flex;  
-          align-items: center;  
-          gap: 1rem; // Space between icon and text  
-          i {
-            font-size: 2rem;
-            color: $primary-color;
-            }
-        }  
-      }  
-
-      .service-image {  
-        // max-width: 100%;
-        width: 80%;
-        margin-inline: auto;
-        object-fit: cover;
-        border-radius: 8px; // Rounding corners for images  
-        @media(min-width: 768px) {  
-          width: 30%;
+        align-items: center;  
+        gap: 1rem; // Space between icon and text  
+        i {
+          font-size: 2rem;
+          color: $accent-color;
           }
       }  
-
-      // &.reverse {  
-      //   flex-direction: row-reverse; // Reverse order for alternating layout  
-      //   .card {  
-      //     margin-left: 2rem; // Adjust margin for reverse  
-      //     margin-right: 0; // Remove margin right  
-      //   }  
-      // }  
     }  
-    // Wave shape effect using pseudo-elements  
+
   }  
   &::before {  
     display: none;

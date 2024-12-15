@@ -8,22 +8,59 @@
       <h2 class="desc fst-italic mb-0">We craft solutions for the success of your people and organization.</h2>
       <a href="#" class="btn btn-light mt-3">Learn More</a>
     </div>
-    <div class="col-md-4 mt-4 mt-md-0">
-      <img src="/images/crafting-50.png " alt="crafting img">
-      <a href="https://www.freepik.com/free-photo/professional-artisan-job-workshop_11760947.htm#fromView=search&page=1&position=2&uuid=2eaaa70e-24c8-4d4e-a22e-3660ceb3440e">Image by freepik</a>
+    <div class="col-md-5 mt-4 mt-md-0">
+      <div class="img-container neumorphic-container">
+        <img src="/images/thumbs-up.jpg" alt="thumbs up" class="neumorphic-img">
+        <a href="https://www.freepik.com/free-photo/happy-motivated-colleagues-office_5542951.htm#fromView=search&page=1&position=36&uuid=034eee51-0032-4d86-a425-7569de45f672"  class="attribution">Image by azerbaijan_stockers on Freepik</a>
+      </div>
     </div>
   </div>
 </section>
 <!-- 2nd sec comapny intro -->
 <section class="intro py-custom px-custom d-flex align-items-center">
-    <div class="row">
-      <div class="col-md-10 mx-auto">
+<div class="rotating-blob ">
+  <svg xmlns="http://www.w3.org/2000/svg" 
+    viewBox="-25 -25 250 250" class="rotate">
+    <defs>
+     <linearGradient id="lgrad" x1="0%" y1="0%" x2="100%" y2="100%" >
+       <stop offset="0%" style="stop-color:#00897b;stop-opacity:1.00" />
+       <stop offset="100%" style="stop-color:#ffd54f;stop-opacity:1.00" />
+     </linearGradient>
+    </defs>
+    <path d="M148.4360131232276 12.513128797936062 C115.81686874161059 -8.45135211217082 9.43724015652792 31.85360785222325 4.507829285405947 70.31422340219433 C-1.4943196560330243 117.14463558445314 114.69048635147577 204.84454817763122 156.34379183298498 182.6158406232198 C193.90187586447095 162.5725893952824 184.24881272313124 35.53018727028476 148.4360131232276 12.513128797936062Z" stroke="none" fill="url(#lgrad)"  />
+  </svg>
+</div>
+    <div class="row justify-content-between align-items-center">
+      <div class="col-md-7">
         <h1 class="display-5 text-primary main-heading mb-5">
           Success Solutions is a synonymous name to expatriate hiring for its global clients
         </h1>
         <h2 class="text-accent sub-heading fst-italic">
           Welcome to one-stop expatriate hiring consulting solution provider
         </h2>
+      </div>
+      <div class="col-md-5 p-0">
+        <div class="blob-container">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" class="blob-svg">
+            <defs>
+              <!-- Background Color -->
+              <rect width="100%" height="100%" fill="#00897B" />
+        
+              <!-- Mask Definition -->
+              <mask id="blobMask">
+                <path d="M300 100 C150 -50 0 200 50 350 C100 500 400 600 500 450 C600 300 450 250 300 100 Z" fill="white" />
+              </mask>
+            </defs>
+            <!-- Image Clipped with Blob Mask -->
+            <image href="/images/one-stop-xpat-hiring.png" width="600" height="600" mask="url(#blobMask)" />
+          </svg>
+        </div>
+        
+        
+        <!-- <div class="blob-bg h-100">
+
+          <img src="/images/one-stop-xpat-hiring.png" alt="one-stop-xpat-hiring">
+        </div> -->
       </div>
     </div>
 </section>
@@ -197,7 +234,10 @@
   <div class="services-cards row justify-content-around">
     <!-- Card 1 -->
     <div class="col-md-3 service-card">
-      <img src="/images/expatriate-hiring.png" alt="Expatriate Hiring" class="service-img">
+      <div class="img-container">
+        <img src="/images/expatriate-hiring.jpg" alt="Expatriate Hiring" class="service-img">
+        <a href="https://www.freepik.com/free-photo/front-view-beautiful-young-businesswoman-black-jacket-blue-shirt-observing-little-globe-smiling-front-table-business-job-office_9159560.htm#fromView=search&page=1&position=42&uuid=235fc465-b271-46a6-bd06-2c63cab3c904" class="attribution">Image by KamranAydinov on Freepik</a>
+      </div>
       <h3 class="service-title">Expatriate Hiring Methodologies</h3>
       <!-- add know more button -->
        <a href="#" class="btn btn-gold">Know More</a>
@@ -205,7 +245,10 @@
 
     <!-- Card 2 -->
     <div class="col-md-3 service-card">
-      <img src="/images/hiring-verticals.png" alt="Hiring SBU Verticals" class="service-img">
+      <div class="img-container">
+        <img src="/images/hiring-sbu-verticals.jpg" alt="Hiring SBU Verticals" class="service-img">
+        <a href="https://www.freepik.com/free-photo/executive-manager-woman-explaining-management-statistics-working-company-strategy-overtime-office-meeting-room_15854117.htm#fromView=search&page=1&position=9&uuid=354bdb3f-a8f2-46da-a59c-b7646ba09d1f" class="attribution">Image by DC Studio on Freepik</a>
+      </div>
       <h3 class="service-title">Our Hiring SBU Verticals</h3>
        <a href="#" class="btn btn-gold">Know More</a>
     </div>
@@ -247,58 +290,42 @@
 <!-- 11th sec usp -->
  <!-- why choose us -->
  <section class="usp py-custom px-custom">  
-  <h1 class="title display-5 text-center mb-4">What makes our services unique..</h1>  
-  
-  <div class="card-image-container">  
-    <div class="card-container">  
-      <div class="card order-1 order-md-1">  
-        <div class="icon-title">  
-          <i class="fa fa-handshake"></i>  
-          <h3>Ethical hiring practice</h3>  
-        </div>  
-      </div>  
-      <img src="/images/ethical-hiring.png" alt="ethical-hiring" class="service-image order-2 order-md-2" />  
-    </div>  
+  <h1 class="title display-5 mb-4">What makes our services unique..</h1>  
+  <div class="row">
+    
+    <div class="card-container col-md-6">
+      <div class="card">
+        <div class="icon-title">
+          <i class="fa fa-handshake"></i>
+          <h5>Ethical hiring practice</h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon-title">
+          <i class="fa fa-user-secret"></i>
+          <h5>Protecting clients' business confidentiality.</h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon-title">
+          <i class="fa fa-balance-scale"></i>
+          <h5>Equal Opportunity employment practices</h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon-title">
+          <i class="fa fa-map-marked-alt"></i>
+          <h5>Geography-specific hiring legal compliances</h5>
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon-title">
+          <i class="fa fa-check"></i>
+          <h5>Adhering to and assuring hiring quality</h5>
+        </div>
+      </div>
+  </div>
 
-    <div class="card-container">  
-      <div class="card order-1">  
-        <div class="icon-title">  
-          <i class="fa fa-user-secret"></i>  
-          <h3>Protecting clients' business confidentiality.</h3>  
-        </div>  
-      </div>  
-      <img src="/images/confidentiality.png" alt="confidentiality" class="service-image order-2" />  
-    </div>  
-
-    <div class="card-container">  
-      <div class="card order-1 order-md-1">  
-        <div class="icon-title">  
-          <i class="fa fa-balance-scale"></i>  
-          <h3>Equal Opportunity employment practices</h3>  
-        </div>  
-      </div>  
-      <img src="/images/Equal-Opportunity.png" alt="Equal-Opportunity" class="service-image order-2 order-md-2" />  
-    </div>  
-
-    <div class="card-container">  
-      <div class="card order-1">  
-        <div class="icon-title">  
-          <i class="fa fa-map-marked-alt"></i>  
-          <h3>Geography-specific hiring legal compliances</h3>  
-        </div>  
-      </div>  
-      <img src="/images/Geographic.png" alt="Geographic" class="service-image order-2" />  
-    </div>  
-
-    <div class="card-container">  
-      <div class="card order-1 order-md-1">  
-        <div class="icon-title">  
-          <i class="fa fa-check"></i>  
-          <h3>Adhering to and assuring hiring quality</h3>  
-        </div>  
-      </div>  
-      <img src="/images/hiring-quality.png" alt="hiring-quality" class="service-image order-2 order-md-2" />  
-    </div>  
 </div>  
 </section>
 

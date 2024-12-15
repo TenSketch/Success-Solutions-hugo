@@ -50,5 +50,12 @@
       <guid>http://localhost:1313/our-approach/belief/</guid>
       <description></description>
     </item>
+    <item>
+      <title>About Us</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 15 Dec 2024 15:59:23 +0530</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

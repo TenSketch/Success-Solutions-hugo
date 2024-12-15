@@ -1,19 +1,62 @@
 {{ define "main" }}
 <main>
-  <section class="page-title d-flex align-items-center">
-    <div class="container text-center py-5">
+  <!-- Hero Section -->
+  <section class="page-hero about-hero" style="background-image: url('{{ .Params.heroImage }}');">
+    <div class="text-center">
       <h1 class="display-4">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+        <p>{{ . }}</p>
+      {{ end }}
     </div>
   </section>
-  <section class="py-5 container">
-    <!-- <h1>{{ .Title }}</h1> -->
-    <div class="row justify-content-around align-items-center">
-      <div class="col-md-3 order-md-2">
-        <img src="{{ .Params.Image }}" alt="{{ .Name }}
-        " class="img-fluid">
+  
+
+  <!-- About Section -->
+  <section class="py-5 px-custom">
+      <div class="row align-items-center">
+        <div class="col-md-7 mb-4 mb-md-0">
+          <h2 class="fw-bold mb-3">{{ .Params.heading | default "Who We Are" }}</h2>
+          <div class="content">
+            {{ .Content }}
+          </div>
+          <!-- Optional List -->
+          {{ with .Params.features }}
+          <ul class="list-unstyled mt-4">
+            {{ range . }}
+            <li class="mb-2">
+              <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
+            </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+        </div>
+        <div class="col-md-4">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid rounded shadow-md">
+        </div>
       </div>
-      <div class="col-md-6 mt-4 mt-md-0">{{ .Content }}</div>
+  </section>
+
+  <!-- Team Section -->
+  {{ if .Params.showTeam }}
+  <section class="py-5 bg-light d-none">
+    <div class=" text-center">
+      <h2 class="fw-bold mb-4">{{ .Params.teamHeading | default "Meet Our Team" }}</h2>
+      <div class="row">
+        {{ range .Params.team }}
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 shadow-sm">
+            <img src="{{ .image }}" alt="{{ .name }}" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">{{ .name }}</h5>
+              <p class="card-text text-muted">{{ .position }}</p>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
     </div>
   </section>
+  {{ end }}
+
 </main>
 {{ end }}

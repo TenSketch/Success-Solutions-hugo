@@ -1,0 +1,52 @@
+// Common styles for the hero section
+.page-hero {
+    background: no-repeat center center;
+    background-size: cover;
+    min-height: 50vh; // Ensure the section is at least 50% of the viewport height
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff; // Default text color for contrast
+  
+    // Background color blending
+    background-color: $primary-color; // Dark color to blend with the image
+    background-blend-mode: darken;
+  
+    // Typography
+    h1 {
+    //   font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+  
+  // Specific variations for pages
+  .about-hero {
+    @extend .page-hero;
+    // background-color: rgba(33, 37, 41, 0.6); // Darker blend for About pages
+  }
+  
+  .contact-hero {
+    @extend .page-hero;
+    // background-color: rgba(52, 152, 219, 0.5); // Light blue tint for Contact pages
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    .page-hero {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+  
