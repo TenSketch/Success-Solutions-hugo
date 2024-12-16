@@ -25,48 +25,48 @@ og_image = '/ogimage.jpg'
     weight = 2
 
   [[menu.main]]
-    name = "Our Approach"
+    name = "Approach"
     url = "/our-approach/"
     weight = 3
 
     [[menu.main]]
       name = "Belief"
-      parent = "Our Approach"
+      parent = "Approach"
       url = "/our-approach/belief/"
       weight = 1
 
     [[menu.main]]
       name = "Consulting Practice"
-      parent = "Our Approach"
+      parent = "Approach"
       url = "/our-approach/consulting-practice/"
       weight = 2
 
     [[menu.main]]
       name = "Consistent Expertise"
-      parent = "Our Approach"
+      parent = "Approach"
       url = "/our-approach/consistent-expertise/"
       weight = 3
 
   [[menu.main]]
-    name = "Our Core Services"
+    name = "Core Services"
     url = "/core-services/"
     weight = 4
 
     [[menu.main]]
       name = "Expat Hiring Methodologies"
-      parent = "Our Core Services"
+      parent = "Core Services"
       url = "/core-services/expat-hiring-methodologies/"
       weight = 1
 
     [[menu.main]]
       name = "Hiring SBU's Vertical"
-      parent = "Our Core Services"
+      parent = "Core Services"
       url = "/core-services/hiring-sbus-vertical/"
       weight = 2
 
     [[menu.main]]
       name = "Allied Services"
-      parent = "Our Core Services"
+      parent = "Core Services"
       url = "/core-services/allied-services/"
       weight = 3
 

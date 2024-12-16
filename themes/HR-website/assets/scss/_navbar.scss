@@ -8,17 +8,17 @@
   background-color: transparent;
   height: $navbar-height;
   .navbar-brand {
-    color: $background-color!important;
+    color: $white!important;
     font-weight: bold;
     transition: color 0.4s ease;
   }
 
   .navbar-collapse {
     @media(max-width:768px) {
-      background: rgba( 55, 71, 79, 0.25 );
+      background: rgba( 54, 70, 78, 0.5 );
       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-      backdrop-filter: blur( 4px );
-      -webkit-backdrop-filter: blur( 4px );
+      backdrop-filter: blur( 1.5rem );
+      -webkit-backdrop-filter: blur( 1.5rem );
       position: absolute;
       top: 0;
       right: 0;
@@ -52,7 +52,7 @@
       bottom: 0;
       width: 0;
       height: 3px;
-      background-color: $background-color;
+      background-color: $white;
       transition: width 500ms ease;
     }
 
@@ -62,16 +62,19 @@
   }
 
   .nav-link {
+    color: $white !important;
+    // font-weight: 600;
     // font-size: 1.2rem;
-    color: $background-color!important;
     transition: color 500ms ease, transform 0.3s ease;
     position: relative;
-
+    
     &:hover {
       color: $accent-color;
     }
-
+    
     @media(max-width:768px) {
+      font-size: 1.3rem;
+      font-weight: 600;
       &:nth-child(n) {
         transform: translateY(-10px);
         transition: transform 0.3s ease;
@@ -90,9 +93,9 @@
       position: absolute;
       right: 0;
       top: 0;
-      width: 35px;
-      height: 1.5px;
-      background-color: $background-color;
+      width: 45px;
+      height: 2px;
+      background-color: $white;
       transition: transform 0.3s ease, top 0.3s ease, width 0.3s ease;
 
       &:nth-child(1) {
@@ -101,8 +104,8 @@
 
       &:nth-child(2) {
         transform: rotate(0);
-        width: 25px;
-        top: 8px;
+        width: 30px;
+        top: 10px;
       }
 
       &:nth-child(3) {
@@ -112,13 +115,13 @@
       &.open {
         &:nth-child(1) {
           transform: rotate(45deg);
-          width: 25px;
+          width: 45px;
           top: 8px;
         }
 
         &:nth-child(2) {
           transform: rotate(-45deg);
-          width: 25px;
+          width: 45px;
         }
 
         &:nth-child(3) {
@@ -138,12 +141,12 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     .navbar-toggler .hamburger-icon {
-      background-color: $background-color !important;
+      background-color: $white !important;
     }
 
     .navbar-brand,
     .nav-link {
-      color: $background-color;
+      color: $white;
     }
 
     .nav-link {
@@ -151,5 +154,10 @@
         color: $primary-color;
       }
     }
+  }
+}
+.dropdown-item{
+  @media(max-width:768px){
+    font-size: 1.1rem;
   }
 }

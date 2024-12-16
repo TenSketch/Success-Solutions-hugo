@@ -1,9 +1,16 @@
 @import 'variables';
 
+@mixin border-radius($radius: 10px) {
+  border-radius: $radius;
+}
+
 .text-gold {
   color: $accent-color;
 }
 
+.py-6{
+  padding-block: 4rem;
+}
 .py-custom {
   padding-block: 7rem;
 }
@@ -29,7 +36,7 @@
   font-weight: bold;
   // text-align: center;
   text-decoration: none;
-  border-radius: 5px;
+  @include border-radius(5px); // Uses default 10px
   transition: all 0.3s ease;
   border: none;
 
@@ -94,30 +101,31 @@
 }
 
 
-@mixin border-radius($radius: 10px) {
-  border-radius: $radius;
-}
-
 .img-container {
   position: relative;
 
   .attribution {
     position: absolute;
-    left: 5px;
-    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
     color: $text-muted;
     font-size: 0.7rem;
     text-decoration: none;
   }
 }
-
+.attribution {
+  color: $text-muted;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
 .neumorphic-container {
   display: flex;
   justify-content: center;
   align-items: center;
   // width:  300px; /* Adjust size as needed */  
   // height: 300px; /* Adjust size as needed */  
-  border-radius: 20px;
+  @include border-radius; // Uses default 10px
   /* Rounded corners */
   // box-shadow: 10px 10px 45px #ffffff62,
   //          -10px -10px 45px #b9b9b9;
@@ -134,7 +142,7 @@
   height: 100%;
   object-fit: cover;
   /* Fit image nicely */
-  border-radius: 20px;
+  @include border-radius; // Uses default 10px
   /* Match border radius */
   transition: transform 0.3s;
   /* Smooth hover effect */
