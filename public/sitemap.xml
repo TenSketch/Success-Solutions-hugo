@@ -11,13 +11,13 @@
     <loc>http://localhost:1313/downloads/</loc>
     <lastmod>2024-12-15T15:59:27+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/core-services/allied-services/</loc>
-    <lastmod>2024-12-15T15:59:26+05:30</lastmod>
-  </url><url>
     <loc>http://localhost:1313/core-services/expat-hiring-methodologies/</loc>
     <lastmod>2024-12-15T15:59:26+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/core-services/hiring-sbus-vertical/</loc>
+    <loc>http://localhost:1313/core-services/allied-services/</loc>
+    <lastmod>2024-12-15T15:59:26+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/core-services/hiring-sbu-verticals/</loc>
     <lastmod>2024-12-15T15:59:26+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/our-approach/consistent-expertise/</loc>
@@ -29,10 +29,10 @@
     <loc>http://localhost:1313/core-services/</loc>
     <lastmod>2024-12-15T15:59:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/our-approach/belief/</loc>
+    <loc>http://localhost:1313/our-approach/</loc>
     <lastmod>2024-12-15T15:59:24+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/our-approach/</loc>
+    <loc>http://localhost:1313/our-approach/core-belief/</loc>
     <lastmod>2024-12-15T15:59:24+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>

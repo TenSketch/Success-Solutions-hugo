@@ -50,7 +50,7 @@
       "Direct business-related bottlenecks",
       "New Products and competition related challenges",
       "Exploring company expansion plans",
-      "Share Market positioning initiatives.."
+      "Share Market positioning initiatives etc"
     ];
     let slideIndex = 0;
     function typeText() {
