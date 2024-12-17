@@ -2,6 +2,7 @@
 title: "About Us"
 subtitle: "We specialize in Global and Expatriate HR Solutions."
 date: 2024-12-15T15:59:23+05:30
+layout: "about"
 draft: "false"
 heroImage: "/images/expatriates.webp"
 image: "/images/expatriate-hiring.png"

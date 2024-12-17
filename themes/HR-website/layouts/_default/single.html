@@ -1,62 +1,96 @@
+
+
 {{ define "main" }}
-<main>
-  <!-- Hero Section -->
-  <section class="page-hero about-hero" style="background-image: url('{{ .Params.heroImage }}');">
-    <div class="text-center">
-      <h1 class="display-4">{{ .Title }}</h1>
-      {{ with .Params.subtitle }}
-        <p>{{ . }}</p>
-      {{ end }}
-    </div>
-  </section>
-  
 
-  <!-- About Section -->
-  <section class="py-5 px-custom">
-      <div class="row align-items-center">
-        <div class="col-md-7 mb-4 mb-md-0">
-          <h2 class="fw-bold mb-3">{{ .Params.heading }}</h2>
-          <div class="content">
-            {{ .Content }}
-          </div>
-          <!-- Optional List -->
-          {{ with .Params.features }}
-          <ul class="list-unstyled mt-4">
-            {{ range . }}
-            <li class="mb-2">
-              <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
-            </li>
-            {{ end }}
-          </ul>
-          {{ end }}
-        </div>
-        <div class="col-md-4">
-          <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid rounded shadow-md">
-        </div>
-      </div>
-  </section>
 
-  <!-- Team Section -->
-  {{ if .Params.showTeam }}
-  <section class="py-5 bg-light d-none">
-    <div class=" text-center">
-      <h2 class="fw-bold mb-4">{{ .Params.teamHeading | default "Meet Our Team" }}</h2>
-      <div class="row">
-        {{ range .Params.team }}
-        <div class="col-md-4 mb-4">
-          <div class="card border-0 shadow-sm">
-            <img src="{{ .image }}" alt="{{ .name }}" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title fw-bold">{{ .name }}</h5>
-              <p class="card-text text-muted">{{ .position }}</p>
-            </div>
-          </div>
-        </div>
+    <!-- Hero Section default -->
+    <section class="page-hero about-hero" style="background-image: url('{{ .Params.heroImage }}');">
+      <div class="text-center">
+        <h1 class="display-4">{{ .Title }}</h1>
+        {{ with .Params.subtitle }}
+          <p>{{ . }}</p>
         {{ end }}
       </div>
+    </section>
+    
+  
+    <!-- default Section for single pg -->
+    <section class="py-5 px-custom">
+        <div class="row align-items-center">
+          <div class="col-md-7 mb-4 mb-md-0">
+            <h2 class="fw-bold mb-3">{{ .Params.heading }}</h2>
+            <div class="content">
+              {{ .Content }}
+            </div>
+            <!-- Optional List -->
+            {{ with .Params.features }}
+            <ul class="list-unstyled mt-4">
+              {{ range . }}
+              <li class="mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
+          </div>
+          <div class="col-md-4">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid rounded shadow-md">
+          </div>
+        </div>
+    </section>
+  
+    
+{{ if eq .Params.layout "contact" }}
+<section class="contact-page">
+
+  <div class="contact-section px-custom py-custom text-white row">
+    <h1>Have a hiring requirement? Let's connect!</h1>
+    <div class="col-md-8 mx-auto">
+      <div class="contact-options">
+        <div>
+          <p>Need more info?</p>
+          <a href="mailto:info@successsolutions.in">info@successsolutions.in</a>
+        </div>
+        <div>
+          <p>Prefer to reach out to our mentor directly?</p>
+          <a href="mailto:link2rmd@gmail.com">link2rmd@gmail.com</a>
+        </div>
+        <div>
+          <p>Would you like to talk to us?</p>
+          <a href="tel:+919962006364">+91 9962006364</a>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control border-bottom-only" id="name" name="name" placeholder="Name"
+            required>
+          <label for="name">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control border-bottom-only" id="company" name="company"
+            placeholder="Company">
+          <label for="company">Company</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control border-bottom-only" id="email" name="email" placeholder="Email"
+            required>
+          <label for="email">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control border-bottom-only" id="phone" name="phone" placeholder="Phone">
+          <label for="phone">Phone</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Send</button>
+      </form>
+
+      <!-- <div class="map-image">
+        <img src="/images/logo/Success-Solutions-logo-4.jpeg" alt="Success Solutions Logo" />
+      </div> -->
     </div>
-  </section>
+  </div>
+
+</section>
+  {{ end }}
   {{ end }}
 
-</main>
-{{ end }}
+

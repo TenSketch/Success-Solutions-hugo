@@ -32,7 +32,7 @@ og_image = '/ogimage.jpg'
     [[menu.main]]
       name = "Belief"
       parent = "Approach"
-      url = "/our-approach/belief/"
+      url = "/our-approach/core-belief/"
       weight = 1
 
     [[menu.main]]
@@ -61,7 +61,7 @@ og_image = '/ogimage.jpg'
     [[menu.main]]
       name = "Hiring SBU's Vertical"
       parent = "Core Services"
-      url = "/core-services/hiring-sbus-vertical/"
+      url = "/core-services/hiring-sbu-verticals/"
       weight = 2
 
     [[menu.main]]
