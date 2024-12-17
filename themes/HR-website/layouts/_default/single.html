@@ -1,45 +1,44 @@
-
-
 {{ define "main" }}
 
 
-    <!-- Hero Section default -->
-    <section class="page-hero about-hero" style="background-image: url('{{ .Params.heroImage }}');">
-      <div class="text-center">
-        <h1 class="display-4">{{ .Title }}</h1>
-        {{ with .Params.subtitle }}
-          <p>{{ . }}</p>
-        {{ end }}
+<!-- Hero Section default -->
+<section class="page-hero about-hero" style="background-image: url('{{ .Params.heroImage }}');">
+  <div class="text-center">
+    <h1 class="display-4">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+
+{{ if eq .Params.layout "common" }}
+
+<!-- default Section for single pg -->
+<section class="py-5 px-custom">
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <h2 class="fw-bold mb-3">{{ .Params.heading }}</h2>
+      <div class="content">
+        {{ .Content }}
       </div>
-    </section>
-    
-  
-    <!-- default Section for single pg -->
-    <section class="py-5 px-custom">
-        <div class="row align-items-center">
-          <div class="col-md-7 mb-4 mb-md-0">
-            <h2 class="fw-bold mb-3">{{ .Params.heading }}</h2>
-            <div class="content">
-              {{ .Content }}
-            </div>
-            <!-- Optional List -->
-            {{ with .Params.features }}
-            <ul class="list-unstyled mt-4">
-              {{ range . }}
-              <li class="mb-2">
-                <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
-              </li>
-              {{ end }}
-            </ul>
-            {{ end }}
-          </div>
-          <div class="col-md-4">
-            <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid rounded shadow-md">
-          </div>
-        </div>
-    </section>
-  
-    
+      <!-- Optional List -->
+      {{ with .Params.features }}
+      <ul class="list-unstyled mt-4">
+        {{ range . }}
+        <li class="mb-2">
+          <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+    <div class="col-md-6">
+      <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid rounded shadow-md">
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{ if eq .Params.layout "contact" }}
 <section class="contact-page">
 
@@ -62,13 +61,11 @@
       </div>
       <form class="contact-form">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control border-bottom-only" id="name" name="name" placeholder="Name"
-            required>
+          <input type="text" class="form-control border-bottom-only" id="name" name="name" placeholder="Name" required>
           <label for="name">Name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control border-bottom-only" id="company" name="company"
-            placeholder="Company">
+          <input type="text" class="form-control border-bottom-only" id="company" name="company" placeholder="Company">
           <label for="company">Company</label>
         </div>
         <div class="form-floating mb-3">
@@ -90,7 +87,35 @@
   </div>
 
 </section>
-  {{ end }}
-  {{ end }}
 
+{{ end }}
 
+{{ if eq .Params.layout "download" }}
+<section class="downloads-page px-custom py-5">
+  <div class="container">
+    <!-- <h1 class="text-center fw-bold mb-5">{{ .Title }}</h1> -->
+
+    {{ if eq .Params.layout "download" }}
+      <div class="row">
+        {{ $files := readDir "static/pdfs" }} <!-- Adjust path as needed -->
+        {{ range $files }}
+          {{ if eq (path.Ext .Name) ".pdf" }} <!-- Check for .pdf files -->
+            <div class="col-md-4 mb-4">
+              <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
+                  <h5 class="card-title">{{ replace .Name "-" " " | title }}</h5>
+                  <a href="/pdfs/{{ .Name }}" class="btn btn-primary mt-2" target="_blank">Download</a>
+                </div>
+              </div>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ else }}
+      <p>No downloads available at the moment.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}

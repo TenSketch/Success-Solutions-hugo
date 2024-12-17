@@ -30,7 +30,7 @@ og_image = '/ogimage.jpg'
     weight = 3
 
     [[menu.main]]
-      name = "Belief"
+      name = "Core Belief"
       parent = "Approach"
       url = "/our-approach/core-belief/"
       weight = 1

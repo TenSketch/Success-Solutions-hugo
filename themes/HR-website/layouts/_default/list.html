@@ -1,8 +1,20 @@
-<!-- {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
-{{ end }} -->
+{{ define "main" }}
+<section class="page-hero about-hero" style="background-image: url('{{ .Params.heroImage }}');">
+  <div class="text-center">
+    <h1 class="display-4">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+  <main class="listpage py-5 px-custom">
+    <!-- <h1>{{ .Title }}</h1> -->
+    <div class="content row">
+      {{ .Content }}
+      {{ range .Pages }}
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ .Summary }}
+      {{ end }}
+    </div>
+  </ma>
+{{ end }}

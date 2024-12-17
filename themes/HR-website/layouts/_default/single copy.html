@@ -1,4 +1,20 @@
+
+
 {{ define "main" }}
+{{ if eq .Layout "contact" }}
+  {{ partial "contact/single.html" . }}
+{{ else }}
+  {{ define "main" }}
+  <main>
+    <!-- Default single page content here -->
+    <section>
+      <h1>{{ .Title }}</h1>
+      <div>{{ .Content }}</div>
+    </section>
+  </main>
+  {{ end }}
+{{ end }}
+
 <main>
   <!-- Hero Section -->
   <section class="page-hero about-hero" style="background-image: url('{{ .Params.heroImage }}');">
