@@ -2,20 +2,41 @@
 title: 'Hiring SBU Verticals'
 date: 2024-12-15T15:59:26+05:30
 image: "/images/sbu-hiring.jpg"
-attribution: "https://www.freepik.com/free-photo/plan-planning-strategy-bysiness-ideas-concept_18044458.htm#fromView=search&page=1&position=22&uuid=42a2a458-e967-4e01-bcaa-216ce290e4e6- Image by rawpixel.com on Freepik"
+heroImage: "/images/sbu-hiring.jpg"
+layout: "singlelist"
+attribution: "Image by rawpixel.com on Freepik"
 draft: false
+sections:
+  - title: "End-to-End Expatriate Hiring Solutions"
+    image: "/images/e2e-Xpat-hiring.jpg"
+    # attribution: "<a href="https://www.freepik.com/free-photo/businessman-touching-virtual-screen_978469.htm#fromView=search&page=1&position=1&uuid=7b691766-37dc-42f3-8f84-d8eb691dc87e">Image by jannoon028 on Freepik</a>"
+    brochure: "/pdfs/e2e-xpat-hiring-solutions3.pdf" # Include this line if a brochure is available.
+    description: >
+      Comprehensive management of the expatriate hiring process, from initial specifications to onboarding, including:
+      - Screening and interviews
+      - Offer acceptance and reference checks
+      - Visa coordination and mentoring for first-time overseas travelers.
+  - title: "Resume Referral Service"
+    image: "/images/resume-referral.jpg"
+    # <a href="https://www.freepik.com/free-photo/company-representatives-reading-applicant-resume-hiring_3952576.htm#fromView=search&page=1&position=0&uuid=bdb24d6f-82f8-4a0e-b279-1dc64e8c0d4f">Image by yanalya on Freepik</a>
+    brochure: "/pdfs/Resume-Referral-Service.pdf" # Include this line if a brochure is available.
+    description: >
+      Streamline the recruitment process with quick access to qualified candidates for expatriate roles. This service supports HR teams in managing overseas hiring challenges efficiently.
+    features:
+      - Efficient connection with suitable profiles
+      - Enhanced hiring process efficiency
+  - title: "Dedicated Resources Management Service"
+    image: "/images/RMS-3.jpg"
+    description: >
+      Specialized teams to manage human resource needs effectively. Benefits include:
+      - Streamlined recruitment processes
+      - Improved talent acquisition
+      - Access to skilled professionals tailored for expatriate hiring.
+  - title: "Hiring Associated Allied Services"
+    image: "/images/allied-1.jpg"
+    description: >
+      A range of support solutions designed to enhance recruitment and ensure successful candidate integration, including:
+      - Onboarding and pre-joining induction
+      - Competency assessments and psychometric profiling
+      - Hiring audits, benchmarking, and manager training.
 ---
-
-1. End-to-end Expatriate Hiring Solutions:
-    After receiving spec, till the candidate joins your overseas location we take care of all coordination like your internal HR department team. It includes preliminary screening, interviewing, supporting in total selection process, successful offer acceptance, detailed reference checks, medical fitness, verifying & validating all candidate credentials, visa coordination, ticketing coordination, mentoring first time overseas travelers on exhaustive dos and don'ts checklist depending upon the country/client factors etc.
-2. Resume Referral Service:
-    The Resume Referral Service assists companies in swiftly accessing suitable candidates for expatriate hiring by providing a streamlined way to reach qualified profiles that meet specific hiring criteria. It serves as a valuable support mechanism, especially for HR teams managing overseas recruitment challenges. This service enhances the efficiency of the hiring process by connecting organizations with the right talent quickly.
-
-3. Dedicated Resources Management Service:
-    Dedicated Resource Management Service provides companies with specialized teams focused on efficiently managing their human resources needs. This service ensures that businesses have access to skilled professionals who are tailored to meet the specific requirements of expatriate hiring and other HR functions. By focusing on dedicated resource allocation, this service helps organizations streamline their recruitment processes, improve talent acquisition, and enhance overall workforce effectiveness.
-
-4. Hiring associated allied services:
-    Hiring Associated Allied Services encompass a range of support solutions designed to enhance the recruitment process and ensure successful candidate integration. These services include onboarding and pre-joining induction, competency assessments, career reference checks, and psychometric profiling, which help organizations make informed hiring decisions. Additionally, they provide hiring audits and benchmarking, as well as training for hiring managers, ensuring a comprehensive and effective hiring strategy tailored to the company's needs.
-
-
-<!--<a href="https://www.freepik.com/free-photo/chess-game-business-strategy-concept_2975992.htm#fromView=search&page=1&position=8&uuid=42a2a458-e967-4e01-bcaa-216ce290e4e6">Image by rawpixel.com on Freepik</a>  -->

@@ -1,0 +1,171 @@
+$primary-color: #00897B;
+$accent-color: #FFD54F;
+$text-color: #333;
+$bg-light: #f9f9f9;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: $text-color;
+}
+
+// Hero Section
+.page-hero {
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 8px;
+
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+// Split Section
+.split-section {
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: $bg-light;
+
+  .split-text {
+    flex: 1;
+
+    h2 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+
+        i {
+          color: $accent-color;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .split-image {
+    flex: 1;
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+}
+
+// Card Section
+.card-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+
+  .service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h3 {
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// Grid Section
+.grid-section {
+  text-align: center;
+  padding: 4rem 2rem;
+
+  h2 {
+    margin-bottom: 2rem;
+    color: $primary-color;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    .grid-box {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+
+      i {
+        font-size: 2rem;
+        color: $accent-color;
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        color: $primary-color;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+// CTA Section
+.cta-section {
+  background-color: $primary-color;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+
+  .cta-content {
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .btn-primary {
+      background-color: $accent-color;
+      color: #333;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+
+      &:hover {
+        background-color: darken($accent-color, 10%);
+      }
+    }
+  }
+}

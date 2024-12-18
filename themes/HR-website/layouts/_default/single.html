@@ -39,6 +39,56 @@
 </section>
 {{ end }}
 
+{{ if eq .Params.layout "singlelist" }}
+<main>
+  <!-- Hero Section -->
+  <!-- <section class="hero-section text-center text-white d-flex align-items-center justify-content-center" style="background-image: url('{{ .Params.heroImage }}'); background-size: cover;">
+    <div class="hero-content">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.attribution }}
+      <p class="small text-muted">{{ . }}</p>
+      {{ end }}
+    </div>
+  </section> -->
+
+  <!-- Sections -->
+  {{ with .Params.sections }}
+  {{ range $index, $section := . }}
+  <section class="content-section py-5 px-custom {{ if eq (mod $index 2) 0 }}bg-light{{ end }}">
+      <div class="row align-items-center">
+        {{ with $section.image }}
+        <div class="col-md-6 text-center">
+          <img src="{{ . }}" alt="{{ $section.title }}" class="img-fluid rounded shadow">
+        </div>
+        {{ end }}
+        <div class="col-md-6 mt-4 mt-md-0">
+          <h2>{{ $section.title }}</h2>
+          <p>{{ $section.description }}</p>
+          {{ with $section.features }}
+          <ul class="feature-list mt-3">
+            {{ range . }}
+            <li>
+              <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
+            </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+          {{ with $section.brochure }}
+          <a href="{{ . }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">  
+            <i class="fa fa-download" aria-hidden="true"></i> Download Brochure  
+          </a>
+          {{ end }}
+        </div>
+        
+      </div>
+  </section>
+  {{ end }}
+  {{ end }}
+</main>
+
+
+{{ end }}
+
 {{ if eq .Params.layout "contact" }}
 <section class="contact-page">
 
@@ -91,7 +141,7 @@
 {{ end }}
 
 {{ if eq .Params.layout "download" }}
-<section class="downloads-page px-custom py-5">
+<section class="downloads-page px-custom py-5">download
   <div class="container">
     <!-- <h1 class="text-center fw-bold mb-5">{{ .Title }}</h1> -->
 
@@ -118,4 +168,5 @@
   </div>
 </section>
 {{ end }}
+
 {{ end }}
