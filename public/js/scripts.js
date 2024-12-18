@@ -47,10 +47,10 @@
     let typingIndex = 0;
     const typingMessage = "The real issues in organizations are the areas to which the Management should pay attention such as...";
     const slidingMessages = [
-      "Direct business-related bottlenecks",
-      "New Products and competition related challenges",
-      "Exploring company expansion plans",
-      "Share Market positioning initiatives etc"
+      `<i class="fa-solid fa-hand-point-right me-2"></i> Direct business-related bottlenecks`,
+      `<i class="fa-solid fa-hand-point-right me-2"></i> New Products and competition related challenges`,
+      `<i class="fa-solid fa-hand-point-right me-2"></i> Exploring company expansion plans`,
+      `<i class="fa-solid fa-hand-point-right me-2"></i> Share Market positioning initiatives etc`
     ];
     let slideIndex = 0;
     function typeText() {
@@ -65,7 +65,7 @@
     function startSliding() {
       if (slideIndex < slidingMessages.length) {
         const span = document.createElement("span");
-        span.textContent = slidingMessages[slideIndex];
+        span.innerHTML = slidingMessages[slideIndex];
         slidingItems.innerHTML = "";
         slidingItems.appendChild(span);
         span.style.animation = "slide-in-out 3s forwards ease-in-out";

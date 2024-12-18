@@ -595,7 +595,7 @@ a {
     width: 80%;
     z-index: 3; }
     .challenges-section .content-wrapper .typing-text {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-style: italic;
       font-weight: bold;
       color: white;
@@ -628,7 +628,7 @@ a {
     transform: translateX(100%);
     opacity: 0; } }
     .challenges-section .content-wrapper .final-paragraph {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       text-align: left;
       animation: slide-in-final 1s forwards ease-in-out;
       color: white;

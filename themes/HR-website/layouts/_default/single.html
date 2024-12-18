@@ -2,7 +2,7 @@
 
 
 <!-- Hero Section default -->
-<section class="page-hero about-hero" style="background-image: url('{{ .Params.heroImage }}');">
+<section class="page-hero about-hero px-custom" style="background-image: url('{{ .Params.heroImage }}');">
   <div class="text-center">
     <h1 class="display-4">{{ .Title }}</h1>
     {{ with .Params.subtitle }}
@@ -141,7 +141,7 @@
 {{ end }}
 
 {{ if eq .Params.layout "download" }}
-<section class="downloads-page px-custom py-5">download
+<section class="downloads-page px-custom py-5">
   <div class="container">
     <!-- <h1 class="text-center fw-bold mb-5">{{ .Title }}</h1> -->
 
