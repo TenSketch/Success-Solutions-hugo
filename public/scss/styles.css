@@ -1310,6 +1310,10 @@ a {
   .page-hero p, .about-hero p, .contact-hero p {
     font-size: 1rem; } }
 
+.singlegrid img {
+  height: 400px;
+  border-radius: 10px; }
+
 .text-gold {
   color: #FFD54F; }
 

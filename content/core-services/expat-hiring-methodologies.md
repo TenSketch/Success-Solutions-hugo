@@ -59,3 +59,13 @@ sections:
       - "Competitive compensation to attract top talent."
    #  brochure: "/brochures/hostility-hiring.pdf"
 ---
+
+Expatriate hiring methodologies streamline the process of sourcing and integrating skilled professionals across international borders, ensuring a seamless fit with organizational goals. By focusing on efficiency, adaptability, and cultural alignment, these strategies help businesses address global talent needs, navigate complexities, and build high-performing teams for sustainable growth.
+
+1. Succession Hiring  
+2. Contingent Hiring  
+3. Leadership Hiring  
+4. Discrete & Confidential Hiring  
+5. Hostility Hiring
+
+<!--more-->

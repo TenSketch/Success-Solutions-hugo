@@ -8,9 +8,7 @@
   </div>
 </section>
   <main class="listpage py-5 px-custom">
-    <!-- <h1>{{ .Title }}</h1> -->
     <div class="content row">
-      {{ .Content }}
       {{ range .Pages }}
         <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
         {{ .Summary }}

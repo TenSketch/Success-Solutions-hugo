@@ -9,6 +9,10 @@ keywords = 'expatriate hiring, global executive search, leadership hiring, busin
 author = 'Balachandiran - TenSketch'
 logo = '/images/logo/Success-Solutions-logo-2.jpeg'
 og_image = '/ogimage.jpg'
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 [asset]
   # Enable Hugo pipes for SCSS
   enable = true

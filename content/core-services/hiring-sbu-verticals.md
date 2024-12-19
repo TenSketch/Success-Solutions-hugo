@@ -40,3 +40,14 @@ sections:
       - Competency assessments and psychometric profiling
       - Hiring audits, benchmarking, and manager training.
 ---
+
+**Hiring SBU Verticals** focuses on providing comprehensive solutions for expatriate hiring and resource management. This service streamlines the recruitment process, ensuring efficient integration of candidates into their roles. It encompasses a variety of specialized services tailored to meet the unique challenges of hiring expatriates.
+
+**Verticals:**
+
+1. End-to-End Expatriate Hiring Solutions  
+2. Resume Referral Service  
+3. Dedicated Resources Management Service  
+4. Hiring Associated Allied Services
+
+<!--more-->

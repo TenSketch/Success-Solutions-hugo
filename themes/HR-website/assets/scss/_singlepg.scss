@@ -49,4 +49,10 @@
       }
     }
   }
-  
+  .singlegrid{
+    img{
+      height:400px ;
+      @include border-radius; // Uses default 10px
+
+    }
+  }
