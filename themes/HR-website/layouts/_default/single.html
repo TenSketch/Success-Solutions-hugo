@@ -8,6 +8,9 @@
     {{ with .Params.subtitle }}
     <p>{{ . }}</p>
     {{ end }}
+    {{ with .Params.attribution }}
+    <p class="small text-muted">{{ . }}</p>
+    {{ end }}
   </div>
 </section>
 

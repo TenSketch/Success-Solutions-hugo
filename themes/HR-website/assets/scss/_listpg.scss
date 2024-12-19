@@ -16,5 +16,17 @@ main{
             color: $accent-color--dark;
         }
        }
+       h2{
+           margin-bottom: 1rem;
+
+       }
+       &-link{
+        text-decoration: none;
+        border-bottom: 2px solid $accent-color--dark;
+        transition: color 300ms ease;
+        &:hover{
+            color: $accent-color;
+        }
+       }
     }
 }

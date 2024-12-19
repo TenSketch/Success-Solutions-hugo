@@ -4,7 +4,7 @@ date: 2024-12-15T15:59:26+05:30
 image: "/images/expat-hiring-methodologies.jpg"
 heroImage: "/images/sbu-hiring.jpg"
 layout: "singlelist"
-attribution: "https://www.freepik.com/free-photo/business-people-meeting-conference-seminar-sharing-strategy-concept_2758720.htm#fromView=search&page=1&position=4&uuid=38d467ac-1c68-45dd-a30f-d803769703fd Image by rawpixel.com on Freepik"
+# attribution: "https://www.freepik.com/free-photo/business-people-meeting-conference-seminar-sharing-strategy-concept_2758720.htm#fromView=search&page=1&position=4&uuid=38d467ac-1c68-45dd-a30f-d803769703fd Image by rawpixel.com on Freepik"
 draft: false
 sections:
   - title: "Turnkey Hiring"
@@ -62,10 +62,11 @@ sections:
 
 Expatriate hiring methodologies streamline the process of sourcing and integrating skilled professionals across international borders, ensuring a seamless fit with organizational goals. By focusing on efficiency, adaptability, and cultural alignment, these strategies help businesses address global talent needs, navigate complexities, and build high-performing teams for sustainable growth.
 
-1. Succession Hiring  
-2. Contingent Hiring  
-3. Leadership Hiring  
-4. Discrete & Confidential Hiring  
-5. Hostility Hiring
+1. Turnkey Hiring
+2. Succession Hiring  
+3. Contingent Hiring  
+4. Leadership Hiring  
+5. Discrete & Confidential Hiring  
+6. Hostility Hiring
 
 <!--more-->

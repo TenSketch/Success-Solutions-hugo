@@ -233,7 +233,7 @@ a {
     color: #fff !important;
     font-weight: bold;
     transition: color 0.4s ease; }
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     .navbar .navbar-collapse {
       background: rgba(54, 70, 78, 0.5);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -737,42 +737,19 @@ a {
 .about-section {
   background-color: #00897B;
   color: #fff; }
-  .about-section .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem; }
+  .about-section .content .title {
+    font-weight: 500; }
+  .about-section .content .description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem; }
+  .about-section .image img {
+    border-radius: 10px; }
     @media (min-width: 768px) {
-      .about-section .content-wrapper {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between; } }
-    .about-section .content-wrapper .text-content {
-      position: relative;
-      flex: 1; }
-      .about-section .content-wrapper .text-content .blob-wrapper {
-        display: none;
-        position: absolute;
-        top: -30px;
-        left: -10px;
-        width: 80px;
-        height: 80px; }
-        .about-section .content-wrapper .text-content .blob-wrapper .blob-shape {
-          width: 100%;
-          height: 100%; }
-      .about-section .content-wrapper .text-content .title {
-        font-weight: 500; }
-      .about-section .content-wrapper .text-content .description {
-        line-height: 1.6;
-        margin-bottom: 1.5rem; }
-    .about-section .content-wrapper .image-content {
-      flex: 1;
-      text-align: center; }
-      .about-section .content-wrapper .image-content img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px; }
-
+      .about-section .image img {
+        min-height: 70vh;
+        object-fit: cover;
+        border-radius: 0; } }
 .global-solutions-section {
   background-color: #FAFAFA;
   position: relative;
@@ -1311,7 +1288,8 @@ a {
     font-size: 1rem; } }
 
 .singlegrid img {
-  height: 400px;
+  min-height: 400px;
+  object-fit: cover;
   border-radius: 10px; }
 
 .text-gold {
@@ -1420,3 +1398,13 @@ main .listpage .content {
   padding: 2rem; }
   main .listpage .content a {
     color: #b38900; }
+
+main .listpage h2 {
+  margin-bottom: 1rem; }
+
+main .listpage-link {
+  text-decoration: none;
+  border-bottom: 2px solid #b38900;
+  transition: color 300ms ease; }
+  main .listpage-link:hover {
+    color: #FFD54F; }

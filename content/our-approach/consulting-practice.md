@@ -3,18 +3,19 @@ title: 'Consulting Practice'
 date: 2024-12-15T15:59:25+05:30
 heroImage: '/images/consulting-bg-1.jpg'
 image: '/images/consulting-practice.jpg'
-attribution: "https://www.freepik.com/free-photo/top-executives-working-out-business-strategy-period_5699116.htm#fromView=search&page=1&position=2&uuid=f5f54a34-eda2-4064-af9b-16405722173c - Image by pressfoto on Freepik"
+# attribution: "https://www.freepik.com/free-photo/top-executives-working-out-business-strategy-period_5699116.htm#fromView=search&page=1&position=2&uuid=f5f54a34-eda2-4064-af9b-16405722173c - Image by pressfoto on Freepik"
 layout: 'common'
 draft: false
 ---
 Consulting Practice emphasizes our commitment to delivering high-quality consulting solutions tailored to meet our clients' needs. We focus on creating processes that not only yield results but also adhere to the highest ethical standards. Our approach prioritizes simplicity and ease of execution, ensuring that our strategies are straightforward and practical, leading to effective outcomes for our clients.
+<!--more-->
 
 **Our Consulting Practice offers four main benefits:**
 
-1. Simple
+<!-- 1. Simple
 2. Safe
 3. Easy
-4. Effective
+4. Effective -->
 
 <!--more-->
 

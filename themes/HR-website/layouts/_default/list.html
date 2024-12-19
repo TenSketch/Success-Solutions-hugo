@@ -9,10 +9,12 @@
 </section>
   <main class="listpage py-5 px-custom">
     <div class="content row">
-      {{ range .Pages }}
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-        {{ .Summary }}
-      {{ end }}
+      <div class="col-md-8">
+        {{ range .Pages }}
+          <h2><a href="{{ .RelPermalink }}" title="goto {{ .LinkTitle }} page" class="listpage-link">{{ .LinkTitle }}</a></h2>
+          {{ .Summary }}
+        {{ end }}
+      </div>
     </div>
-  </ma>
+  </main>
 {{ end }}

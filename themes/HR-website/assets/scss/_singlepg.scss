@@ -51,7 +51,8 @@
   }
   .singlegrid{
     img{
-      height:400px ;
+      min-height:400px ;
+      object-fit: cover;
       @include border-radius; // Uses default 10px
 
     }

@@ -14,7 +14,7 @@
   }
 
   .navbar-collapse {
-    @media(max-width:768px) {
+    @media(max-width:991px) {
       background: rgba( 54, 70, 78, 0.5 );
       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
       backdrop-filter: blur( 1.5rem );
