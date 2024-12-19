@@ -65,7 +65,7 @@
           <h2>{{ $section.title }}</h2>
           <p>{{ $section.description }}</p>
           {{ with $section.features }}
-          <ul class="feature-list mt-3">
+          <ul class="feature-list mt-3 list-unstyled">
             {{ range . }}
             <li>
               <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
