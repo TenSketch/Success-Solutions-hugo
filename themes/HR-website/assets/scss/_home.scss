@@ -49,15 +49,16 @@
   background-color: $background-color;
   .title {
     // font-size: 2.5rem;
+    font-size: 1.4rem;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.3;
   }
 
   .subtitle {
     color: $secondary-color;
-    // font-size: 1.5rem;
+    font-size: 1.3rem;
     // font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.4;
     margin-top: 1rem;
   }
   // .blob-bg{
@@ -117,14 +118,14 @@
       padding: 1.5rem;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease;
-      min-height: 45vh;
+      min-height: 35vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
 
       @media(min-width:768px) {
-        min-height: 65vh;
+        min-height: 45vh;
       }
 
       &:hover {
@@ -132,18 +133,18 @@
       }
 
       .person-img {
-        width:  200px;
-        height: 200px;
+        // width:  200px;
+        height: 150px;
         // aspect-ratio: 1;
         margin-bottom: 1rem;
         object-fit: contain;
       }
 
       blockquote {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-style: italic;
         color: $secondary-color;
-        line-height: 1.6;
+        line-height: 1.3;
       }
 
       cite {
@@ -516,25 +517,25 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 // 8th sec search sols and serv
 .global-solutions-section {
   background-color: $background-color;
-  position: relative;
-  overflow: hidden;
+  // position: relative;
+  // overflow: hidden;
 
   // Section Divider (Wave Shape)
-  .section-divider {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to right, $primary-color, transparent);
-    clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
-    z-index: 1;
-  }
+  // .section-divider {
+  //   position: absolute;
+  //   top: -50px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100px;
+  //   background: linear-gradient(to right, $primary-color, transparent);
+  //   clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
+  //   z-index: 1;
+  // }
 
   .title {
     // font-size: 2rem;
     font-weight: 500;
-    line-height: 1.4;
+    // line-height: 1.3;
     position: relative;
     z-index: 2;
   }
@@ -553,39 +554,39 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
     background: $background-color;
     @include border-radius; // Uses default 10px
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
+    padding: 1rem;
+    // text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 
-    &:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    // &:hover {
+    //   transform: translateY(-10px);
+    //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 213, 79, 0.3);
-        @include border-radius; // Uses default 10px
-        z-index: 0;
-      }
-    }
+    //   &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(255, 213, 79, 0.3);
+    //     @include border-radius; // Uses default 10px
+    //     z-index: 0;
+    //   }
+    // }
 
     .service-icon {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       color: $primary-color;
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
     }
 
     .service-title {
       font-size: 1.2rem;
       // font-weight: bold;
       color: $secondary-color;
-      margin-bottom: 0.5rem;
+      // margin-bottom: 0.5rem;
     }
 
     .service-desc {
@@ -629,19 +630,20 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
       background: $primary-color;
       @include border-radius; // Uses default 10px
       // width: 300px;
-      max-width: 90%;
-      min-height: 350px;
-      text-align: center;
-      padding: 1.3rem 1rem;
+      // max-width: 90%;
+      // min-height: 350px;
+      // text-align: center;
+      padding: 1rem;
       box-shadow: 
         -12px -12px 30px #006359, 
         12px 12px 30px #00af9d;
       color: white;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+      gap: 2rem;
+      // flex-direction: column;
+      // justify-content: space-between;
+      // align-items: center;
       @media(min-width:768px){
       width: 300px;
 
@@ -663,16 +665,23 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
       }
 
       .service-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        line-height: 1.3;
         // font-weight: bold;
         // margin-top: 1rem;
-        margin-block: 2rem;
+        // margin-block: 2rem;
       }
 
       .service-description {
         font-size: 0.9rem;
         margin-top: 0.5rem;
         opacity: 0.8;
+      }
+      .btn{
+        i{
+          font-size: 2rem;
+          color: $accent-color;
+        }
       }
     }
   }
@@ -685,7 +694,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 
 .approach-section {
   position: relative;
-  min-height: 100vh;
+  // min-height: 100vh;
   // display: flex;
   // align-items: center;
   // justify-content: center;
@@ -704,20 +713,21 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 
     .glass-card {
       // width: 22.5%;
-      min-height: 200px;
+      // min-height: 200px;
       position: relative;
       background: $glass-color;
       border: 1px solid $card-border;
       backdrop-filter: blur(10px);
-      padding: 2rem;
+      padding: 1rem;
       @include border-radius; // Uses default 10px
       box-shadow: 0 4px 6px $shadow-color, 0 1px 3px $shadow-color;
-      text-align: center;
+      // text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      // justify-content: space-between;
+      gap: 1rem;
 
       &:hover {
         transform: translateY(-10px);
@@ -725,11 +735,16 @@ $shadow-color: rgba(0, 0, 0, 0.1);
       }
 
       i {
-        font-size: 3.5rem;
+        font-size: 1.5rem;
         color: $accent-color;
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
       }
-
+      a{
+        margin-left: auto;
+        .fa{
+        }
+  
+      }
       h3 {
         font-size: 1.2rem;
         font-weight: bold;

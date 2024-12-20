@@ -54,9 +54,9 @@
     </div>
   </section> -->
   <!-- intro section for content -->
-  <section class="py-5 px-custom ">
+  <section class="py-3 px-custom ">
     <div class="row align-items-center">
-      <div class="col-md-8 mx-auto mb-4 mb-md-0">
+      <div class="col-md-6 mb-4 mb-md-0">
         <h2 class="fw-bold mb-3">{{ .Params.heading }}</h2>
         <div class="content">
           {{ .Content }}
@@ -68,14 +68,14 @@
   <!-- Sections -->
   {{ with .Params.sections }}
   {{ range $index, $section := . }}
-  <section class="content-section py-5 px-custom {{ if eq (mod $index 2) 0 }}{{ end }}">
+  <section class="content-section py-2 px-custom {{ if eq (mod $index 2) 0 }}{{ end }}">
     <div class="row align-items-center justify-content-around">
       {{ with $section.image }}
       <div class="col-md-4 text-center">
         <img src="{{ . }}" alt="{{ $section.title }}" class="img-fluid rounded shadow">
       </div>
       {{ end }}
-      <div class="col-md-6 mt-4 mt-md-0 neumorphism ">
+      <div class="col-md-6 mt-2 mt-md-0 neumorphism ">
         <h2 class="text-primary">{{ $section.title }}</h2>
         <p>{{ $section.description }}</p>
         {{ with $section.features }}
@@ -94,7 +94,7 @@
         {{ end }}
       </div>
     </div>
-    <hr class="bg-accent mt-4">
+    <hr class="bg-accent mt-2">
   </section>
   {{ end }}
   {{ end }}

@@ -6,7 +6,7 @@
   padding-block: 4rem; }
 
 .py-custom {
-  padding-block: 7rem; }
+  padding-block: 5rem; }
 
 .px-custom {
   padding-inline: 2rem; }
@@ -151,7 +151,7 @@ a {
   padding-block: 4rem; }
 
 .py-custom {
-  padding-block: 7rem; }
+  padding-block: 5rem; }
 
 .px-custom {
   padding-inline: 2rem; }
@@ -379,7 +379,7 @@ hr.bg-accent {
   padding-block: 4rem; }
 
 .py-custom {
-  padding-block: 7rem; }
+  padding-block: 5rem; }
 
 .px-custom {
   padding-inline: 2rem; }
@@ -531,11 +531,13 @@ hr.bg-accent {
   100% {
     transform: rotate(360deg); } }
   .intro .title {
+    font-size: 1.4rem;
     font-weight: 500;
-    line-height: 1.4; }
+    line-height: 1.3; }
   .intro .subtitle {
     color: #36464e;
-    line-height: 1.5;
+    font-size: 1.3rem;
+    line-height: 1.4;
     margin-top: 1rem; }
   .intro .blob-container {
     display: flex;
@@ -572,26 +574,25 @@ hr.bg-accent {
       padding: 1.5rem;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease;
-      min-height: 45vh;
+      min-height: 35vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center; }
       @media (min-width: 768px) {
         .quotes .quotes-grid .quote-item {
-          min-height: 65vh; } }
+          min-height: 45vh; } }
       .quotes .quotes-grid .quote-item:hover {
         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); }
       .quotes .quotes-grid .quote-item .person-img {
-        width: 200px;
-        height: 200px;
+        height: 150px;
         margin-bottom: 1rem;
         object-fit: contain; }
       .quotes .quotes-grid .quote-item blockquote {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-style: italic;
         color: #36464e;
-        line-height: 1.6; }
+        line-height: 1.3; }
       .quotes .quotes-grid .quote-item cite {
         display: block;
         font-size: 0/9rem;
@@ -819,21 +820,9 @@ hr.bg-accent {
         object-fit: cover;
         border-radius: 0; } }
 .global-solutions-section {
-  background-color: #FAFAFA;
-  position: relative;
-  overflow: hidden; }
-  .global-solutions-section .section-divider {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to right, #00897B, transparent);
-    clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
-    z-index: 1; }
+  background-color: #FAFAFA; }
   .global-solutions-section .title {
     font-weight: 500;
-    line-height: 1.4;
     position: relative;
     z-index: 2; }
   .global-solutions-section .services-grid {
@@ -846,31 +835,15 @@ hr.bg-accent {
     background: #FAFAFA;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
+    padding: 1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative; }
-    .global-solutions-section .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-      .global-solutions-section .service-card:hover::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 213, 79, 0.3);
-        border-radius: 10px;
-        z-index: 0; }
     .global-solutions-section .service-card .service-icon {
-      font-size: 2.5rem;
-      color: #00897B;
-      margin-bottom: 1rem; }
+      font-size: 1.5rem;
+      color: #00897B; }
     .global-solutions-section .service-card .service-title {
       font-size: 1.2rem;
-      color: #36464e;
-      margin-bottom: 0.5rem; }
+      color: #36464e; }
     .global-solutions-section .service-card .service-desc {
       font-size: 1rem;
       color: #0d1012; }
@@ -893,17 +866,12 @@ hr.bg-accent {
   .core-services-section .services-cards .service-card {
     background: #00897B;
     border-radius: 10px;
-    max-width: 90%;
-    min-height: 350px;
-    text-align: center;
-    padding: 1.3rem 1rem;
+    padding: 1rem;
     box-shadow: -12px -12px 30px #006359,  12px 12px 30px #00af9d;
     color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; }
+    gap: 2rem; }
     @media (min-width: 768px) {
       .core-services-section .services-cards .service-card {
         width: 300px; } }
@@ -913,16 +881,18 @@ hr.bg-accent {
       transform: translateY(-8px);
       box-shadow: -18px -18px 40px #00524e,  18px 18px 40px #00d3ba; }
     .core-services-section .services-cards .service-card .service-title {
-      font-size: 1.2rem;
-      margin-block: 2rem; }
+      font-size: 1.1rem;
+      line-height: 1.3; }
     .core-services-section .services-cards .service-card .service-description {
       font-size: 0.9rem;
       margin-top: 0.5rem;
       opacity: 0.8; }
+    .core-services-section .services-cards .service-card .btn i {
+      font-size: 2rem;
+      color: #FFD54F; }
 
 .approach-section {
   position: relative;
-  min-height: 100vh;
   background: #00897B url("/images/global-executive-search.webp") no-repeat fixed center center/cover;
   background-blend-mode: color-burn;
   color: white; }
@@ -930,27 +900,25 @@ hr.bg-accent {
     line-height: 1.4;
     font-weight: 500; }
   .approach-section .card-container .glass-card {
-    min-height: 200px;
     position: relative;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
-    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between; }
+    gap: 1rem; }
     .approach-section .card-container .glass-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1); }
     .approach-section .card-container .glass-card i {
-      font-size: 3.5rem;
-      color: #FFD54F;
-      margin-bottom: 1rem; }
+      font-size: 1.5rem;
+      color: #FFD54F; }
+    .approach-section .card-container .glass-card a {
+      margin-left: auto; }
     .approach-section .card-container .glass-card h3 {
       font-size: 1.2rem;
       font-weight: bold;
@@ -997,7 +965,7 @@ hr.bg-accent {
   padding-block: 4rem; }
 
 .py-custom {
-  padding-block: 7rem; }
+  padding-block: 5rem; }
 
 .px-custom {
   padding-inline: 2rem; }
@@ -1128,7 +1096,7 @@ hr.bg-accent {
   padding-block: 4rem; }
 
 .py-custom {
-  padding-block: 7rem; }
+  padding-block: 5rem; }
 
 .px-custom {
   padding-inline: 2rem; }
@@ -1284,6 +1252,9 @@ hr.bg-accent {
 .fa-2x {
   font-size: 1.5em !important; }
 
+.company-address {
+  font-size: 1.1rem !important; }
+
 .contact-page {
   background: #00897B url(/images/hero.jpg) no-repeat fixed center center/cover;
   background-blend-mode: multiply;
@@ -1370,7 +1341,7 @@ textarea {
   padding-block: 4rem; }
 
 .py-custom {
-  padding-block: 7rem; }
+  padding-block: 5rem; }
 
 .px-custom {
   padding-inline: 2rem; }
