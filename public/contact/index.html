@@ -151,52 +151,65 @@
 
 
 
+
+
 <section class="contact-page">
 
-  <div class="contact-section px-custom py-custom text-white row">
-    <h1>Have a hiring requirement? Let's connect!</h1>
-    <div class="col-md-8 mx-auto">
-      <div class="contact-options">
-        <div>
+  <div class="contact-section px-custom py-custom row">
+    <h1 class="display-6 mb-4">Have a hiring requirement? Let's connect!</h1>
+    <div class="col-md-10 mx-auto mb-5">
+      <div class="contact-options row justify-content-between">
+        <div class="col-auto">
           <p>Need more info?</p>
           <a href="mailto:info@successsolutions.in">info@successsolutions.in</a>
         </div>
-        <div>
+        <div class="col-auto">
           <p>Prefer to reach out to our mentor directly?</p>
           <a href="mailto:link2rmd@gmail.com">link2rmd@gmail.com</a>
         </div>
-        <div>
+        <div class="col-auto">
           <p>Would you like to talk to us?</p>
           <a href="tel:+919962006364">+91 9962006364</a>
         </div>
       </div>
-      <form class="contact-form">
+      <hr class="bg-accent">
+    </div>
+    <div class="col-md-6 mx-auto">
+      <h1 class="display-6">Contact form</h1>
+      <form class="contact-form" id="contact" name="contact" method="POST" action="/thank-you" netlify>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control border-bottom-only" id="name" name="name" placeholder="Name" required>
+          <input type="text" class="form-control border-bottom-only" id="name" name="Name" placeholder="Full Name"
+            required>
           <label for="name">Name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control border-bottom-only" id="company" name="company" placeholder="Company">
-          <label for="company">Company</label>
+          <input type="text" class="form-control border-bottom-only" id="company" name="Company Name"
+            placeholder="Enter your company name" required>
+          <label for="company">Company Name</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control border-bottom-only" id="email" name="email" placeholder="Email"
-            required>
+          <input type="tel" class="form-control border-bottom-only" minlength="10" maxlength="10" id="phone"
+            name="Contact #" placeholder="Enter 10 digit mobile number">
+          <label for="phone">Contact #</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control border-bottom-only" id="email" name="Email"
+            placeholder="abc@email.com" required>
           <label for="email">Email</label>
         </div>
+        
         <div class="form-floating mb-3">
-          <input type="tel" class="form-control border-bottom-only" id="phone" name="phone" placeholder="Phone">
-          <label for="phone">Phone</label>
+          <textarea class="form-control border-bottom-only" id="message" name="Message" placeholder="Message" rows="3"
+            required></textarea>
+          <label for="message">Message</label>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Send</button>
+        <button type="submit" class="btn btn-gold w-100 mt-3">Send</button>
       </form>
 
-      
     </div>
   </div>
 
 </section>
-
 
 
 

@@ -8,9 +8,10 @@
   color: $accent-color;
 }
 
-.py-6{
+.py-6 {
   padding-block: 4rem;
 }
+
 .py-custom {
   padding-block: 7rem;
 }
@@ -114,11 +115,13 @@
     text-decoration: none;
   }
 }
+
 .attribution {
   color: $text-muted;
   font-size: 0.7rem;
   text-decoration: none;
 }
+
 .neumorphic-container {
   display: flex;
   justify-content: center;
@@ -129,8 +132,8 @@
   /* Rounded corners */
   // box-shadow: 10px 10px 45px #ffffff62,
   //          -10px -10px 45px #b9b9b9;
-           box-shadow:  20px 20px 60px #005c52,
-             -20px -20px 60px #00b6a4;
+  box-shadow: 20px 20px 60px #005c52,
+    -20px -20px 60px #00b6a4;
   /* Neumorphic shadow effect */
   overflow: hidden;
   /* Hide overflow */
@@ -151,4 +154,33 @@
 .neumorphic-container:hover .neumorphic-img {
   transform: scale(1.05);
   /* Scale up on hover */
+}
+
+hr.accent {
+  border: none; // Remove default border  
+  height: 4px; // Height of the line  
+  background-color: $accent-color; // Set color  
+  margin: 0; // Remove default margin  
+  width: 100%; // Full width  
+}
+
+hr.bg-accent {
+  height: 4px;
+  opacity: 1;
+  width: 80%;
+  margin-inline: auto;
+  border-radius: 50%;
+}
+
+.bg-primary--light {
+  background-color: $primary-color--light;
+}
+
+.neumorphism {
+  background: linear-gradient(145deg, #d8e6e4, #ffffff);
+  // background: $accent-color;
+  box-shadow: 31px 31px 65px #d8e6e4,
+    -31px -31px 65px #ffffff;
+  @include border-radius;
+  padding: 2rem;
 }

@@ -27,6 +27,7 @@ sections:
       - Enhanced hiring process efficiency
   - title: "Dedicated Resources Management Service"
     image: "/images/RMS-3.jpg"
+    brochure: "/pdfs/offshore-GRMS.pdf"
     description: >
       Specialized teams to manage human resource needs effectively. Benefits include:
       - Streamlined recruitment processes

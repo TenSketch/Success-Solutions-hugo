@@ -15,7 +15,7 @@ sections:
       - "Rapid delivery of qualified candidates"
       - "Reduced time and cost of hiring"
       - "Comprehensive recruitment management"
-   #  brochure: "/brochures/turnkey-hiring.pdf"
+    brochure: "/brochures/turnkey-hiring.pdf"
 
   - title: "Succession Hiring"
     image: "/images/succession-hiring-1.jpg"

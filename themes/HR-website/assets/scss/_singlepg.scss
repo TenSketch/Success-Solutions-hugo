@@ -57,3 +57,10 @@
 
     }
   }
+
+  .main-section{
+    background: linear-gradient(145deg, #d8e6e4, #ffffff);
+    // &:nth-of-type(even){
+    //   background-color: $primary-color;
+    // }
+  }

@@ -6,6 +6,7 @@ heroImage: '/images/consulting-bg-1.jpg'
 layout: 'singlelist'
 draft: false
 sections:
+
 #   - title: "Our Proven Expertise in Global Expatriate Placement"
 #     description: "We have a consistent track record of successfully placing expatriates across a diverse range of industries and professional domains. Our specialized knowledge and experience enable us to effectively meet the unique needs of organizations worldwide, ensuring the right talent is matched to the right opportunity."
 #     features:
@@ -47,6 +48,8 @@ sections:
       - "Manufacturing"  
       - "Research & Development"
     # brochure: "/brochures/domains-brochure.pdf"
+  - brochure: "/pdfs/consistent-expertise-brochure.pdf"
+
 ---
 
 <!-- ## Our Proven Expertise in Global Expatriate Placement -->

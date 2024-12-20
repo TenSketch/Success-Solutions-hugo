@@ -43,7 +43,7 @@
 {{ end }}
 
 {{ if eq .Params.layout "singlelist" }}
-<main>
+<main class="main-section">
   <!-- Hero Section -->
   <!-- <section class="hero-section text-center text-white d-flex align-items-center justify-content-center" style="background-image: url('{{ .Params.heroImage }}'); background-size: cover;">
     <div class="hero-content">
@@ -54,7 +54,7 @@
     </div>
   </section> -->
   <!-- intro section for content -->
-   <section class="py-5 px-custom">
+  <section class="py-5 px-custom ">
     <div class="row align-items-center">
       <div class="col-md-8 mx-auto mb-4 mb-md-0">
         <h2 class="fw-bold mb-3">{{ .Params.heading }}</h2>
@@ -63,38 +63,38 @@
         </div>
       </div>
     </div>
-   </section>
+  </section>
 
   <!-- Sections -->
   {{ with .Params.sections }}
   {{ range $index, $section := . }}
-  <section class="content-section py-5 px-custom {{ if eq (mod $index 2) 0 }}bg-light{{ end }}">
-      <div class="row align-items-center">
-        {{ with $section.image }}
-        <div class="col-md-6 text-center">
-          <img src="{{ . }}" alt="{{ $section.title }}" class="img-fluid rounded shadow">
-        </div>
-        {{ end }}
-        <div class="col-md-6 mt-4 mt-md-0">
-          <h2>{{ $section.title }}</h2>
-          <p>{{ $section.description }}</p>
-          {{ with $section.features }}
-          <ul class="feature-list mt-3 list-unstyled">
-            {{ range . }}
-            <li>
-              <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
-            </li>
-            {{ end }}
-          </ul>
-          {{ end }}
-          {{ with $section.brochure }}
-          <a href="{{ . }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">  
-            <i class="fa fa-download" aria-hidden="true"></i> Download Brochure  
-          </a>
-          {{ end }}
-        </div>
-        
+  <section class="content-section py-5 px-custom {{ if eq (mod $index 2) 0 }}{{ end }}">
+    <div class="row align-items-center justify-content-around">
+      {{ with $section.image }}
+      <div class="col-md-4 text-center">
+        <img src="{{ . }}" alt="{{ $section.title }}" class="img-fluid rounded shadow">
       </div>
+      {{ end }}
+      <div class="col-md-6 mt-4 mt-md-0 neumorphism ">
+        <h2 class="text-primary">{{ $section.title }}</h2>
+        <p>{{ $section.description }}</p>
+        {{ with $section.features }}
+        <ul class="feature-list mt-3 list-unstyled">
+          {{ range . }}
+          <li>
+            <i class="fas fa-check-circle text-success me-2"></i> {{ . }}
+          </li>
+          {{ end }}
+        </ul>
+        {{ end }}
+        {{ with $section.brochure }}
+        <a href="{{ . }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">
+          <i class="fa fa-download" aria-hidden="true"></i> Download Brochure
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    <hr class="bg-accent mt-4">
   </section>
   {{ end }}
   {{ end }}
@@ -103,30 +103,40 @@
 
 {{ if eq .Params.layout "singlegrid" }}
 <main>
-  <section class="px-custom py-5 singlegrid">    
+  <section class="px-custom py-5 singlegrid">
     <div class="row">
       <div class="col-md-8 mx-auto">
         <!-- <h1 class="text-center mb-5">{{ .Title }}</h1> -->
         <p class="text-center mb-5">{{ .Content }}</p>
+        {{ with .Params.sections }}
+        {{ range $index, $section := . }}
+        {{ with $section.brochure }}
+        <a href="{{ . }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">
+          <i class="fa fa-download" aria-hidden="true"></i> Download Brochure
+        </a>
+        {{ end }}
+        {{ end }}
+        {{ end }}
       </div>
     </div>
     <div class="row gy-4 d-none">
       {{ $sections := split .RawContent "\n\n" }}
-      {{ $images := slice "/images/onboarding.jpg" "/images/recruitment-tests.jpg" "/images/assessment-center.jpg" "/images/hiring-architecture.jpg" }}
+      {{ $images := slice "/images/onboarding.jpg" "/images/recruitment-tests.jpg" "/images/assessment-center.jpg"
+      "/images/hiring-architecture.jpg" }}
       {{ $imageIndex := 0 }}
 
       {{ range $index, $section := $sections }}
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <div class="card-body">
-              {{ if and (lt $index (len $images)) (mod $index 3) }}
-                <img src="{{ index $images $imageIndex }}" alt="Section Image" class="img-fluid mb-3">
-                {{ $imageIndex = add $imageIndex 1 }}
-              {{ end }}
-              <p class="card-text">{{ $section }}</p>
-            </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            {{ if and (lt $index (len $images)) (mod $index 3) }}
+            <img src="{{ index $images $imageIndex }}" alt="Section Image" class="img-fluid mb-3">
+            {{ $imageIndex = add $imageIndex 1 }}
+            {{ end }}
+            <p class="card-text">{{ $section }}</p>
           </div>
         </div>
+      </div>
       {{ end }}
     </div>
   </section>
@@ -135,70 +145,19 @@
 
 <!-- layout name "splitContent" -->
 {{ if eq .Params.layout "splitcontent" }}
-  <main>
-    <section class="px-custom py-5">
-      {{ range .Params.sections }}
-        <div class="row align-items-center mb-5">
-          <div class="col-md-6">
-            <h2>{{ .title }}</h2>
-            <div class="content">{{ .content | markdownify | safeHTML }}</div>
-          </div>
-        </div>
-      {{ end }}
-    </section>
-    
-  </main>
-
-{{ end }}
-
-{{ if eq .Params.layout "contact" }}
-<section class="contact-page">
-
-  <div class="contact-section px-custom py-custom text-white row">
-    <h1>Have a hiring requirement? Let's connect!</h1>
-    <div class="col-md-8 mx-auto">
-      <div class="contact-options">
-        <div>
-          <p>Need more info?</p>
-          <a href="mailto:info@successsolutions.in">info@successsolutions.in</a>
-        </div>
-        <div>
-          <p>Prefer to reach out to our mentor directly?</p>
-          <a href="mailto:link2rmd@gmail.com">link2rmd@gmail.com</a>
-        </div>
-        <div>
-          <p>Would you like to talk to us?</p>
-          <a href="tel:+919962006364">+91 9962006364</a>
-        </div>
+<main>
+  <section class="px-custom py-5">
+    {{ range .Params.sections }}
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h2>{{ .title }}</h2>
+        <div class="content">{{ .content | markdownify | safeHTML }}</div>
       </div>
-      <form class="contact-form">
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control border-bottom-only" id="name" name="name" placeholder="Name" required>
-          <label for="name">Name</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="text" class="form-control border-bottom-only" id="company" name="company" placeholder="Company">
-          <label for="company">Company</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="email" class="form-control border-bottom-only" id="email" name="email" placeholder="Email"
-            required>
-          <label for="email">Email</label>
-        </div>
-        <div class="form-floating mb-3">
-          <input type="tel" class="form-control border-bottom-only" id="phone" name="phone" placeholder="Phone">
-          <label for="phone">Phone</label>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Send</button>
-      </form>
-
-      <!-- <div class="map-image">
-        <img src="/images/logo/Success-Solutions-logo-4.jpeg" alt="Success Solutions Logo" />
-      </div> -->
     </div>
-  </div>
+    {{ end }}
+  </section>
 
-</section>
+</main>
 
 {{ end }}
 
@@ -208,25 +167,109 @@
     <!-- <h1 class="text-center fw-bold mb-5">{{ .Title }}</h1> -->
 
     {{ if eq .Params.layout "download" }}
-      <div class="row">
-        {{ $files := readDir "static/pdfs" }} <!-- Adjust path as needed -->
-        {{ range $files }}
-          {{ if eq (path.Ext .Name) ".pdf" }} <!-- Check for .pdf files -->
-            <div class="col-md-4 mb-4">
-              <div class="card shadow-sm h-100">
-                <div class="card-body text-center">
-                  <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
-                  <h5 class="card-title">{{ replace .Name "-" " " | title }}</h5>
-                  <a href="/pdfs/{{ .Name }}" class="btn btn-primary mt-2" target="_blank">Download</a>
-                </div>
-              </div>
-            </div>
-          {{ end }}
-        {{ end }}
+    <div class="row">
+      {{ $files := readDir "static/pdfs" }} <!-- Adjust path as needed -->
+      {{ range $files }}
+      {{ if eq (path.Ext .Name) ".pdf" }} <!-- Check for .pdf files -->
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-file-pdf fa-3x text-danger mb-3"></i>
+            <h5 class="card-title">{{ replace .Name "-" " " | title }}</h5>
+            <a href="/pdfs/{{ .Name }}" class="btn btn-primary mt-2" target="_blank">Download</a>
+          </div>
+        </div>
       </div>
+      {{ end }}
+      {{ end }}
+    </div>
     {{ else }}
-      <p>No downloads available at the moment.</p>
+    <p>No downloads available at the moment.</p>
     {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ if eq .Params.layout "contact" }}
+<section class="contact-page">
+
+  <div class="contact-section px-custom py-custom row">
+    <h1 class="display-6 mb-4">Have a hiring requirement? Let's connect!</h1>
+    <div class="col-md-10 mx-auto mb-5">
+      <div class="contact-options row justify-content-between">
+        <div class="col-auto">
+          <p>Need more info?</p>
+          <a href="mailto:info@successsolutions.in">info@successsolutions.in</a>
+        </div>
+        <div class="col-auto">
+          <p>Prefer to reach out to our mentor directly?</p>
+          <a href="mailto:link2rmd@gmail.com">link2rmd@gmail.com</a>
+        </div>
+        <div class="col-auto">
+          <p>Would you like to talk to us?</p>
+          <a href="tel:+919962006364">+91 9962006364</a>
+        </div>
+      </div>
+      <hr class="bg-accent">
+    </div>
+    <div class="col-md-6 mx-auto">
+      <h1 class="display-6">Contact form</h1>
+      <form class="contact-form" id="contact" name="contact" method="POST" action="/thank-you" netlify>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control border-bottom-only" id="name" name="Name" placeholder="Full Name"
+            required>
+          <label for="name">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control border-bottom-only" id="company" name="Company Name"
+            placeholder="Enter your company name" required>
+          <label for="company">Company Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control border-bottom-only" minlength="10" maxlength="10" id="phone"
+            name="Contact #" placeholder="Enter 10 digit mobile number">
+          <label for="phone">Contact #</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control border-bottom-only" id="email" name="Email"
+            placeholder="abc@email.com" required>
+          <label for="email">Email</label>
+        </div>
+        <!-- msg texatarea -->
+        <div class="form-floating mb-3">
+          <textarea class="form-control border-bottom-only" id="message" name="Message" placeholder="Message" rows="3"
+            required></textarea>
+          <label for="message">Message</label>
+        </div>
+        <button type="submit" class="btn btn-gold w-100 mt-3">Send</button>
+      </form>
+
+    </div>
+  </div>
+
+</section>
+{{ end }}
+
+{{ if eq .Params.layout "response" }}
+<section class=" py-5">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-lg p-4 ">
+          <div class="card-body">
+            <!-- <h1 class="display-4 text-success mb-4">Thank You!</h1> -->
+            <p class="lead">We appreciate your enquiry and will get back to you as soon as possible.</p>
+            <hr class="my-4">
+            <p>If you need immediate assistance, feel free to call us
+              <a class="nav-link phone-link" href="tel:+919962006364" title="tap to call mobile"
+                aria-label="tap to call mobile">9962006364</a>
+              <!-- <a href="/contact" class="text-primary">contact us directly</a>. -->
+            </p>
+            <!-- <a href="/" class="btn btn-primary btn-lg mt-3">Go Back to Home</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 {{ end }}

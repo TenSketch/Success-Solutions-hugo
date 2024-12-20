@@ -3,6 +3,8 @@ title: 'Hiring Associated Allied Services'
 date: 2024-12-15T15:59:26+05:30
 image: "/images/onboarding.jpg"
 layout: "singlegrid"
+sections:
+    - brochure: "/pdfs/allied-services.pdf"
 draft: false
 ---
 
