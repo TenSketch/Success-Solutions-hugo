@@ -15,6 +15,7 @@
       p {
         font-size: 1.1rem;
         font-weight: 500;
+        margin-bottom: 0.25rem;
         // margin-bottom: 5p;
       }
 
@@ -35,7 +36,7 @@
           border-radius: 0;
           background: transparent;
           // padding-left: 0;
-          padding-top: 3rem;
+          padding: 3rem 0.5rem 1rem 1rem;
           box-shadow: none;
           font-size: 1.3rem;
           transition: all 0.3s ease;
@@ -65,4 +66,8 @@
       background-color: transparent;
     }
   }
+}
+textarea{
+  height: 200px;
+  scrollbar-width: none;
 }

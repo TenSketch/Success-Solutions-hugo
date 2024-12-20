@@ -1294,7 +1294,8 @@ hr.bg-accent {
       font-weight: 500; }
     .contact-page .contact-section .contact-options p {
       font-size: 1.1rem;
-      font-weight: 500; }
+      font-weight: 500;
+      margin-bottom: 0.25rem; }
     .contact-page .contact-section .contact-options a {
       font-weight: bold; }
     .contact-page .contact-section .contact-form .form-floating {
@@ -1304,7 +1305,7 @@ hr.bg-accent {
         border-bottom: 2px solid #ccc;
         border-radius: 0;
         background: transparent;
-        padding-top: 3rem;
+        padding: 3rem 0.5rem 1rem 1rem;
         box-shadow: none;
         font-size: 1.3rem;
         transition: all 0.3s ease;
@@ -1324,6 +1325,10 @@ hr.bg-accent {
     .contact-page .contact-section .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
     .contact-page .contact-section .form-floating > .form-select ~ label::after {
       background-color: transparent; }
+
+textarea {
+  height: 200px;
+  scrollbar-width: none; }
 
 .page-hero, .contact-hero, .about-hero {
   background: no-repeat center center;
