@@ -165,11 +165,13 @@ hr.accent {
 }
 
 hr.bg-accent {
+  background-color: $accent-color; // Set color  Ks
   height: 4px;
   opacity: 1;
   width: 80%;
   margin-inline: auto;
   border-radius: 50%;
+  border: none;
 }
 
 .bg-primary--light {

@@ -14,6 +14,11 @@
       .footer-column {
         // flex: 1 1 calc(25% - 1rem);
         // margin: 0.5rem;
+        .links{
+         @media(min-width: 768px){
+          columns: 2;
+         }
+        }
         
         h4 {
           color: $background-color;

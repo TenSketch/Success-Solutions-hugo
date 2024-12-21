@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `<i class="fa-solid fa-hand-point-right me-2"></i> Direct business-related bottlenecks`,
       `<i class="fa-solid fa-hand-point-right me-2"></i> New Products and competition related challenges`,
       `<i class="fa-solid fa-hand-point-right me-2"></i> Exploring company expansion plans`,
-      `<i class="fa-solid fa-hand-point-right me-2"></i> Share Market positioning initiatives etc`
+      `<i class="fa-solid fa-hand-point-right me-2"></i> Share Market positioning initiatives..`
     ];
     let slideIndex = 0;
 

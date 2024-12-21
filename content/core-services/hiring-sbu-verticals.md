@@ -9,7 +9,6 @@ draft: false
 sections:
   - title: "End-to-End Expatriate Hiring Solutions"
     image: "/images/e2e-Xpat-hiring.jpg"
-    # attribution: "<a href="https://www.freepik.com/free-photo/businessman-touching-virtual-screen_978469.htm#fromView=search&page=1&position=1&uuid=7b691766-37dc-42f3-8f84-d8eb691dc87e">Image by jannoon028 on Freepik</a>"
     brochure: "/pdfs/e2e-xpat-hiring-solutions3.pdf" # Include this line if a brochure is available.
     description: >
       Comprehensive management of the expatriate hiring process, from initial specifications to onboarding, including:
@@ -18,7 +17,6 @@ sections:
       - Visa coordination and mentoring for first-time overseas travelers.
   - title: "Resume Referral Service"
     image: "/images/resume-referral.jpg"
-    # <a href="https://www.freepik.com/free-photo/company-representatives-reading-applicant-resume-hiring_3952576.htm#fromView=search&page=1&position=0&uuid=bdb24d6f-82f8-4a0e-b279-1dc64e8c0d4f">Image by yanalya on Freepik</a>
     brochure: "/pdfs/Resume-Referral-Service.pdf" # Include this line if a brochure is available.
     description: >
       Streamline the recruitment process with quick access to qualified candidates for expatriate roles. This service supports HR teams in managing overseas hiring challenges efficiently.

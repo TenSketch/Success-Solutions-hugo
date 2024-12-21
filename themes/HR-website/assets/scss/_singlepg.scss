@@ -64,3 +64,19 @@
     //   background-color: $primary-color;
     // }
   }
+
+  .content-section{
+&:nth-of-type(even){
+  background:#1f1f1f url(/images/Ripple-Line.svg) no-repeat center center/cover;
+  color: $white;
+  img{
+    box-shadow: 3px  8px  8px #3b3b3b,
+                -3px -8px 8px #1f1f1f;
+  }}
+    img{
+      @include border-radius; // Uses default 10px
+
+      box-shadow: 13px  13px 21px #9c9c9c,
+      -13px -13px 21px #ffffff;
+    }
+  }

@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-
 <!-- Hero Section default -->
 <section class="page-hero about-hero px-custom" style="background-image: url('{{ .Params.heroImage }}');">
   <div class="text-center">
@@ -44,15 +43,6 @@
 
 {{ if eq .Params.layout "singlelist" }}
 <main class="main-section">
-  <!-- Hero Section -->
-  <!-- <section class="hero-section text-center text-white d-flex align-items-center justify-content-center" style="background-image: url('{{ .Params.heroImage }}'); background-size: cover;">
-    <div class="hero-content">
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.attribution }}
-      <p class="small text-muted">{{ . }}</p>
-      {{ end }}
-    </div>
-  </section> -->
   <!-- intro section for content -->
   <section class="py-3 px-custom ">
     <div class="row align-items-center">
@@ -63,19 +53,21 @@
         </div>
       </div>
     </div>
+    <hr class="bg-accent mt-2">
+
   </section>
 
   <!-- Sections -->
   {{ with .Params.sections }}
   {{ range $index, $section := . }}
-  <section class="content-section py-2 px-custom {{ if eq (mod $index 2) 0 }}{{ end }}">
+  <section class="content-section py-6 px-custom {{ if eq (mod $index 2) 0 }}{{ end }}">
     <div class="row align-items-center justify-content-around">
       {{ with $section.image }}
-      <div class="col-md-4 text-center">
-        <img src="{{ . }}" alt="{{ $section.title }}" class="img-fluid rounded shadow">
+      <div class="col-md-4">
+        <img src="{{ . }}" alt="{{ $section.title }}" class="">
       </div>
       {{ end }}
-      <div class="col-md-6 mt-2 mt-md-0 neumorphism ">
+      <div class="col-md-6 mt-4 mt-md-0 ">
         <h2 class="text-primary">{{ $section.title }}</h2>
         <p>{{ $section.description }}</p>
         {{ with $section.features }}
@@ -94,7 +86,7 @@
         {{ end }}
       </div>
     </div>
-    <hr class="bg-accent mt-2">
+    <!-- <hr class="bg-accent mt-2"> -->
   </section>
   {{ end }}
   {{ end }}
@@ -143,23 +135,6 @@
 </main>
 {{ end }}
 
-<!-- layout name "splitContent" -->
-{{ if eq .Params.layout "splitcontent" }}
-<main>
-  <section class="px-custom py-5">
-    {{ range .Params.sections }}
-    <div class="row align-items-center mb-5">
-      <div class="col-md-6">
-        <h2>{{ .title }}</h2>
-        <div class="content">{{ .content | markdownify | safeHTML }}</div>
-      </div>
-    </div>
-    {{ end }}
-  </section>
-
-</main>
-
-{{ end }}
 
 {{ if eq .Params.layout "download" }}
 <section class="downloads-page px-custom py-5">

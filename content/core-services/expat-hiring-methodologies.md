@@ -4,12 +4,10 @@ date: 2024-12-15T15:59:26+05:30
 image: "/images/expat-hiring-methodologies.jpg"
 heroImage: "/images/sbu-hiring.jpg"
 layout: "singlelist"
-# attribution: "https://www.freepik.com/free-photo/business-people-meeting-conference-seminar-sharing-strategy-concept_2758720.htm#fromView=search&page=1&position=4&uuid=38d467ac-1c68-45dd-a30f-d803769703fd Image by rawpixel.com on Freepik"
 draft: false
 sections:
   - title: "Turnkey Hiring"
     image: "/images/turnkey-hiring-1.jpg"
-   #  attribution: "<a href="https://www.freepik.com/free-photo/hr-recruiter-examines-candidate-resume-formal-job-interview_386518797.htm#fromView=search&page=1&position=1&uuid=ca9821d9-e196-4191-a878-9fd3430d983b">Image by DC Studio on Freepik</a>"
     description: "Turnkey hiring lets you focus on your core business while we handle the entire recruitment process, ensuring rapid delivery aligned with your hiring needs. Our expertise saves you time and costs while improving the quality of your hires."
     features:
       - "Rapid delivery of qualified candidates"
