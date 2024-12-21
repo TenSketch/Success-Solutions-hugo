@@ -2,6 +2,19 @@
 @import 'utilities';
 
 // first hero section
+// hero-sm
+.hero-sm {
+  background: $primary-color url('/images/hero-bg-sm.jpg') no-repeat fixed center center/cover;
+background-blend-mode: multiply;
+  // height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  color: $white;
+  text-align: center;
+  // padding: 0 20px;
+ 
+}
 .hero {
   background-color: $primary-color;
   color: $background-color;

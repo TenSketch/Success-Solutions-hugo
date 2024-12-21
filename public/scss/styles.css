@@ -497,6 +497,12 @@ hr.bg-accent {
   border-radius: 10px;
   padding: 2rem; }
 
+.hero-sm {
+  background: #00897B url("/images/hero-bg-sm.jpg") no-repeat fixed center center/cover;
+  background-blend-mode: multiply;
+  color: #fff;
+  text-align: center; }
+
 .hero {
   background-color: #00897B;
   color: #FAFAFA; }
