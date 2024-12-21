@@ -178,9 +178,46 @@ hr.bg-accent {
 
 .neumorphism {
   background: linear-gradient(145deg, #d8e6e4, #ffffff);
-  // background: $accent-color;
   box-shadow: 31px 31px 65px #d8e6e4,
     -31px -31px 65px #ffffff;
   @include border-radius;
   padding: 2rem;
+}
+
+.service-card {
+  @include border-radius; // Uses default 10px
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  gap:2rem;
+  box-shadow: 13px  13px 21px #9c9c9c,
+  -13px -13px 21px #ffffff;
+  transition: transform 0.3s ease;
+
+  @media(min-width:768px) {
+    width: fit-content;
+  }
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+}
+
+.blob-container {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  max-width: 600px; /* Match image width */  
+  max-height: 600px; /* Match image height */  
+  overflow: hidden;  
+  width: 100%;  
+  height: 100%;  
+  margin: 0 auto;  
+
+  .blob-svg {  
+    width: 100%;  
+    height: 100%;  
+  }  
 }

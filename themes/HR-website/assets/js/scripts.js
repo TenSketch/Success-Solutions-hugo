@@ -1,120 +1,94 @@
-document.addEventListener("scroll", () => {
+document.addEventListener("DOMContentLoaded", () => {
+  // Navbar scrolling behavior
   const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 100) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-
-// Toggle the navbar when the hamburger is clicked
-document.querySelector('.navbar-toggler').addEventListener('click', function (event) {
-  // Prevent the click event from propagating to the document
-  event.stopPropagation();
-
-  const icons = document.querySelectorAll('.navbar-toggler .hamburger-icon');
-  icons.forEach(icon => {
-    icon.classList.toggle('open');
+  document.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
   });
 
-  // Manually trigger Bootstrap collapse (without toggling class)
+  // Toggle navbar on hamburger click
+  const navbarToggler = document.querySelector('.navbar-toggler');
   const navbarCollapse = document.querySelector('.navbar-collapse');
-  if (navbarCollapse.classList.contains('show')) {
-    // If the navbar is shown, collapse it
-    bootstrap.Collapse.getInstance(navbarCollapse).hide();
-  } else {
-    // Otherwise, show it
-    bootstrap.Collapse.getInstance(navbarCollapse).show();
-  }
-});
+  navbarToggler.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const icons = navbarToggler.querySelectorAll('.hamburger-icon');
+    icons.forEach(icon => icon.classList.toggle('open'));
+    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+    navbarCollapse.classList.contains('show') ? bsCollapse.hide() : bsCollapse.show();
+  });
 
-// Close the navbar when clicking outside of the navbar
-document.addEventListener('click', function (event) {
-  const navbar = document.querySelector('.navbar');
-  const toggler = document.querySelector('.navbar-toggler');
-  const navbarCollapse = document.querySelector('.navbar-collapse');
-
-  // Check if the clicked area is outside the navbar and navbar-toggler
-  if (!navbar.contains(event.target) && !toggler.contains(event.target)) {
-    // Remove the 'open' class from the hamburger icon
-    const icons = document.querySelectorAll('.navbar-toggler .hamburger-icon');
-    icons.forEach(icon => {
-      icon.classList.remove('open');
-    });
-
-    // Close the navbar by calling Bootstrap's collapse.hide method
-    if (navbarCollapse.classList.contains('show')) {
-      bootstrap.Collapse.getInstance(navbarCollapse).hide();
+  // Close navbar when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!navbar.contains(event.target)) {
+      const icons = navbarToggler.querySelectorAll('.hamburger-icon');
+      icons.forEach(icon => icon.classList.remove('open'));
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (navbarCollapse.classList.contains('show')) bsCollapse.hide();
     }
-  }
-});
+  });
 
-// Prevent closing the navbar when clicking inside the navbar or on the toggler
-document.querySelector('.navbar').addEventListener('click', function (event) {
-  event.stopPropagation();
-});
+  // Close other dropdowns when a new one is opened
+  document.querySelectorAll('.dropdown-toggle').forEach(dropdownToggle => {
+    dropdownToggle.addEventListener('click', function () {
+      const openDropdowns = document.querySelectorAll('.dropdown.show');
+      openDropdowns.forEach(dropdown => {
+        if (dropdown !== this.parentElement) {
+          dropdown.classList.remove('show');
+          const menu = dropdown.querySelector('.dropdown-menu');
+          menu.classList.remove('show');
+        }
+      });
+    });
+  });
 
-// challenges animation section
-document.addEventListener('DOMContentLoaded', () => {
+  // Intersection Observer for challenges animation
   const challengesSection = document.querySelector('.challenges-section');
-  const typingText = document.getElementById('typing-text');
-  const slidingItems = document.getElementById('sliding-items');
-  const finalParagraph = document.getElementById('final-paragraph');
+  if (challengesSection) {
+    const typingText = document.getElementById('typing-text');
+    const slidingItems = document.getElementById('sliding-items');
+    const finalParagraph = document.getElementById('final-paragraph');
+    let typingStarted = false;
+    let typingIndex = 0;
+    const typingMessage = "The real issues in organizations are the areas to which the Management should pay attention such as...";
+    const slidingMessages = [
+      `<i class="fa-solid fa-hand-point-right me-2"></i> Direct business-related bottlenecks`,
+      `<i class="fa-solid fa-hand-point-right me-2"></i> New Products and competition related challenges`,
+      `<i class="fa-solid fa-hand-point-right me-2"></i> Exploring company expansion plans`,
+      `<i class="fa-solid fa-hand-point-right me-2"></i> Share Market positioning initiatives etc`
+    ];
+    let slideIndex = 0;
 
-  let typingStarted = false;
-  let typingIndex = 0;
-  const typingMessage = "The real issues in organizations are the areas to which the Management should pay attention such as...";
-  const slidingMessages = [  
-    `<i class="fa-solid fa-hand-point-right me-2"></i> Direct business-related bottlenecks`,  
-    `<i class="fa-solid fa-hand-point-right me-2"></i> New Products and competition related challenges`,  
-    `<i class="fa-solid fa-hand-point-right me-2"></i> Exploring company expansion plans`,  
-    `<i class="fa-solid fa-hand-point-right me-2"></i> Share Market positioning initiatives etc`  
-];
-  let slideIndex = 0;
-
-  // Typing animation
-  function typeText() {
-    if (typingIndex < typingMessage.length) {
-      typingText.textContent += typingMessage.charAt(typingIndex);
-      typingIndex++;
-      setTimeout(typeText, 50); // Typing speed
-    } else {
-      setTimeout(startSliding, 1000); // Start sliding animation
-    }
-  }
-
-  // Sliding items animation
-  function startSliding() {
-    if (slideIndex < slidingMessages.length) {
-      const span = document.createElement('span');
-      span.innerHTML = slidingMessages[slideIndex];
-      slidingItems.innerHTML = ''; // Clear previous content
-      slidingItems.appendChild(span);
-
-      span.style.animation = 'slide-in-out 3s forwards ease-in-out';
-      slideIndex++;
-
-      setTimeout(startSliding, 3000); // Time between messages
-    } else {
-      slidingItems.style.display = 'none'; // Hide sliding items
-      showFinalParagraph();
-    }
-  }
-
-  function showFinalParagraph() {
-    finalParagraph.classList.remove('d-none');
-    finalParagraph.style.animation = 'slide-in-final 1s ease-in-out forwards';
-  }
-
-  // Intersection Observer for triggering typing animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !typingStarted) {
-        typingStarted = true;
-        typeText();
+    function typeText() {
+      if (typingIndex < typingMessage.length) {
+        typingText.textContent += typingMessage.charAt(typingIndex++);
+        setTimeout(typeText, 50);
+      } else {
+        setTimeout(startSliding, 1000);
       }
-    });
-  });
+    }
 
-  observer.observe(challengesSection);
+    function startSliding() {
+      if (slideIndex < slidingMessages.length) {
+        slidingItems.innerHTML = `<span style="animation: slide-in-out 3s forwards ease-in-out;">${slidingMessages[slideIndex++]}</span>`;
+        setTimeout(startSliding, 3000);
+      } else {
+        slidingItems.style.display = 'none';
+        finalParagraph.classList.remove('d-none');
+        finalParagraph.style.animation = 'slide-in-final 1s ease-in-out forwards';
+      }
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !typingStarted) {
+          typingStarted = true;
+          typeText();
+        }
+      });
+    });
+    observer.observe(challengesSection);
+  }
 });

@@ -7,7 +7,7 @@ image: '/images/consulting-practice.jpg'
 layout: 'common'
 draft: false
 ---
-Consulting Practice emphasizes our commitment to delivering high-quality consulting solutions tailored to meet our clients' needs. We focus on creating processes that not only yield results but also adhere to the highest ethical standards. Our approach prioritizes simplicity and ease of execution, ensuring that our strategies are straightforward and practical, leading to effective outcomes for our clients.
+<!-- Consulting Practice emphasizes our commitment to delivering high-quality consulting solutions tailored to meet our clients' needs. We focus on creating processes that not only yield results but also adhere to the highest ethical standards. Our approach prioritizes simplicity and ease of execution, ensuring that our strategies are straightforward and practical, leading to effective outcomes for our clients. -->
 <!--more-->
 
 **Our Consulting Practice offers four main benefits:**

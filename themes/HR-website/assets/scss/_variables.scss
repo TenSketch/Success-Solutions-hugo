@@ -8,12 +8,14 @@ $white: #fff; // White
 $text-muted: #757575;
 
 $navbar-height: 10vh;
-// Example Usage
 
+$primary-color--light: hsl(174, 100%, 87%);  // Primary - Teal
 
-// header, footer {
-//   background-color: $secondary-color;
-//   color: $background-color;
-// }
+$bg-color: #f0f0f3;
+$shadow-light: #ffffff;
+$shadow-dark: rgba(0, 0, 0, 0.2);
 
-$primary-color--light: hsl(174, 100%, 97%);  // Primary - Teal
+$glass-color: rgba(255, 255, 255, 0.2);
+$card-border: rgba(255, 255, 255, 0.3);
+$shadow-color: rgba(0, 0, 0, 0.1);
+$shadow-color-deep: rgba(0, 0, 0, 0.2); // Add a deeper shadow color  

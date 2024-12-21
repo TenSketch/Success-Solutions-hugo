@@ -5,25 +5,33 @@
 // hero-sm
 .hero-sm {
   background: $primary-color url('/images/hero-bg-sm.jpg') no-repeat fixed center center/cover;
-background-blend-mode: multiply;
-  // height: 100vh;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  background-blend-mode: multiply;
   color: $white;
   text-align: center;
-  // padding: 0 20px;
- 
 }
+
 .hero {
   background-color: $primary-color;
+  background: linear-gradient(145deg, #00534a, #006258);
   color: $background-color;
-  .content{
-    .title{
+
+  img {
+    width: 70%;
+    display: block;
+    margin-inline: auto;
+    @include border-radius;
+    box-shadow: 13px  13px 21px #00453e,
+               -13px -13px 21px #007367;
+  }
+
+  .content {
+    .title {
       font-weight: 500;
       line-height: 1.4;
     }
-    .subtitle, .desc{
+
+    .subtitle,
+    .desc {
       line-height: 1.4;
 
     }
@@ -32,39 +40,50 @@ background-blend-mode: multiply;
 
 // 2nd section company intro
 .intro {
-  min-height: 40vh;
+  // min-height: 40vh;
   position: relative;
-  .rotating-blob{
+  background-color: $background-color;
+
+  .rotating-blob {
     position: absolute;
     top: 2%;
     left: 2%;
-      .rotate {
-        width :100px;
-        height:100px;
-        animation-name: ani-rotate;
-        animation-duration: 30s;
-        animation-timing-function: linear;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        // @media(min-width:768px){
-        //   width: 150px;
-        //   height:150px;
-        // }
+
+    .rotate {
+      width: 100px;
+      height: 100px;
+      animation-name: ani-rotate;
+      animation-duration: 30s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+      animation-fill-mode: none;
+      // @media(min-width:768px){
+      //   width: 150px;
+      //   height:150px;
+      // }
+    }
+
+    @keyframes ani-rotate {
+      0% {
+        transform: rotate(0);
       }
-    
-      @keyframes ani-rotate {
-        0%{ transform: rotate(0); }
-        100%{ transform: rotate(360deg); }  
+
+      100% {
+        transform: rotate(360deg);
       }
-}
-  background-color: $background-color;
+    }
+  }
+
   .title {
-    // font-size: 2.5rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    line-height: 1.3;
+    line-height: 1.4;
+
+    @media (min-width: 768px) {
+      font-size: 2.4rem;
+    }
   }
 
   .subtitle {
@@ -73,142 +92,55 @@ background-blend-mode: multiply;
     // font-weight: 400;
     line-height: 1.4;
     margin-top: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.6rem;
+    }
   }
-  // .blob-bg{
-  //   background: url(/images/blob.svg) no-repeat center center/cover;
-  //   position: relative;
-  //   img{
-  //     position: absolute;
-  //     inset: 0;
-  //     object-fit: contain;
-  //     width: 100%;
-  //     height: 100%;
-  //   }
-  // }
-  .blob-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 600px; /* Match image width */
-    max-height: 600px; /* Match image height */
-    // background-color: #f0f4f8; /* Desired background color */
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-  }
-  
-  .blob-svg {
-    width: 100%;
-    height: 100%;
-  }
-  
-  
+
+
 }
 
 // 3rd section quotes
-.quotes {
-  background-color: $primary-color;
-  text-align: center;
+.quotes-img{
+  img{
+    // box-shadow bottom
+    // box-shadow: 0px 0px 10px rgba(240, 228, 228, 0.671);
+    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adjust values for shadow effect */  
 
-  .title {
-    color: $background-color;
-    // font-size: 2rem;
-    font-weight: 500;
-    line-height: 1.4;
-  }
-
-  .quotes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    align-items: center;
-
-    .quote-item {
-      background: white;
-      @include border-radius; // Uses default 10px
-      border: 1px solid $background-color;
-      padding: 1.5rem;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-      min-height: 35vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-
-      @media(min-width:768px) {
-        min-height: 45vh;
-      }
-
-      &:hover {
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      .person-img {
-        // width:  200px;
-        height: 150px;
-        // aspect-ratio: 1;
-        margin-bottom: 1rem;
-        object-fit: contain;
-      }
-
-      blockquote {
-        font-size: 1.1rem;
-        font-style: italic;
-        color: $secondary-color;
-        line-height: 1.3;
-      }
-
-      cite {
-        display: block;
-        // margin-top: 1rem;
-        font-size: 0/9rem;
-        color: $text-muted;
-
-        .year {
-          // font-weight: 500;
-          color: $primary-color;
-        }
-      }
-    }
   }
 }
 
 // 4th sec what we do
 .people-success {
   background-color: $background-color;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 
   .title {
     color: $primary-color;
-    // font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    // font-weight: 500;
-    // line-height: 1.4;
-    text-align: left;
   }
 
   .image-wrapper {
-    .responsive-img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
+    img {
+      // width: 100%;
       @include border-radius; // Uses default 10px
+      box-shadow: 13px  13px 21px #9c9c9c,
+               -13px -13px 21px #ffffff;
+      
     }
-    a{
+
+    a {
       color: $primary-color;
     }
   }
 
-  .description {
-    color: $text-muted;
-    font-size: 1.3rem;
-    line-height: 1.6;
-    text-align: left;
-  }
+  // .description {
+  //   // color: $text-muted;
+  //   // font-size: 1.2rem;
+  //   // line-height: 1.6;
+  //   // text-align: left;
+  // }
 
   // Grid layout for min-width: 768px
   @media (min-width: 768px) {
@@ -268,10 +200,11 @@ background-blend-mode: multiply;
   }
 
   .content-wrapper {
-    max-width: 800px;
-    width: 80%;
     z-index: 3;
-
+    @media(min-width:768px) {
+      max-width: 800px;
+      width: 80%;
+    }
     .typing-text {
       font-size: 1.3rem;
       font-style: italic;
@@ -290,7 +223,7 @@ background-blend-mode: multiply;
       overflow: hidden;
       z-index: 3;
       font-weight: 600;
-      
+
       @media(min-width:768px) {
         font-size: 2rem;
       }
@@ -307,10 +240,13 @@ background-blend-mode: multiply;
         transform: translateX(-100%);
         opacity: 0;
       }
-      10%, 80% {
+
+      10%,
+      80% {
         transform: translateX(0);
         opacity: 1;
       }
+
       100% {
         transform: translateX(100%);
         opacity: 0;
@@ -318,11 +254,14 @@ background-blend-mode: multiply;
     }
 
     .final-paragraph {
-      font-size: 1.2rem;
+      // font-size: 1.2rem;
       text-align: left;
       animation: slide-in-final 1s forwards ease-in-out;
       color: white;
       z-index: 3;
+      @media(min-width:768px) {
+        font-size: 1.3rem;
+      }
 
       ul {
         list-style: none;
@@ -331,7 +270,8 @@ background-blend-mode: multiply;
         li {
           position: relative;
           padding-left: 30px;
-          margin-bottom: 10px;
+          margin-bottom: 0.5rem;
+          margin-left: 1rem;
 
           &::before {
             content: '\f058'; // FontAwesome icon (circle check)
@@ -339,6 +279,8 @@ background-blend-mode: multiply;
             font-weight: 900;
             position: absolute;
             left: 0;
+            top: 50%;
+            transform: translateY(-50%);
             color: #f0c75e; // Custom icon color
           }
         }
@@ -351,6 +293,7 @@ background-blend-mode: multiply;
       transform: translateX(-100%);
       opacity: 0;
     }
+
     100% {
       transform: translateX(0);
       opacity: 1;
@@ -359,9 +302,6 @@ background-blend-mode: multiply;
 }
 
 // 6th sec job seekers puzzle 
-$bg-color: #f0f0f3;
-$shadow-light: #ffffff;
-$shadow-dark: rgba(0, 0, 0, 0.2);
 
 .maze-section {
   display: flex;
@@ -439,7 +379,12 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
       }
     }
   }
+  .maze-img{
+    box-shadow: 13px  13px 21px #9c9c9c,
+               -13px -13px 21px #ffffff;
+      @include border-radius; // Uses default 10px
 
+  }
   // Text Content
   .content-wrapper {
     flex: 1;
@@ -447,18 +392,17 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 
     .title {
       font-weight: 500;
-      // margin-bottom: 1rem;
-      // opacity: 0;
-      // transform: translateY(20px);
-      // transition: opacity 1s, transform 1s ease-out;
     }
-    .subtitle{
+
+    .subtitle {
       line-height: 1.5;
-      span{
+
+      span {
         color: $accent-color--dark;
       }
     }
-    .description{
+
+    .description {
       font-size: 1.2rem;
     }
 
@@ -480,6 +424,7 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
 .about-section {
   background-color: $primary-color;
   color: $white;
+
   .content {
 
     // .blob-wrapper {
@@ -509,318 +454,161 @@ $shadow-dark: rgba(0, 0, 0, 0.2);
     }
   }
 
-  .image {
-    // flex: 1;
-    // text-align: center;
+  img {
+    @include border-radius; // Uses default 10px
 
-    img {
-      @include border-radius; // Uses default 10px
-      @media(min-width:768px){
-        min-height: 70vh;
+    @media(min-width:768px) {
+      min-height: 70vh;
       object-fit: cover;
       @include border-radius(0); // Uses default 10px
-      
-      }
+
     }
   }
 
- 
+
 }
 
 // 8th sec search sols and serv
-.global-solutions-section {
+.global-section {
   background-color: $background-color;
-  // position: relative;
-  // overflow: hidden;
-
-  // Section Divider (Wave Shape)
-  // .section-divider {
-  //   position: absolute;
-  //   top: -50px;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100px;
-  //   background: linear-gradient(to right, $primary-color, transparent);
-  //   clip-path: polygon(0 100%, 100% 0%, 100% 100%, 0 100%);
-  //   z-index: 1;
-  // }
-
+  color: $primary-color;
   .title {
-    // font-size: 2rem;
     font-weight: 500;
-    // line-height: 1.3;
-    position: relative;
-    z-index: 2;
   }
 
-  // Services Grid
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    position: relative;
-    z-index: 2;
-  }
-
-  // Service Cards
   .service-card {
-    background: $background-color;
-    @include border-radius; // Uses default 10px
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    // text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-
-    // &:hover {
-    //   transform: translateY(-10px);
-    //   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: rgba(255, 213, 79, 0.3);
-    //     @include border-radius; // Uses default 10px
-    //     z-index: 0;
-    //   }
-    // }
-
+   
     .service-icon {
       font-size: 1.5rem;
-      color: $primary-color;
-      // margin-bottom: 1rem;
     }
 
     .service-title {
-      font-size: 1.2rem;
+      // font-size: 1.2rem;
       // font-weight: bold;
-      color: $secondary-color;
-      // margin-bottom: 0.5rem;
-    }
-
-    .service-desc {
-      font-size: 1rem;
-      color: darken($secondary-color, 20%);
     }
   }
-}
-@keyframes waveAnimation {
-  0% { transform: translateX(-10px); }
-  100% { transform: translateX(10px); }
-}
-
-.section-divider {
-  animation: waveAnimation 4s infinite alternate ease-in-out;
 }
 
 // 9th sec core serv
 .core-services-section {
   background-color: $primary-color;
-  // position: relative;
-  // padding: 3rem 1.5rem;
 
   .title {
     // font-size: 2.2rem;
     font-weight: 500;
-    line-height: 1.4;
     color: $background-color;
-    // text-align: center;
-    // margin-bottom: 2rem;
   }
+  .service-card {
+    background: $primary-color;
+    box-shadow:
+      -12px -12px 30px #006359,
+      12px 12px 30px #00af9d;
+    color: white;
+    .service-title {
+      font-size: 1.1rem;
+      // line-height: 1.3;
+    }
 
-  .services-cards {
-    // display: flex;
-    // flex-wrap: wrap;
-    // gap: 2rem;
-    // justify-content: center;
-
-    .service-card {
-      // position: relative;
-      background: $primary-color;
-      @include border-radius; // Uses default 10px
-      // width: 300px;
-      // max-width: 90%;
-      // min-height: 350px;
-      // text-align: center;
-      padding: 1rem;
-      box-shadow: 
-        -12px -12px 30px #006359, 
-        12px 12px 30px #00af9d;
-      color: white;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      gap: 2rem;
-      // flex-direction: column;
-      // justify-content: space-between;
-      // align-items: center;
-      @media(min-width:768px){
-      width: 300px;
-
-      }
-      & + .service-card{
-        margin-top: 1.5rem;
-      }
-      &:hover {
-        transform: translateY(-8px);
-        box-shadow: 
-          -18px -18px 40px #00524e, 
-          18px 18px 40px #00d3ba;
-      }
-
-      .service-img {
-        // width: 90px;
-        // height: auto;
-        // margin: 0 auto 1rem;
-      }
-
-      .service-title {
-        font-size: 1.1rem;
-        line-height: 1.3;
-        // font-weight: bold;
-        // margin-top: 1rem;
-        // margin-block: 2rem;
-      }
-
-      .service-description {
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-        opacity: 0.8;
-      }
-      .btn{
-        i{
-          font-size: 2rem;
-          color: $accent-color;
-        }
+    .btn {
+      i {
+        font-size: 2rem;
+        color: $accent-color;
       }
     }
   }
+
 }
 
 // 10th sec approach
-$glass-color: rgba(255, 255, 255, 0.2);
-$card-border: rgba(255, 255, 255, 0.3);
-$shadow-color: rgba(0, 0, 0, 0.1);
-
 .approach-section {
-  position: relative;
-  // min-height: 100vh;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   background: $primary-color url('/images/global-executive-search.webp') no-repeat fixed center center/cover;
   background-blend-mode: color-burn;
   color: white;
-  .title{
-    line-height: 1.4;
+
+  .title {
     font-weight: 500;
+  }
+  .glass-card {
+    background: $glass-color;
+    border: 1px solid $card-border;
+    backdrop-filter: blur(10px);
+    // box-shadow: 0 4px 6px $shadow-color, 0 1px 3px $shadow-color;
+    box-shadow:   
+        0 8px 15px $shadow-color-deep,  /* Deeper shadow for more depth */  
+        0 4px 6px $shadow-color,  
+        0 1px 3px $shadow-color !important;         /* Lighter shadow for subtlety */  
+  @media(min-width:768px) {
+    width: fit-content;
+  }
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    i {
+      font-size: 1.5rem;
+      color: $accent-color;
+      // margin-bottom: 1rem;
+    }
+
+    a {
+      margin-left: auto;
+    }
+
+  }
+
+}
+
+// sec 11 - usp
+.usp {
+  background: $background-color url(/images/vertical-wave-bg.png)no-repeat fixed center center/cover;
+  color: $primary-color;
+
+  .title {
+    font-weight: 500;
+    line-height: 1.4;
+    // margin-bottom: 2rem;
   }
 
   .card-container {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    // gap: 1.5rem;
-
-    .glass-card {
-      // width: 22.5%;
-      // min-height: 200px;
-      position: relative;
-      background: $glass-color;
-      border: 1px solid $card-border;
-      backdrop-filter: blur(10px);
-      padding: 1rem;
-      @include border-radius; // Uses default 10px
-      box-shadow: 0 4px 6px $shadow-color, 0 1px 3px $shadow-color;
-      // text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      // flex-direction: column;
-      align-items: center;
-      // justify-content: space-between;
-      gap: 1rem;
-
-      &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 15px $shadow-color, 0 4px 6px $shadow-color;
-      }
-
-      i {
-        font-size: 1.5rem;
-        color: $accent-color;
-        // margin-bottom: 1rem;
-      }
-      a{
-        margin-left: auto;
-        .fa{
-        }
-  
-      }
-      h3 {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin: 0;
-      }
-    }
-  }
-  // .content-wrapper {
-  //   z-index: 2;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   gap: 2rem;
-
-  // }
-
-}
-// sec 11 - usp
-.usp {  
-  // background-color: $background-color;  
-  background: $background-color url(/images/vertical-wave-bg.png)no-repeat fixed center center/cover;
-  color: $primary-color;  
-  .title {  
-    font-weight: 500;  
-    line-height: 1.4;  
-    margin-bottom: 2rem;
-  }  
-
-  .card-container {  
-    .card {  
+    .card {
       background: transparent;
       border: none;
-      padding: 1rem 1.5rem;  
+      padding: 1rem 1.3rem;
       // text-align: center;  
-      transition: transform 0.3s, box-shadow 0.3s;  
-      display: flex;  
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
       // align-items: center; // Centering icon and text  
       // margin-right: 2rem; // Gap between card and image  
 
-      .icon-title {  
-        display: flex;  
-        align-items: center;  
+      .icon-title {
+        display: flex;
+        align-items: center;
         gap: 1rem; // Space between icon and text  
+        h6{
+          color: $primary-color;
+        }
+
         i {
           font-size: 2rem;
-          color: $accent-color;
-          }
-      }  
-    }  
+          color: $primary-color;
+        }
+      }
+    }
 
-  }  
-  &::before {  
+  }
+
+  &::before {
     display: none;
-    content: '';  
-    position: absolute;  
-    width: 100%;  
-    height: 100%;  
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
     left: 50%;
-    transform: translateX(-50%);  
-    top: 0;  
+    // transform: translateX(-50%);
+    top: 0;
     bottom: 0;
-    background: linear-gradient(to right, transparent 50%, $primary-color 50%);  
+    background: linear-gradient(to right, transparent 50%, $primary-color 50%);
     z-index: 0; // Place behind card and image  
-    clip-path: ellipse(100% 50% at 50% 50%);  
-  }  
+    clip-path: ellipse(100% 50% at 50% 50%);
+  }
 }

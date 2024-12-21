@@ -15,10 +15,10 @@
 
   .navbar-collapse {
     @media(max-width:991px) {
-      background: rgba( 54, 70, 78, 0.5 );
+      background: rgba( 54, 70, 78, 0.75 );
       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-      backdrop-filter: blur( 1.5rem );
-      -webkit-backdrop-filter: blur( 1.5rem );
+      backdrop-filter: blur( 0.1rem );
+      -webkit-backdrop-filter: blur( 0.1rem );
       position: absolute;
       top: 0;
       right: 0;
@@ -36,6 +36,7 @@
 
     .navbar-nav {
       @media(max-width:768px) {
+        gap: 1rem;
         display: grid;
         align-content: center;
       }
@@ -67,14 +68,14 @@
     // font-size: 1.2rem;
     transition: color 500ms ease, transform 0.3s ease;
     position: relative;
-    
+    padding: 0;
     &:hover {
       color: $accent-color;
     }
     
     @media(max-width:768px) {
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-size: 1.2rem;
+      font-weight: 500;
       &:nth-child(n) {
         transform: translateY(-10px);
         transition: transform 0.3s ease;
@@ -115,13 +116,13 @@
       &.open {
         &:nth-child(1) {
           transform: rotate(45deg);
-          width: 45px;
+          width: 35px;
           top: 8px;
         }
 
         &:nth-child(2) {
           transform: rotate(-45deg);
-          width: 45px;
+          width: 35px;
         }
 
         &:nth-child(3) {
@@ -156,8 +157,24 @@
     }
   }
 }
-.dropdown-item{
+.dropdown-menu{
   @media(max-width:768px){
-    font-size: 1.1rem;
+    background: transparent;
+    border-radius: 0;
+    border: none;
+    border-top: 2px solid $white;
+
+    
+  }
+  .dropdown-item{
+    &:hover{
+      background-color: transparent;
+      opacity: 1;
+    }
+    @media(max-width:768px){
+      font-size: 1.1rem;
+      color: $white;
+      text-align: right;
+    }
   }
 }
