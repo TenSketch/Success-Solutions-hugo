@@ -107,6 +107,21 @@
 
 // 3rd section quotes
 .quotes-img{
+  .quotes-col{
+    // border: 1px solid white;
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background: url(/images/Ripple-Line-cropped.png) no-repeat bottom center/100% auto;
+    }
+  }
   img{
     // box-shadow bottom
     // box-shadow: 0px 0px 10px rgba(240, 228, 228, 0.671);
@@ -449,9 +464,10 @@
     font-weight: 500;
   }
   .glass-card {
-    background: $glass-color;
-    border: 1px solid $card-border;
-    backdrop-filter: blur(10px);
+    background: rgba( 54, 70, 78, 0.75 );
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 0.1rem );
+      -webkit-backdrop-filter: blur( 0.1rem );
     // box-shadow: 0 4px 6px $shadow-color, 0 1px 3px $shadow-color;
     box-shadow:   
         0 8px 15px $shadow-color-deep,  /* Deeper shadow for more depth */  

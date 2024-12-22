@@ -54,6 +54,7 @@
       width: 0;
       height: 3px;
       background-color: $white;
+      border-radius: 50%;
       transition: width 500ms ease;
     }
 
@@ -68,7 +69,7 @@
     // font-size: 1.2rem;
     transition: color 500ms ease, transform 0.3s ease;
     position: relative;
-    padding: 0;
+    padding: 0 0 0.5rem 0;
     &:hover {
       color: $accent-color;
     }
@@ -170,6 +171,12 @@
     &:hover{
       background-color: transparent;
       opacity: 1;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle box shadow effect */
+
+    }
+    &:focus{
+      color: $primary-color!important;
+      
     }
     @media(max-width:768px){
       font-size: 1.1rem;

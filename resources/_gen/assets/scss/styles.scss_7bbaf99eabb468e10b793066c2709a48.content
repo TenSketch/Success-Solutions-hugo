@@ -164,6 +164,7 @@ html {
     html {
       font-size: 15px; } }
 body {
+  background-color: #FAFAFA;
   color: #212121;
   overflow-x: hidden;
   font-family: "Noto Sans Display", sans-serif;
@@ -378,6 +379,7 @@ hr.bg-accent {
       width: 0;
       height: 3px;
       background-color: #fff;
+      border-radius: 50%;
       transition: width 500ms ease; }
     .navbar .nav-item:hover::after {
       width: 100%; }
@@ -385,7 +387,7 @@ hr.bg-accent {
     color: #fff !important;
     transition: color 500ms ease, transform 0.3s ease;
     position: relative;
-    padding: 0; }
+    padding: 0 0 0.5rem 0; }
     .navbar .nav-link:hover {
       color: #FFD54F; }
     @media (max-width: 768px) {
@@ -447,7 +449,12 @@ hr.bg-accent {
 
 .dropdown-menu .dropdown-item:hover {
   background-color: transparent;
-  opacity: 1; }
+  opacity: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  /* Subtle box shadow effect */ }
+
+.dropdown-menu .dropdown-item:focus {
+  color: #008a7c !important; }
 
 @media (max-width: 768px) {
   .dropdown-menu .dropdown-item {
@@ -678,6 +685,19 @@ hr.bg-accent {
     @media (min-width: 768px) {
       .intro .subtitle {
         font-size: 1.6rem; } }
+.quotes-img .quotes-col {
+  position: relative; }
+  .quotes-img .quotes-col::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: url(/images/Ripple-Line-cropped.png) no-repeat bottom center/100% auto; }
+
 .people-success {
   background-color: #FAFAFA; }
   .people-success .title {
@@ -868,9 +888,10 @@ hr.bg-accent {
   .approach-section .title {
     font-weight: 500; }
   .approach-section .glass-card {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
+    background: rgba(54, 70, 78, 0.75);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1) !important;
     /* Lighter shadow for subtlety */ }
     @media (min-width: 768px) {
@@ -1342,7 +1363,7 @@ textarea {
   position: relative;
   color: #fff;
   background-color: #008a7c;
-  background-blend-mode: darken; }
+  background-blend-mode: soft-light; }
   .page-hero h1, .contact-hero h1, .about-hero h1 {
     font-weight: bold;
     margin-bottom: 1rem; }
@@ -1366,14 +1387,23 @@ textarea {
   background: linear-gradient(145deg, #d8e6e4, #ffffff); }
 
 .content-section:nth-of-type(even) {
-  background: #1f1f1f url(/images/Ripple-Line.svg) no-repeat center center/cover;
+  background: #1f1f1f url(/images/Ripple-Line.svg) no-repeat bottom center/100% auto;
   color: #fff; }
   .content-section:nth-of-type(even) img {
-    box-shadow: 3px  8px  8px #3b3b3b, -3px -8px 8px #1f1f1f; }
+    box-shadow: 3px 8px 8px #3b3b3b, -3px -8px 8px #1f1f1f; }
+  .content-section:nth-of-type(even) .text-content {
+    background: #1f1f1f;
+    box-shadow: inset 14px 14px 28px #181818, inset -14px -14px 28px #262626; }
+
+.content-section .text-content {
+  border-radius: 10px;
+  padding: 1rem;
+  background: #FAFAFA;
+  box-shadow: inset 14px 14px 28px #c6c6c6, inset -14px -14px 28px #ffffff; }
 
 .content-section img {
   border-radius: 10px;
-  box-shadow: 13px  13px 21px #9c9c9c, -13px -13px 21px #ffffff; }
+  box-shadow: 13px 13px 21px #9c9c9c, -13px -13px 21px #ffffff; }
 
 .text-gold {
   color: #FFD54F; }

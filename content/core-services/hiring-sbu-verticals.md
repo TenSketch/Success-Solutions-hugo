@@ -2,9 +2,9 @@
 title: 'Hiring SBU Verticals'
 date: 2024-12-15T15:59:26+05:30
 image: "/images/sbu-hiring.jpg"
-heroImage: "/images/sbu-hiring.jpg"
+heroImage: "/images/sbu-bg.jpg"
 layout: "singlelist"
-attribution: "Image by rawpixel.com on Freepik"
+# attribution: "Image by rawpixel.com on Freepik"
 draft: false
 sections:
   - title: "End-to-End Expatriate Hiring Solutions"

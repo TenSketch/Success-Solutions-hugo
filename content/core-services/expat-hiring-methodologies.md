@@ -2,7 +2,7 @@
 title: 'Expat Hiring Methodologies'
 date: 2024-12-15T15:59:26+05:30
 image: "/images/expat-hiring-methodologies.jpg"
-heroImage: "/images/sbu-hiring.jpg"
+heroImage: "/images/expat-hiring-methodologies.jpg"
 layout: "singlelist"
 draft: false
 sections:
@@ -49,7 +49,7 @@ sections:
       - "Protects organizational reputation"
 
   - title: "Hostility Hiring"
-    image: "/images/"
+    image: "/images/Hostility-Hiring.jpg"
     description: "Hostile hiring focuses on recruiting talent for high-risk environments, where safety and stability are crucial. By ensuring transparent processes and providing robust support, organizations can attract skilled professionals capable of thriving in challenging settings."
     features:
       - "Expert guidance for recruiting in high-risk areas."
