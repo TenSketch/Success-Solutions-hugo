@@ -3,10 +3,17 @@
   document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".navbar");
     document.addEventListener("scroll", () => {
+      const navbar2 = document.querySelector(".navbar");
+      const logo = document.getElementById("navbar-logo");
+      if (!logo) return;
+      const defaultLogo = logo.dataset.default;
+      const scrolledLogo = logo.dataset.scrolled;
       if (window.scrollY > 100) {
-        navbar.classList.add("scrolled");
+        navbar2?.classList.add("scrolled");
+        logo.src = scrolledLogo;
       } else {
-        navbar.classList.remove("scrolled");
+        navbar2?.classList.remove("scrolled");
+        logo.src = defaultLogo;
       }
     });
     const navbarToggler = document.querySelector(".navbar-toggler");

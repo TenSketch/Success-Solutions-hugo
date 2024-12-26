@@ -1,1 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Sinera';
+    src: url('/fonts/sinera/Sinera.woff2') format('woff2'),
+        url('/fonts/sinera/Sinera.woff') format('woff'),
+        url('/fonts/sinera/Sinera.ttf') format('truetype'),
+        url('/fonts/sinera/Sinera.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+$font-Noto-sans: "Noto Sans Display", sans-serif;
+
+$font-Sinera: 'Sinera', sans-serif;

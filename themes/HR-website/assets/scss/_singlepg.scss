@@ -61,41 +61,45 @@
 }
 
 .main-section {
-  background: linear-gradient(145deg, #d8e6e4, #ffffff);
+  // background: linear-gradient(145deg, #d8e6e4, #ffffff);
   // &:nth-of-type(even){
   //   background-color: $primary-color;
   // }
 }
+// &:nth-of-type(even) {
 
 .content-section {
-  &:nth-of-type(even) {
-    background: #1f1f1f url(/images/Ripple-Line.svg) no-repeat bottom center/100% auto;
-    color: $white;
-
-    img {
-      box-shadow: 3px 8px 8px #3b3b3b,
-        -3px -8px 8px #1f1f1f;
-    }
+    background:  url(/images/Ripple-Line-cropped.png) no-repeat bottom center/100% auto;
+    color: $primary-color;
+    @include border-radius;
+    
 
     .text-content {
-      background: #1f1f1f;
-      box-shadow: inset 14px 14px 28px #181818,
-        inset -14px -14px 28px #262626;
-    }
-  }
-
-  .text-content {
-    @include border-radius;
+      // background: $secondary-color;
     padding: 1rem;
-    background: #FAFAFA;
-    box-shadow: inset 14px 14px 28px #c6c6c6,
-      inset -14px -14px 28px #ffffff;
-  }
+     .title{
+      font-size: 1.3rem;
+     }
+     .desc{
+      font-size: 1.1rem;
+     }
+    }
+  
+
 
   img {
     @include border-radius; // Uses default 10px
 
-    box-shadow: 13px 13px 21px #9c9c9c,
-      -13px -13px 21px #ffffff;
+    // box-shadow: 13px 13px 21px #9c9c9c,
+    //   -13px -13px 21px #ffffff;
   }
+}
+
+
+// logo
+.brand-name{
+  font-family: $font-Sinera;
+}
+.tagline{
+  // font-family: $font-Noto-sans;
 }

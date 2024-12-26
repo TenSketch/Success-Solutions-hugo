@@ -2,12 +2,24 @@ document.addEventListener("DOMContentLoaded", () => {
   // Navbar scrolling behavior
   const navbar = document.querySelector(".navbar");
   document.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    const logo = document.getElementById("navbar-logo");
+  
+    if (!logo) return;
+  
+    // Get the logo paths from data attributes
+    const defaultLogo = logo.dataset.default;
+    const scrolledLogo = logo.dataset.scrolled;
+  
     if (window.scrollY > 100) {
-      navbar.classList.add("scrolled");
+      navbar?.classList.add("scrolled");
+      logo.src = scrolledLogo;
     } else {
-      navbar.classList.remove("scrolled");
+      navbar?.classList.remove("scrolled");
+      logo.src = defaultLogo;
     }
   });
+  
 
   // Toggle navbar on hamburger click
   const navbarToggler = document.querySelector('.navbar-toggler');

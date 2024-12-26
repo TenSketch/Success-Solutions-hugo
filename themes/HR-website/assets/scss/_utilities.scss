@@ -15,6 +15,9 @@
 .py-custom {
   padding-block: 5rem;
 }
+.py-first{
+  padding-block: 7.5rem;
+}
 
 .px-custom {
   padding-inline: 2rem;
@@ -39,7 +42,15 @@
   text-decoration: none;
   @include border-radius(5px); // Uses default 10px
   transition: all 0.3s ease;
-  border: none;
+  // border: 2px solid $primary-color;
+  // background-color: $secondary-color;
+  &:hover{
+    box-shadow: inset 0 0 0 2px $primary-color;
+  }
+  &:active{
+    border-color: $primary-color!important;
+  }
+  
 
   &-primary {
     background-color: $primary-color;
@@ -50,6 +61,16 @@
       background-color: $accent-color;
 
       color: $background-color;
+    }
+    // --outline
+    &--outline{
+      background-color: transparent;
+      border: 2px solid $primary-color;
+      color: $primary-color;
+      &:hover{
+        background-color: $primary-color;
+        color: $secondary-color;
+    }
     }
   }
 
@@ -71,11 +92,11 @@
 
   &-gold {
     background-color: $accent-color;
-    color: $secondary-color;
+    color: $primary-color;
 
     &:hover {
       background-color: lighten($accent-color, 10%);
-      color: $secondary-color;
+      // color: $pr-color;
     }
   }
 

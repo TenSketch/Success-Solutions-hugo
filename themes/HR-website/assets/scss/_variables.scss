@@ -1,21 +1,36 @@
-$primary-color: hsl(174, 100%, 27%);  // Primary - Teal
-$secondary-color: hsl(200, 18%, 26%);  //#37474f Secondary - Blue Gray
-$accent-color: #FFD54F;  // Accent - Amber
-$accent-color--dark: #b38900;  //
+// $primary-color: hsl(174, 100%, 27%);  // Primary - Teal
+// $secondary-color: hsl(200, 18%, 26%);  //#37474f Secondary - Blue Gray
+// $accent-color: #FFD54F;  // Accent - Amber
+// $accent-color--dark: #b38900;  //
+
+$primary-color: hsl(203, 92%, 14%); // Primary - Navy Blue
+$hue-priamry: 203;
+$saturation-primary: 92;
+$lightness-primary: 14;
+$secondary-color: hsl(197, 71%, 73%); // Secondary - Sky Blue
+$hue-secondary: 197;
+$saturation-secondary: 71;
+$lightness-secondary: 73;
+$accent-color: hsl(42, 100%, 70%);  // Accent - Sunglow
+$accent-color--dark: hsl(42, 100%, 35%);  
+
+
+$primary-color--light: hsl(203, 92%, 54%);  
+
 $text-color: #212121;  // Dark text
 $background-color: #FAFAFA;  // Light background
-$white: #fff; // White
 $text-muted: #757575;
 
-$navbar-height: 10vh;
 
-$primary-color--light: hsl(174, 100%, 87%);  // Primary - Teal
-
+$white: #fff; // White
 $bg-color: #f0f0f3;
-$shadow-light: #ffffff;
-$shadow-dark: rgba(0, 0, 0, 0.2);
 
-$glass-color: rgba(255, 255, 255, 0.2);
-$card-border: rgba(255, 255, 255, 0.3);
 $shadow-color: rgba(0, 0, 0, 0.1);
 $shadow-color-deep: rgba(0, 0, 0, 0.2); // Add a deeper shadow color  
+
+
+$Sky-Blue: #87CEEB;
+$Navy-Blue: #032B44;
+// $Dark-Grey: #333333;
+
+$navbar-height: 10vh;

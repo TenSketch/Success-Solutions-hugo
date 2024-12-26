@@ -6,21 +6,40 @@
   transition: background-color 0.4s ease, box-shadow 0.4s ease;
   background-color: $secondary-color;
   background-color: transparent;
-  height: $navbar-height;
+  min-height: $navbar-height;
+
   .navbar-brand {
-    color: $white!important;
-    font-weight: bold;
-    transition: color 0.4s ease;
+    flex: 1;
+
+    // color: $white!important;
+    // font-weight: bold;
+    // transition: color 0.4s ease;
+    img {
+      // width: clamp(60vw, 70vw, 90vw);
+      min-width: 60%;
+      width: 55vw;
+      // max-width: 70%;
+      @media(min-width:425px){
+        min-width: 40%;
+        width: 40vw;
+      }
+      // 768px
+      @media(min-width:768px){
+        min-width: 30%;
+        width: 18vw;
+        }
+    }
   }
 
   .navbar-collapse {
     @media(max-width:991px) {
-      background: rgba( 54, 70, 78, 0.75 );
-      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-      backdrop-filter: blur( 0.1rem );
-      -webkit-backdrop-filter: blur( 0.1rem );
+      // background: hsla($hue-priamry, $saturation-primary, $lightness-primary, 0.85);
+      background: hsla($hue-secondary, $saturation-secondary, $lightness-secondary, 0.85);
+      box-shadow: 0 8px 32px 0 $primary-color;
+      backdrop-filter: blur(0.5rem);
+      -webkit-backdrop-filter: blur(0.5rem);
       position: absolute;
-      top: 0;
+      top: 12vh;
       right: 0;
       height: 0;
       overflow: hidden;
@@ -64,19 +83,24 @@
   }
 
   .nav-link {
-    color: $white !important;
+    color: $secondary-color;
     // font-weight: 600;
     // font-size: 1.2rem;
     transition: color 500ms ease, transform 0.3s ease;
     position: relative;
     padding: 0 0 0.5rem 0;
+
     &:hover {
       color: $accent-color;
     }
-    
+
     @media(max-width:768px) {
+      color: $primary-color;
       font-size: 1.2rem;
       font-weight: 500;
+      &:hover {
+        color: $text-color;
+      }
       &:nth-child(n) {
         transform: translateY(-10px);
         transition: transform 0.3s ease;
@@ -92,12 +116,12 @@
     z-index: 10;
 
     .hamburger-icon {
+      background-color: $secondary-color;
       position: absolute;
       right: 0;
       top: 0;
       width: 45px;
       height: 2px;
-      background-color: $white;
       transition: transform 0.3s ease, top 0.3s ease, width 0.3s ease;
 
       &:nth-child(1) {
@@ -133,54 +157,74 @@
       }
     }
 
+
+
     &:focus {
       box-shadow: none;
     }
   }
 
   &.scrolled {
-    background-color: $secondary-color; 
+    background-color: $secondary-color;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    .navbar-toggler .hamburger-icon {
-      background-color: $white !important;
+    .navbar-toggler {
+      .hamburger-icon {
+        background-color: $primary-color!important;
+      }
+    
     }
 
-    .navbar-brand,
-    .nav-link {
-      color: $white;
-    }
 
     .nav-link {
-      @media(max-width:768px) {
+      color: $secondary-color;
+
+      // color: $primary-color  !important;
+      @media(min-width:768px) {
         color: $primary-color;
       }
+
     }
+
+
+    .nav-item {
+      &::after {
+        background-color: $primary-color!important ;
+      }
+    }
+
+
+
   }
 }
-.dropdown-menu{
-  @media(max-width:768px){
+
+.dropdown-menu {
+  @media(max-width:768px) {
     background: transparent;
     border-radius: 0;
     border: none;
     border-top: 2px solid $white;
 
-    
+
   }
-  .dropdown-item{
-    &:hover{
+
+  .dropdown-item {
+    &:hover {
       background-color: transparent;
       opacity: 1;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle box shadow effect */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      /* Subtle box shadow effect */
 
     }
-    &:focus{
-      color: $primary-color!important;
-      
+
+    &:focus {
+      color: $primary-color !important;
+
     }
-    @media(max-width:768px){
+
+    @media(max-width:768px) {
       font-size: 1.1rem;
-      color: $white;
+      color: $primary-color;
       text-align: right;
     }
   }

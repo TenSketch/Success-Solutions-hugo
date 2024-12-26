@@ -68,8 +68,8 @@
       </div>
       {{ end }}
       <div class="col-md-6 mt-4 mt-md-0 text-content">
-        <h2 class="text-primary">{{ $section.title }}</h2>
-        <p>{{ $section.description }}</p>
+        <h2 class="title">{{ $section.title }}</h2>
+        <p class="desc">{{ $section.description }}</p>
         {{ with $section.features }}
         <ul class="feature-list mt-3 list-unstyled">
           {{ range . }}
@@ -80,7 +80,7 @@
         </ul>
         {{ end }}
         {{ with $section.brochure }}
-        <a href="{{ . }}" class="btn btn-primary mt-3" target="_blank" rel="noopener">
+        <a href="{{ . }}" class="btn btn-primary--outline mt-3" target="_blank" rel="noopener">
           <i class="fa fa-download" aria-hidden="true"></i> Download Brochure
         </a>
         {{ end }}
@@ -239,7 +239,7 @@
             <p>If you need immediate assistance, feel free to call us
               <a class="nav-link phone-link" href="tel:+919962006364" title="tap to call mobile"
                 aria-label="tap to call mobile">9962006364</a>
-              <!-- <a href="/contact" class="text-primary">contact us directly</a>. -->
+              <!-- <a href="/contact" class="">contact us directly</a>. -->
             </p>
             <!-- <a href="/" class="btn btn-primary btn-lg mt-3">Go Back to Home</a> -->
           </div>
@@ -249,5 +249,21 @@
   </div>
 </section>
 {{ end }}
+{{ if eq .Params.layout "brand" }}
+<section class="vh-100">
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-md-4 mx-auto">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" class="mb-4">
+        <h1 class="brand-name fst-italic">{{ .Title }}</h1>
+        <h3 class="tagline">{{ .Content }}</h3>
+      </div>
+    </div>
+  </div>
+
+</section>
 
 {{ end }}
+
+{{ end }}
+

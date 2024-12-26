@@ -6,22 +6,34 @@
 .hero-sm {
   background: $primary-color url('/images/hero-bg-sm.jpg') no-repeat fixed center center/cover;
   background-blend-mode: multiply;
-  color: $white;
+  color: $secondary-color;
   text-align: center;
+  &.py-first{
+    padding-block: 6rem;
+  }
+  .title{
+    color: $white;
+  }
+  .desc{
+    line-height: 1.6;
+  }
+ 
 }
-
+.last{
+  color:$accent-color;
+}
 .hero {
   background-color: $primary-color;
-  background: linear-gradient(145deg, #00534a, #006258);
-  color: $background-color;
+  // background: linear-gradient(145deg, $primary-color, $secondary-color);
+  color: $secondary-color;
 
   img {
     width: 70%;
     display: block;
     margin-inline: auto;
     @include border-radius;
-    box-shadow: -12px -12px 30px #006359,
-                 12px  12px 30px #00af9d;
+    box-shadow: -12px -12px 30px $primary-color,
+                 12px  12px 30px $primary-color--light;
     transition: transform 0.3s ease;
 
     &:hover {
@@ -31,13 +43,19 @@
 
   .content {
     .title {
-      font-weight: 500;
+      color:$white;
+      font-weight: 600;
       line-height: 1.4;
     }
-
+    .subtitle{
+      font-size: 1.6rem;
+    }
     .subtitle,
     .desc {
       line-height: 1.4;
+    }
+    .desc{
+      font-size: 1.1rem;
     }
   }
 }
@@ -91,7 +109,7 @@
   }
 
   .subtitle {
-    color: $secondary-color;
+    color: $accent-color--dark;
     font-size: 1.3rem;
     // font-weight: 400;
     line-height: 1.4;
@@ -214,7 +232,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(28, 42, 72, 0.8) 70%, rgba(0, 255, 198, 0.8) 100%);
+    background: linear-gradient(90deg, hsla($hue-priamry, $saturation-primary, $lightness-primary, 0.8 ) 70%, $primary-color--light 100%);
     z-index: 2;
   }
 
@@ -389,8 +407,8 @@
 
   img {
     @include border-radius; // Uses default 10px
-    box-shadow: -12px -12px 30px #006359,
-                 12px  12px 30px #00af9d;
+    box-shadow: -12px -12px 30px $primary-color,
+                 12px  12px 30px $secondary-color;
     @media(min-width:768px) {
       @include border-radius(0); // Uses default 10px
       min-height: 70vh;
@@ -436,8 +454,8 @@
   .service-card {
     background: $primary-color;
     box-shadow:
-      -12px -12px 30px #006359,
-      12px 12px 30px #00af9d;
+      -12px -12px 30px $primary-color,
+      12px 12px 30px $primary-color--light;
     color: white;
     .service-title {
       font-size: 1.1rem;
