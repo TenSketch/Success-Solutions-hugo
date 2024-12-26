@@ -2,53 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/logo/</loc>
+    <loc>https://successsolutions.in/logo/</loc>
     <lastmod>2024-12-22T20:26:40+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://successsolutions.in/</loc>
     <lastmod>2024-12-22T20:26:40+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://successsolutions.in/contact/</loc>
     <lastmod>2024-12-15T17:12:08+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/downloads/</loc>
+    <loc>https://successsolutions.in/downloads/</loc>
     <lastmod>2024-12-15T15:59:27+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/core-services/expat-hiring-methodologies/</loc>
+    <loc>https://successsolutions.in/core-services/expat-hiring-methodologies/</loc>
     <lastmod>2024-12-15T15:59:26+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/core-services/allied-services/</loc>
+    <loc>https://successsolutions.in/core-services/allied-services/</loc>
     <lastmod>2024-12-15T15:59:26+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/core-services/hiring-sbu-verticals/</loc>
+    <loc>https://successsolutions.in/core-services/hiring-sbu-verticals/</loc>
     <lastmod>2024-12-15T15:59:26+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/our-approach/consistent-expertise/</loc>
+    <loc>https://successsolutions.in/our-approach/consistent-expertise/</loc>
     <lastmod>2024-12-15T15:59:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/our-approach/consulting-practice/</loc>
+    <loc>https://successsolutions.in/our-approach/consulting-practice/</loc>
     <lastmod>2024-12-15T15:59:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/core-services/</loc>
+    <loc>https://successsolutions.in/core-services/</loc>
     <lastmod>2024-12-15T15:59:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/our-approach/</loc>
+    <loc>https://successsolutions.in/our-approach/</loc>
     <lastmod>2024-12-15T15:59:24+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/our-approach/core-belief/</loc>
+    <loc>https://successsolutions.in/our-approach/core-belief/</loc>
     <lastmod>2024-12-15T15:59:24+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://successsolutions.in/about/</loc>
     <lastmod>2024-12-15T15:59:23+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/thanks/</loc>
+    <loc>https://successsolutions.in/thanks/</loc>
     <lastmod>2024-12-15T15:59:23+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/home/</loc>
-    <lastmod>2024-10-17T14:37:44+05:30</lastmod>
+    <loc>https://successsolutions.in/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://successsolutions.in/tags/</loc>
   </url>
 </urlset>

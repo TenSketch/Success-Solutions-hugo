@@ -60,7 +60,7 @@
   <!-- Sections -->
   {{ with .Params.sections }}
   {{ range $index, $section := . }}
-  <section class="content-section py-6 px-custom {{ if eq (mod $index 2) 0 }}{{ end }}">
+  <section class="content-section py-3 px-custom {{ if eq (mod $index 2) 0 }}{{ end }}">
     <div class="row align-items-center justify-content-around">
       {{ with $section.image }}
       <div class="col-md-4">

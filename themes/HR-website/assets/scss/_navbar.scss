@@ -39,7 +39,7 @@
       backdrop-filter: blur(0.5rem);
       -webkit-backdrop-filter: blur(0.5rem);
       position: absolute;
-      top: 12vh;
+      top: 0;
       right: 0;
       height: 0;
       overflow: hidden;
@@ -139,6 +139,7 @@
       }
 
       &.open {
+        background-color: $primary-color ;
         &:nth-child(1) {
           transform: rotate(45deg);
           width: 35px;
@@ -177,12 +178,12 @@
 
 
     .nav-link {
-      color: $secondary-color;
+      color: $primary-color;
 
-      // color: $primary-color  !important;
-      @media(min-width:768px) {
-        color: $primary-color;
-      }
+      // // color: $primary-color  !important;
+      // @media(min-width:768px) {
+      //   color: $primary-color;
+      // }
 
     }
 

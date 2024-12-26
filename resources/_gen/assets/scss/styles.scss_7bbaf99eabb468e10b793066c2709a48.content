@@ -392,7 +392,7 @@ hr.bg-accent {
       backdrop-filter: blur(0.5rem);
       -webkit-backdrop-filter: blur(0.5rem);
       position: absolute;
-      top: 12vh;
+      top: 0;
       right: 0;
       height: 0;
       overflow: hidden;
@@ -458,16 +458,18 @@ hr.bg-accent {
         top: 10px; }
       .navbar .navbar-toggler .hamburger-icon:nth-child(3) {
         transform: rotate(0); }
-      .navbar .navbar-toggler .hamburger-icon.open:nth-child(1) {
-        transform: rotate(45deg);
-        width: 35px;
-        top: 8px; }
-      .navbar .navbar-toggler .hamburger-icon.open:nth-child(2) {
-        transform: rotate(-45deg);
-        width: 35px; }
-      .navbar .navbar-toggler .hamburger-icon.open:nth-child(3) {
-        transform: rotate(-45deg);
-        top: 8px; }
+      .navbar .navbar-toggler .hamburger-icon.open {
+        background-color: #032b45; }
+        .navbar .navbar-toggler .hamburger-icon.open:nth-child(1) {
+          transform: rotate(45deg);
+          width: 35px;
+          top: 8px; }
+        .navbar .navbar-toggler .hamburger-icon.open:nth-child(2) {
+          transform: rotate(-45deg);
+          width: 35px; }
+        .navbar .navbar-toggler .hamburger-icon.open:nth-child(3) {
+          transform: rotate(-45deg);
+          top: 8px; }
     .navbar .navbar-toggler:focus {
       box-shadow: none; }
   .navbar.scrolled {
@@ -476,10 +478,7 @@ hr.bg-accent {
     .navbar.scrolled .navbar-toggler .hamburger-icon {
       background-color: #032b45 !important; }
     .navbar.scrolled .nav-link {
-      color: #89cfeb; }
-      @media (min-width: 768px) {
-        .navbar.scrolled .nav-link {
-          color: #032b45; } }
+      color: #032b45; }
     .navbar.scrolled .nav-item::after {
       background-color: #032b45 !important; }
 
