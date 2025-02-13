@@ -38,13 +38,14 @@ sections:
       - "Supply Chain"  
       - "Manufacturing"  
       - "Research & Development"
-  - brochure: "/pdfs/consistent-expertise-brochure.pdf"
+  # - brochure: "/pdfs/consistent-expertise-brochure.pdf"
 
 ---
 
 <!-- ## Our Proven Expertise in Global Expatriate Placement -->
 
-We have a consistent track record of successfully placing expatriates across a diverse range of industries and professional domains. Our specialized knowledge and experience enable us to effectively meet the unique needs of organizations worldwide, ensuring the right talent is matched to the right opportunity. <!--more--> 
+#### We have a consistent track record of successfully placing expatriates across a diverse range of industries and professional domains. Our specialized knowledge and experience enable us to effectively meet the unique needs of organizations worldwide, ensuring the right talent is matched to the right opportunity. <!--more-->
+
 <!-- Our Benefits are,
 
 - "Global talent placement"

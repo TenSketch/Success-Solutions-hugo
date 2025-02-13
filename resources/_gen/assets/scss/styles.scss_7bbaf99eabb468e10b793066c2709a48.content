@@ -372,19 +372,22 @@ hr.bg-accent {
   background-color: #89cfeb;
   background-color: transparent;
   min-height: 10vh; }
+  @media (max-width: 768px) {
+    .navbar.px-custom {
+      padding-left: 0; } }
   .navbar .navbar-brand {
     flex: 1; }
     .navbar .navbar-brand img {
-      min-width: 60%;
-      width: 55vw; }
+      min-width: 55%;
+      width: 50vw; }
       @media (min-width: 425px) {
         .navbar .navbar-brand img {
-          min-width: 40%;
-          width: 40vw; } }
+          min-width: 35%;
+          width: 35vw; } }
       @media (min-width: 768px) {
         .navbar .navbar-brand img {
-          min-width: 30%;
-          width: 18vw; } }
+          min-width: 25%;
+          width: 15vw; } }
   @media (max-width: 991px) {
     .navbar .navbar-collapse {
       background: rgba(137, 207, 235, 0.85);
@@ -676,10 +679,12 @@ hr.bg-accent {
     height: 100%; }
 
 .hero-sm {
-  background: #032b45 url("/images/hero-bg-sm.jpg") no-repeat fixed center center/cover;
-  background-blend-mode: multiply;
+  background: rgba(3, 41, 69, 0.9) url("/images/hero-bg-sm.jpg") no-repeat fixed center center/cover;
+  background-blend-mode: overlay;
   color: #89cfeb;
   text-align: center; }
+  .hero-sm .row {
+    height: calc(100vh - 10vh); }
   .hero-sm.py-first {
     padding-block: 6rem; }
   .hero-sm .title {
@@ -704,7 +709,6 @@ hr.bg-accent {
       transform: translateY(-10px); }
   .hero .content .title {
     color: #fff;
-    font-weight: 600;
     line-height: 1.4; }
   .hero .content .subtitle {
     font-size: 1.6rem; }
@@ -1473,9 +1477,19 @@ textarea {
   border-radius: 10px; }
 
 .content-section {
-  background: url(/images/Ripple-Line-cropped.png) no-repeat bottom center/100% auto;
   color: #032b45;
-  border-radius: 10px; }
+  border-radius: 10px;
+  position: relative; }
+  .content-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(145deg, #ffd166, #ffffff);
+    z-index: 1000000;
+    clip-path: path("M0,15 C50,30 150,0 200,15 S350,30 400,15 S550,0 600,15 L600,25 L0,25 Z"); }
   .content-section .text-content {
     padding: 1rem; }
     .content-section .text-content .title {
@@ -1487,6 +1501,29 @@ textarea {
 
 .brand-name {
   font-family: "Sinera", sans-serif; }
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333; }
+  .contact-info .phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: color 0.3s ease; }
+    .contact-info .phone-link.call-link {
+      color: #00339a; }
+      .contact-info .phone-link.call-link:hover {
+        color: #001f66; }
+    .contact-info .phone-link.whatsapp-link {
+      color: #25D366;
+      font-size: 22px; }
+      .contact-info .phone-link.whatsapp-link:hover {
+        color: #1aa64a; }
 
 .text-gold {
   color: #ffd166; }

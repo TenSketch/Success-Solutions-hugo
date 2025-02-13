@@ -7,6 +7,11 @@
   background-color: $secondary-color;
   background-color: transparent;
   min-height: $navbar-height;
+  &.px-custom{
+    @media(max-width:768px){
+      padding-left: 0;
+    }
+  }
 
   .navbar-brand {
     flex: 1;
@@ -16,17 +21,17 @@
     // transition: color 0.4s ease;
     img {
       // width: clamp(60vw, 70vw, 90vw);
-      min-width: 60%;
-      width: 55vw;
+      min-width: 55%;
+      width: 50vw;
       // max-width: 70%;
       @media(min-width:425px){
-        min-width: 40%;
-        width: 40vw;
+        min-width: 35%;
+        width: 35vw;
       }
       // 768px
       @media(min-width:768px){
-        min-width: 30%;
-        width: 18vw;
+        min-width: 25%;
+        width: 15vw;
         }
     }
   }

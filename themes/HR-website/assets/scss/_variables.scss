@@ -3,16 +3,16 @@
 // $accent-color: #FFD54F;  // Accent - Amber
 // $accent-color--dark: #b38900;  //
 
-$primary-color: hsl(203, 92%, 14%); // Primary - Navy Blue
+$primary-color: hsl(203, 92%, 14%); // Primary - Navy Blue - dark
 $hue-priamry: 203;
 $saturation-primary: 92;
 $lightness-primary: 14;
-$secondary-color: hsl(197, 71%, 73%); // Secondary - Sky Blue
+$secondary-color: hsl(197, 71%, 73%); // Secondary - Sky Blue - light
 $hue-secondary: 197;
 $saturation-secondary: 71;
 $lightness-secondary: 73;
-$accent-color: hsl(42, 100%, 70%);  // Accent - Sunglow
-$accent-color--dark: hsl(42, 100%, 35%);  
+$accent-color: hsl(42, 100%, 70%);  // Accent for dark- Sunglow
+$accent-color--dark: hsl(42, 100%, 35%);  //Accent for light -Dark goldenred
 
 
 $primary-color--light: hsl(203, 92%, 54%);  

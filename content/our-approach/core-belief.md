@@ -7,8 +7,8 @@ layout: 'common'
 draft: false
 ---
 
-Success is not an accident, magic or a miracle.
-Its a blend of well thought processes, hard work, focused energies & resources with a passion to make it happen. \
+### Success is not an accident, magic or a miracle. Its a blend of well thought processes, hard work, focused energies & resources with a passion to make it happen.
+
 \
 **_We craft solutions for your people’s and organization’s success._**
 

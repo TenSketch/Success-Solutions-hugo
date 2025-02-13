@@ -1,13 +1,19 @@
 @import 'variables';
 @import 'utilities';
+$hero-bg: hsla(205, 92%, 14%, 0.9);
 
 // first hero section
 // hero-sm
 .hero-sm {
-  background: $primary-color url('/images/hero-bg-sm.jpg') no-repeat fixed center center/cover;
-  background-blend-mode: multiply;
+  background: $hero-bg url('/images/hero-bg-sm.jpg') no-repeat fixed center center/cover;
+  background-blend-mode: overlay;
   color: $secondary-color;
   text-align: center;
+  .row{
+    // min-height: calc(100vh - $navbar-height);
+    height: calc(100vh - #{$navbar-height});
+    
+  }
   &.py-first{
     padding-block: 6rem;
   }
@@ -44,7 +50,7 @@
   .content {
     .title {
       color:$white;
-      font-weight: 600;
+      // font-weight: 600;
       line-height: 1.4;
     }
     .subtitle{

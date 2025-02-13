@@ -9,10 +9,10 @@ image: "/images/world-maps-globe1.png"
 heading: "Who We Are"
 features:
   - "Indian Incorporated company for Expat HR Services."
-  - "Led by Mr. R Muralidharan, a HR Professional with 40+ years of experience."
+  - "Led by Mr. R Muralidharan, a passioante HR Professional with 40+ years of experience."
   - "Dedicated RPO Team with exceptional talent."
   - "Competency assessment capabilities."
-  - "Network of consulting partner across India."
+  - "Consulting partner's network across India."
   - "Preferred sourcing partner for NRI global and MNC companies."
 showTeam: true
 teamHeading: "Meet Our Team"

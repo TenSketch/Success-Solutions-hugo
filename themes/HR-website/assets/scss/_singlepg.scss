@@ -69,9 +69,24 @@
 // &:nth-of-type(even) {
 
 .content-section {
-    background:  url(/images/Ripple-Line-cropped.png) no-repeat bottom center/100% auto;
+    // background:  url(/images/Ripple-Line-cropped.png) no-repeat bottom center/100% auto;
     color: $primary-color;
     @include border-radius;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 25px; // Keep height small but with a wave effect
+      background: linear-gradient(145deg, $accent-color, #ffffff);
+      z-index: 1000000;
+      // clip-path: path("M0,15 Q25,0 50,15 T100,15 T150,15 T200,15 T250,15 T300,15 L300,25 L0,25 Z");
+        clip-path: path("M0,15 C50,30 150,0 200,15 S350,30 400,15 S550,0 600,15 L600,25 L0,25 Z");
+
+    }
+    
     
 
     .text-content {
@@ -102,4 +117,36 @@
 }
 .tagline{
   // font-family: $font-Noto-sans;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+
+  .phone-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &.call-link {
+      color: #00339a; // Primary brand color
+      &:hover {
+        color: #001f66; // Darker shade for hover effect
+      }
+    }
+
+    &.whatsapp-link {
+      color: #25D366; // WhatsApp green
+      font-size: 22px;
+      &:hover {
+        color: #1aa64a; // Darker green on hover
+      }
+    }
+  }
 }

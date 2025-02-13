@@ -52,9 +52,9 @@ sections:
     image: "/images/Hostility-Hiring.jpg"
     description: "Hostile hiring focuses on recruiting talent for high-risk environments, where safety and stability are crucial. By ensuring transparent processes and providing robust support, organizations can attract skilled professionals capable of thriving in challenging settings."
     features:
-      - "Expert guidance for recruiting in high-risk areas."
-      - "Comprehensive safety and health protocols."
-      - "Competitive compensation to attract top talent."
+      - "Expert guidance for recruiting in high-risk areas"
+      - "Comprehensive safety and health protocols"
+      - "Competitive compensation to attract top talent"
    #  brochure: "/brochures/hostility-hiring.pdf"
 ---
 

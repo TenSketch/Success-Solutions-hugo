@@ -3,7 +3,7 @@
 <!-- Hero Section default -->
 <section class="page-hero about-hero px-custom" style="background-image: url('{{ .Params.heroImage }}');">
   <div class="text-center">
-    <h1 class="display-4">{{ .Title }}</h1>
+    <h2 class="">{{ .Title }}</h2>
     {{ with .Params.subtitle }}
     <p>{{ . }}</p>
     {{ end }}
@@ -60,8 +60,13 @@
   <!-- Sections -->
   {{ with .Params.sections }}
   {{ range $index, $section := . }}
-  <section class="content-section py-3 px-custom {{ if eq (mod $index 2) 0 }}{{ end }}">
-    <div class="row align-items-center justify-content-around">
+  <section class="content-section py-3 px-custom wave {{ if eq (mod $index 2) 0 }}{{ end }}">
+    <div class="wave-container">
+      <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#FDD835" fill-opacity="1" d="M0,224L80,234.7C160,245,320,267,480,245.3C640,224,800,160,960,149.3C1120,139,1280,181,1360,202.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+      </svg>
+    </div>
+    <div class="row align-items-center">
       {{ with $section.image }}
       <div class="col-md-4">
         <img src="{{ . }}" alt="{{ $section.title }}" class="">
@@ -236,11 +241,20 @@
             <!-- <h1 class="display-4 text-success mb-4">Thank You!</h1> -->
             <p class="lead">We appreciate your enquiry and will get back to you as soon as possible.</p>
             <hr class="my-4">
-            <p>If you need immediate assistance, feel free to call us
-              <a class="nav-link phone-link" href="tel:+919962006364" title="tap to call mobile"
-                aria-label="tap to call mobile">9962006364</a>
-              <!-- <a href="/contact" class="">contact us directly</a>. -->
+            <p class="contact-info justify-content-center">
+              If you need immediate assistance, call us at  
+              <a class="nav-link phone-link call-link" href="tel:+919962006364" title="Tap to call" aria-label="Tap to call">
+                <i class="fa-solid fa-mobile-screen-button"></i> +91-99620-06364
+              </a>  
+              or  
+              <a class="nav-link phone-link whatsapp-link" href="https://wa.me/+919962006364" title="Tap to WhatsApp" aria-label="Tap to WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <br>
+              <p class="text-muted">we'll revert to you at the earliest...</p>
             </p>
+            
+            
             <!-- <a href="/" class="btn btn-primary btn-lg mt-3">Go Back to Home</a> -->
           </div>
         </div>
