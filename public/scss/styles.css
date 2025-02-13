@@ -376,18 +376,9 @@ hr.bg-accent {
     .navbar.px-custom {
       padding-left: 0; } }
   .navbar .navbar-brand {
-    flex: 1; }
+    flex: 1 1 30%; }
     .navbar .navbar-brand img {
-      min-width: 55%;
-      width: 50vw; }
-      @media (min-width: 425px) {
-        .navbar .navbar-brand img {
-          min-width: 35%;
-          width: 35vw; } }
-      @media (min-width: 768px) {
-        .navbar .navbar-brand img {
-          min-width: 25%;
-          width: 15vw; } }
+      width: clamp(120px, 40vw, 220px); }
   @media (max-width: 991px) {
     .navbar .navbar-collapse {
       background: rgba(137, 207, 235, 0.85);
@@ -1502,27 +1493,27 @@ textarea {
 .brand-name {
   font-family: "Sinera", sans-serif; }
 
-.contact-info {
+.contact-info-thankuPg {
   display: flex;
   align-items: center;
   gap: 15px;
   font-size: 18px;
   font-weight: 500;
   color: #333; }
-  .contact-info .phone-link {
+  .contact-info-thankuPg .phone-link {
     display: flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
     transition: color 0.3s ease; }
-    .contact-info .phone-link.call-link {
+    .contact-info-thankuPg .phone-link.call-link {
       color: #00339a; }
-      .contact-info .phone-link.call-link:hover {
+      .contact-info-thankuPg .phone-link.call-link:hover {
         color: #001f66; }
-    .contact-info .phone-link.whatsapp-link {
+    .contact-info-thankuPg .phone-link.whatsapp-link {
       color: #25D366;
       font-size: 22px; }
-      .contact-info .phone-link.whatsapp-link:hover {
+      .contact-info-thankuPg .phone-link.whatsapp-link:hover {
         color: #1aa64a; }
 
 .text-gold {
