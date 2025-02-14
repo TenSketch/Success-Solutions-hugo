@@ -12,7 +12,7 @@ features:
   - "Led by Mr. R Muralidharan, a passioante HR Professional with 40+ years of experience."
   - "Dedicated RPO Team with exceptional talent."
   - "Competency assessment capabilities."
-  - "Consulting partner's network across India."
+  - " Network of consulting partners across India."
   - "Preferred sourcing partner for NRI global and MNC companies."
 showTeam: true
 teamHeading: "Meet Our Team"

@@ -175,19 +175,25 @@
 
   <div class="contact-section px-custom py-custom row">
     <h1 class="display-6 mb-4">Have a hiring requirement? Let's connect!</h1>
-    <div class="col-md-10 mx-auto mb-5">
-      <div class="contact-options row justify-content-md-between justify-content-center">
-        <div class="col-auto">
+    <div class="col-md-7 mx-auto mb-5">
+      <div class="contact-options row gap-5 justify-content-center">
+        <!-- <div class="col-auto">
           <p>Need more info?</p>
           <a href="mailto:info@successsolutions.in">info@successsolutions.in</a>
-        </div>
+        </div> -->
         <div class="col-auto mt-4 mt-md-0">
-          <p>Prefer to reach out to our mentor directly?</p>
+          <p>Email id</p>
           <a href="mailto:link2rmd@gmail.com">link2rmd@gmail.com</a>
         </div>
         <div class="col-auto mt-4 mt-md-0">
-          <p>Would you like to talk to us?</p>
-          <a href="tel:+919962006364">+91 9962006364</a>
+          <!-- <p>Would you like to talk to us?</p> -->
+          <!-- <a href="tel:+919962006364">+91 9962006364</a> -->
+          <p>WhatsApp</p>
+          <a href="https://wa.me/919962006364?text=Hi%20Muralidharan,%20I%27m%20interested%20in%20learning%20more%20about%20your%20HR%20consulting%20services.%20Can%20you%20share%20some%20details?%20">
+            <i class="fa-brands fa-whatsapp fa-2x"></i>
+            
+          </a>
+
         </div>
       </div>
       <hr class="bg-accent">
@@ -197,30 +203,35 @@
       
       <form class="contact-form" id="contact" name="contact" method="POST" action="/thanks" netlify>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control border-bottom-only" id="name" name="Name" placeholder="Full Name"
-            required>
-          <label for="name">Name</label>
+          <input type="text" class="form-control border-bottom-only" id="name" name="Name" placeholder="John Doe" required>
+          <label for="name">Name <span class="text-danger">*</span></label>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control border-bottom-only" id="phone" name="phone" placeholder="123-456-7890" required>
+          <label for="phone">Contact number <span class="text-danger">*</span></label>
         </div>
         <div class="form-floating mb-3">
-          <input type="text" class="form-control border-bottom-only" id="company" name="Company Name"
-            placeholder="Enter your company name" required>
-          <label for="company">Company Name</label>
+          <input type="email" class="form-control border-bottom-only" id="email" name="email" placeholder="example@example.com" required>
+          <label for="email">Email <span class="text-danger">*</span></label>
         </div>
         <div class="form-floating mb-3">
-          <input type="tel" class="form-control border-bottom-only" minlength="10" maxlength="10" id="phone"
-            name="Contact #" placeholder="Enter 10 digit mobile number">
-          <label for="phone">Contact #</label>
+          <input type="text" class="form-control border-bottom-only" id="company" name="company" placeholder="ABC Corporation" required>
+          <label for="company">Company <span class="text-danger">*</span></label>
         </div>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control border-bottom-only" id="email" name="Email"
-            placeholder="abc@email.com" required>
-          <label for="email">Email</label>
+          <input type="text" class="form-control border-bottom-only" id="designation" name="designation" placeholder="Software Engineer">
+          <label for="designation">Designation</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control border-bottom-only" id="department" name="department" placeholder="IT Department">
+          <label for="department">Department</label>
         </div>
         <!-- msg texatarea -->
         <div class="form-floating mb-3">
-          <textarea class="form-control border-bottom-only" id="message" name="Message" placeholder="Message" rows="6"
-            required></textarea>
-          <label for="message">Message</label>
+          <textarea class="form-control border-bottom-only" id="message" name="Message" placeholder="Type your message here..." rows="6" required></textarea>
+          <label for="message">Message <span class="text-danger">*</span></label>
         </div>
         <button type="submit" class="btn btn-gold w-100 mt-3">Send</button>
       </form>
@@ -242,12 +253,12 @@
             <p class="lead">We appreciate your enquiry and will get back to you as soon as possible.</p>
             <hr class="my-4">
             <p class="contact-info-thankuPg justify-content-center">
-              If you need immediate assistance, call us at  
-              <a class="nav-link phone-link call-link" href="tel:+919962006364" title="Tap to call" aria-label="Tap to call">
+              If you need immediate assistance, send a WhatsApp message- 
+              <!-- <a class="nav-link phone-link call-link" href="tel:+919962006364" title="Tap to call" aria-label="Tap to call">
                 <i class="fa-solid fa-mobile-screen-button"></i> +91-99620-06364
               </a>  
-              or  
-              <a class="nav-link phone-link whatsapp-link" href="https://wa.me/+919962006364" title="Tap to WhatsApp" aria-label="Tap to WhatsApp">
+              or   -->
+              <a class="nav-link phone-link whatsapp-link" href="https://wa.me/919962006364?text=Hi%20Muralidharan,%20I%20came%20across%20your%20website%2C%20Success%20Solutions%2C%20and%20we%20are%20looking%20to%20hire%20top%20talent%20and%20need%20HR%20consulting%20support.%20Can%20we%20connect?%20" title="Tap to WhatsApp" aria-label="Tap to WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
               <br>

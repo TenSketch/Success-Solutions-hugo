@@ -81,6 +81,6 @@ og_image = '/ogimage.jpg'
     weight = 5
 
   [[menu.main]]
-    name = "Contact Us"
+    name = "Engage with Us"
     url = "/contact/"
     weight = 6
