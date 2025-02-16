@@ -1,6 +1,6 @@
 .contact-page {
-  background: $primary-color url(/images/global-business-concept.jpg) no-repeat fixed center center / cover;
-  background-blend-mode: overlay;
+  background: $primary-color;
+  // background-blend-mode: overlay;
   color: $white;
 
   .contact-section {

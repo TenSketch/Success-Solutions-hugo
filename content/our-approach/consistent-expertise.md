@@ -38,7 +38,7 @@ sections:
       - "Supply Chain"  
       - "Manufacturing"  
       - "Research & Development"
-  # - brochure: "/pdfs/consistent-expertise-brochure.pdf"
+  - brochure: "/pdfs/consistent-expertise-brochure.pdf"
 
 ---
 

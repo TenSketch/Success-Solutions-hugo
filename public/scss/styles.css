@@ -1392,8 +1392,7 @@ address {
   line-height: 1.6; }
 
 .contact-page {
-  background: #032b45 url(/images/global-business-concept.jpg) no-repeat fixed center center/cover;
-  background-blend-mode: overlay;
+  background: #032b45;
   color: #fff; }
   .contact-page .contact-section {
     text-align: center; }
