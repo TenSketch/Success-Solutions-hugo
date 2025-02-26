@@ -77,17 +77,17 @@ og_image = '/ogimage.jpg'
   
   [[menu.main]]
     name = "Candidate's Corner"
-    url = "/pdfs/Candidate_Corner_compressed.pdf"
+    url = "/pdfs/Candidate-Corner.pdf"
     weight = 5
 
   [[menu.main]]
     name = "Employer's Corner"
-    url = "/pdfs/Employers_Corner_compressed.pdf"
+    url = "/pdfs/Employers-Corner.pdf"
     weight = 6
 
   [[menu.main]]
     name = "Career Café"
-    url = "/pdfs/Career_Cafe_compressed.pdf"
+    url = "/pdfs/Career-Cafe.pdf"
     weight = 7
 
   [[menu.main]]
