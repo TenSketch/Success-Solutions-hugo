@@ -1,7 +1,7 @@
 ---
 title: 'Our Core Belief'
 date: 2024-12-15T15:59:24+05:30
-image: '/images/growth-and-sucsess.png'
+image: '/images/core-belief-new.jpg'
 heroImage: '/images/core-belief-bg.jpg'
 layout: 'common'
 draft: false

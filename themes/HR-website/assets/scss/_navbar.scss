@@ -19,7 +19,7 @@
     // font-weight: bold;
     // transition: color 0.4s ease;
     img {
-      width: clamp(120px, 40vw, 220px); // Resizes smoothly for different screen sizes
+      width: clamp(100px, 30vw, 150px); // Resizes smoothly for different screen sizes
       // max-height: 60px; // Maintains aspect ratio and prevents overflow
     }
   }

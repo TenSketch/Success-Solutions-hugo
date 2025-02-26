@@ -74,13 +74,28 @@ og_image = '/ogimage.jpg'
       parent = "Core Services"
       url = "/core-services/allied-services/"
       weight = 3
+  
+  [[menu.main]]
+    name = "Candidate's Corner"
+    url = "/pdfs/Candidate_Corner_compressed.pdf"
+    weight = 5
+
+  [[menu.main]]
+    name = "Employer's Corner"
+    url = "/pdfs/Employers_Corner_compressed.pdf"
+    weight = 6
+
+  [[menu.main]]
+    name = "Career Café"
+    url = "/pdfs/Career_Cafe_compressed.pdf"
+    weight = 7
 
   [[menu.main]]
     name = "Downloads"
     url = "/downloads/"
-    weight = 5
+    weight = 8
 
   [[menu.main]]
     name = "Engage with Us"
     url = "/contact/"
-    weight = 6
+    weight = 9

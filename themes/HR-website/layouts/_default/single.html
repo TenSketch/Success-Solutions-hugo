@@ -43,38 +43,31 @@
 
 {{ if eq .Params.layout "singlelist" }}
 <main class="main-section">
-  <!-- intro section for content -->
-  <section class="py-3 px-custom ">
+  <!-- Intro Section -->
+  <section class="py-5 px-custom">
     <div class="row align-items-center">
       <div class="col-md-6 mb-4 mb-md-0">
-        <h2 class="fw-bold mb-3">{{ .Params.heading }}</h2>
-        <div class="content">
+        <h2 class="fw-bold mb-3 text-primary">{{ .Params.heading }}</h2>
+        <div class="content lead">
           {{ .Content }}
         </div>
       </div>
     </div>
-    <!-- <hr class="bg-accent mt-2"> -->
-
   </section>
 
-  <!-- Sections -->
+  <!-- Dynamic Sections -->
   {{ with .Params.sections }}
   {{ range $index, $section := . }}
-  <section class="content-section py-3 px-custom wave {{ if eq (mod $index 2) 0 }}{{ end }}">
-    <div class="wave-container">
-      <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#FDD835" fill-opacity="1" d="M0,224L80,234.7C160,245,320,267,480,245.3C640,224,800,160,960,149.3C1120,139,1280,181,1360,202.7L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-      </svg>
-    </div>
+  <section class="content-section py-5 px-custom wave {{ if eq (mod $index 2) 0 }}bg-light{{ else }}bg-white{{ end }}">
     <div class="row align-items-center">
       {{ with $section.image }}
       <div class="col-md-4">
-        <img src="{{ . }}" alt="{{ $section.title }}" class="">
+        <img src="{{ . }}" alt="{{ $section.title }}" class="img-fluid rounded shadow-sm">
       </div>
       {{ end }}
       <div class="col-md-6 mt-4 mt-md-0 text-content">
-        <h2 class="title">{{ $section.title }}</h2>
-        <p class="desc">{{ $section.description }}</p>
+        <h3 class="title fw-bold">{{ $section.title }}</h3>
+        <p class="desc text-muted">{{ $section.description }}</p>
         {{ with $section.features }}
         <ul class="feature-list mt-3 list-unstyled">
           {{ range . }}
@@ -85,17 +78,17 @@
         </ul>
         {{ end }}
         {{ with $section.brochure }}
-        <a href="{{ . }}" class="btn btn-primary--outline mt-3" target="_blank" rel="noopener">
-          <i class="fa-regular fa-eye" aria-hidden="true"></i> View Brochure
+        <a href="{{ . }}" class="btn btn-outline-primary mt-3" target="_blank" rel="noopener">
+          <i class="fa-regular fa-eye"></i> View Brochure
         </a>
         {{ end }}
       </div>
     </div>
-    <!-- <hr class="bg-accent mt-2"> -->
   </section>
   {{ end }}
   {{ end }}
 </main>
+
 {{ end }}
 
 {{ if eq .Params.layout "singlegrid" }}

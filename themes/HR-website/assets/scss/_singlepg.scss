@@ -1,124 +1,92 @@
-// Common styles for the hero section
+// Hero Section (Improved Visuals)
 .page-hero {
-  background: no-repeat center center;
-  background-size: cover;
-  min-height: 50vh; // Ensure the section is at least 50% of the viewport height
+  background: no-repeat center center / cover;
+  min-height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  color: #fff; // Default text color for contrast
-
-  // Background color blending
-  background-color: $primary-color; // Dark color to blend with the image
+  color: #fff;
+  background-color: rgba(0, 51, 154, 0.85); // Dark blend
   background-blend-mode: soft-light;
 
-  // Typography
   h1 {
-    //   font-size: 3rem;
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
   }
 
   p {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
   }
 }
 
-// Specific variations for pages
-.about-hero {
-  @extend .page-hero;
-  // background-color: rgba(33, 37, 41, 0.6); // Darker blend for About pages
+// Sections Styling
+.content-section {
+  padding: 4rem 2rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+
+  .text-content {
+    padding: 1.5rem;
+    
+    .title {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .desc {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+  }
+
+  img {
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 
-.contact-hero {
-  @extend .page-hero;
-  // background-color: rgba(52, 152, 219, 0.5); // Light blue tint for Contact pages
-}
-
-// Responsive adjustments
+// Responsive Adjustments
 @media (max-width: 768px) {
   .page-hero {
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
-
     p {
-      font-size: 1rem;
-    }
-  }
-}
-
-.singlegrid {
-  img {
-    min-height: 400px;
-    object-fit: cover;
-    @include border-radius; // Uses default 10px
-
-  }
-}
-
-.main-section {
-  // background: linear-gradient(145deg, #d8e6e4, #ffffff);
-  // &:nth-of-type(even){
-  //   background-color: $primary-color;
-  // }
-}
-// &:nth-of-type(even) {
-
-.content-section {
-    // background:  url(/images/Ripple-Line-cropped.png) no-repeat bottom center/100% auto;
-    color: $primary-color;
-    @include border-radius;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 25px; // Keep height small but with a wave effect
-      background: linear-gradient(145deg, $accent-color, #ffffff);
-      z-index: 1000000;
-      // clip-path: path("M0,15 Q25,0 50,15 T100,15 T150,15 T200,15 T250,15 T300,15 L300,25 L0,25 Z");
-        clip-path: path("M0,15 C50,30 150,0 200,15 S350,30 400,15 S550,0 600,15 L600,25 L0,25 Z");
-
-    }
-    
-    
-
-    .text-content {
-      // background: $secondary-color;
-    padding: 1rem;
-     .title{
-      font-size: 1.3rem;
-     }
-     .desc{
       font-size: 1.1rem;
-     }
     }
-  
+  }
 
-
-  img {
-    @include border-radius; // Uses default 10px
-
-    // box-shadow: 13px 13px 21px #9c9c9c,
-    //   -13px -13px 21px #ffffff;
+  .content-section {
+    padding: 2rem 1rem;
   }
 }
 
+// Button Styling
+.btn-outline-primary {
+  border: 2px solid #00339a;
+  color: #00339a;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 
-// logo
-.brand-name{
-  font-family: $font-Sinera;
-}
-.tagline{
-  // font-family: $font-Noto-sans;
+  &:hover {
+    background: #00339a;
+    color: #fff;
+  }
 }
 
+// Improved Contact Info
 .contact-info-thankuPg {
   display: flex;
   align-items: center;
@@ -135,17 +103,17 @@
     transition: color 0.3s ease;
 
     &.call-link {
-      color: #00339a; // Primary brand color
+      color: #00339a; // Primary color
       &:hover {
-        color: #001f66; // Darker shade for hover effect
+        color: #001f66;
       }
     }
 
     &.whatsapp-link {
-      color: #25D366; // WhatsApp green
+      color: #25D366;
       font-size: 22px;
       &:hover {
-        color: #1aa64a; // Darker green on hover
+        color: #1aa64a;
       }
     }
   }

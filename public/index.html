@@ -30,7 +30,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-0">
   
-  <div class="container">
+  <div class="container-fluid">
     <a class="navbar-brand" href="/">
       <img id="navbar-logo" src="/images/logo/logo-default.png" data-default="/images/logo/logo-default.png"
         data-scrolled="/images/logo/logo-scrolled.png" alt="Success Solutions logo" />
@@ -44,21 +44,21 @@
       <ul class="navbar-nav ms-auto h-100">
         
         <li class="nav-item ">
-          <a class="nav-link " href="/" >
+          <a class="nav-link " href="http://localhost:1313/" >
             Home
           </a>
           
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link " href="/about/" >
+          <a class="nav-link " href="http://localhost:1313/about/" >
             About Us
           </a>
           
         </li>
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/our-approach/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+          <a class="nav-link dropdown-toggle" href="http://localhost:1313/our-approach/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             Approach
           </a>
           
@@ -75,7 +75,7 @@
         </li>
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/core-services/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+          <a class="nav-link dropdown-toggle" href="http://localhost:1313/core-services/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             Core Services
           </a>
           
@@ -92,14 +92,35 @@
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link " href="/downloads/" >
+          <a class="nav-link " href="http://localhost:1313/pdfs/candidate_corner_compressed.pdf" >
+            Candidate&#39;s Corner
+          </a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link " href="http://localhost:1313/pdfs/employers_corner_compressed.pdf" >
+            Employer&#39;s Corner
+          </a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link " href="http://localhost:1313/pdfs/career_cafe_compressed.pdf" >
+            Career Café
+          </a>
+          
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link " href="http://localhost:1313/downloads/" >
             Downloads
           </a>
           
         </li>
         
         <li class="nav-item ">
-          <a class="nav-link " href="/contact/" >
+          <a class="nav-link " href="http://localhost:1313/contact/" >
             Engage with Us
           </a>
           
@@ -117,7 +138,7 @@
  <section class="hero-sm min-vh-100 py-first px-custom d-flex align-items-center d-block d-md-none">
   <div class="row row-mob align-items-center justify-content-between ">
     <h1 class="col-auto title display-4 mb-0">"A Company is as great<br>as the people who work for it..."</h1>
-    <h3 class="col-auto subtitle my-5">Your <span class="text-gold fw-bold text-uppercase">people...</span>is...your <span class="text-gold fw-bold">SUCCESS</span></h3>
+    <h3 class="col-auto subtitle my-5">Your <span class="text-gold fw-bold text-uppercase">people...</span>are..your <span class="text-gold fw-bold">SUCCESS</span></h3>
     <div class="col-auto hero-last">
       <h6 class="desc fst-italic mb-2">"getting people who craft solutions for your business success"</h6>
       
@@ -132,7 +153,7 @@
   <div class="row align-items-center justify-content-around mt-5">
     <div class="col-md-5 content">
       <h1 class="title display-5 mb-0">"A Company is as great<br>as the people who work for it..."</h1>
-      <h3 class="subtitle mt-5">Your <span class="text-gold fw-bold text-uppercase">people...</span>is...your <span class="text-gold fw-bold">SUCCESS</span></h3>
+      <h3 class="subtitle mt-5">Your <span class="text-gold fw-bold text-uppercase">people...</span>are..your <span class="text-gold fw-bold">SUCCESS</span></h3>
       <div class="hero-last mt-5">
         <h6 class="desc fst-italic mb-2">"getting people who craft solutions for your business success"</h6>
         
@@ -269,7 +290,7 @@
       <img class="d-md-none my-3" src="/images/expatriate-hiring-1.jpeg" alt="expatriate-hiring img" />
 
       <p class="description fst-italic mt-3">
-        We cater to<strong> client's expatriate hiring needs</strong> and would meet up to your
+        We cater to<strong> clients' expatriate hiring needs</strong> and would meet up to your
         business expectations.
       </p>
       <a href="about" class="btn btn-gold">Know more</a>
@@ -334,46 +355,98 @@
   <h1 class="title display-6 text-center mb-4">Our Core Services</h1>
   <div class="row align-items-center justify-content-between gap-3">
     
-    <div class="service-card ">
-      <h6 class="service-title mb-0">Expatriate Hiring Methodologies</h6>
-       <a href="core-services/expat-hiring-methodologies" class="btn "><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="service-card">
+        <h6 class="service-title mb-0">Expatriate Hiring Methodologies</h6>
+        <a href="core-services/expat-hiring-methodologies" 
+           class="btn tooltip-btn" 
+           title="Know more about Expatriate Hiring Methodologies" 
+           data-bs-toggle="tooltip" 
+           aria-label="Know more about Expatriate Hiring Methodologies">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
     </div>
 
     
-    <div class="service-card ">
-      <h6 class="service-title mb-0">Our Hiring SBU Verticals</h6>
-       <a href="core-services/hiring-sbu-verticals" class="btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="service-card">
+        <h6 class="service-title mb-0">Our Hiring SBU Verticals</h6>
+        <a href="core-services/hiring-sbu-verticals" 
+           class="btn tooltip-btn" 
+           title="Know more about Our Hiring SBU Verticals" 
+           data-bs-toggle="tooltip" 
+           aria-label="Know more about Our Hiring SBU Verticals">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
     </div>
 
     
-    <div class="service-card ">
-      <h6 class="service-title mb-0">Hiring Associated Allied Services</h6>
-       <a href="core-services/allied-services" class="btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="service-card">
+        <h6 class="service-title mb-0">Hiring Associated Allied Services</h6>
+        <a href="core-services/allied-services" 
+           class="btn tooltip-btn" 
+           title="Know more about Hiring Associated Allied Services" 
+           data-bs-toggle="tooltip" 
+           aria-label="Know more about Hiring Associated Allied Services">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
     </div>
-  </div>
+</div>
+
 </section>
 
 
 <section class="approach-section px-custom py-6">
   <h1 class="title display-6 text-center mb-4">Our Approach</h1>
   <div class="row align-items-center justify-content-between gap-3">
-    <div class="glass-card service-card">
-      <i class="fa fa-handshake"></i>
-      <h6 class="mb-0">Core Belief</h6>
-      <a title="Know More" href="our-approach/core-belief" class="btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    </div>
     
     <div class="glass-card service-card">
-      <i class="fa fa-briefcase"></i>
-      <h6 class="mb-0">Consulting Practice</h6>
-      <a href="our-approach/consulting-practice" class="btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <i class="fa fa-handshake"></i>
+        <h6 class="mb-0">Core Belief</h6>
+        <a href="our-approach/core-belief" 
+           class="btn tooltip-btn" 
+           title="Know More about Core Belief" 
+           data-bs-toggle="tooltip" 
+           aria-label="Know More about Core Belief">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
     </div>
+
+    
     <div class="glass-card service-card">
-      <i class="fa fa-chart-line"></i>
-      <h6 class="mb-0">Consistent Expertise</h6>
-      <a href="our-approach/consistent-expertise" class="btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <i class="fa fa-briefcase"></i>
+        <h6 class="mb-0">Consulting Practice</h6>
+        <a href="our-approach/consulting-practice" 
+           class="btn tooltip-btn" 
+           title="Know More about Consulting Practice" 
+           data-bs-toggle="tooltip" 
+           aria-label="Know More about Consulting Practice">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
     </div>
-  </div>
+
+    
+    <div class="glass-card service-card">
+        <i class="fa fa-chart-line"></i>
+        <h6 class="mb-0">Consistent Expertise</h6>
+        <a href="our-approach/consistent-expertise" 
+           class="btn tooltip-btn" 
+           title="Know More about Consistent Expertise" 
+           data-bs-toggle="tooltip" 
+           aria-label="Know More about Consistent Expertise">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+  });
+</script>
+
 </section>
 
 
@@ -468,6 +541,18 @@
                                 <li><a href="/core-services/allied-services/">Allied Services</a></li>
                             
                         </ul>
+                    
+                
+                    
+                        <li><a href="/pdfs/candidate_corner_compressed.pdf">Candidate&#39;s Corner</a></li>
+                    
+                
+                    
+                        <li><a href="/pdfs/employers_corner_compressed.pdf">Employer&#39;s Corner</a></li>
+                    
+                
+                    
+                        <li><a href="/pdfs/career_cafe_compressed.pdf">Career Café</a></li>
                     
                 
                     

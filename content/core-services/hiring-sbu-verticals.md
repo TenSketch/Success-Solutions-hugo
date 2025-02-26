@@ -33,6 +33,7 @@ sections:
       - Access to skilled professionals tailored for expatriate hiring.
   - title: "Hiring Associated Allied Services"
     image: "/images/allied-1.jpg"
+    brochure: "/pdfs/allied-services.pdf"
     description: >
       A range of support solutions designed to enhance recruitment and ensure successful candidate integration, including:
       - Onboarding and pre-joining induction
